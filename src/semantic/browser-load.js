@@ -13,15 +13,24 @@ async function fetchWithProgress(url, onProgress) {
     onProgress(1);
     return buf;
   }
+  // content-length può essere la dimensione compressa (GitHub Pages manda emb.bin in gzip), mentre lo
+  // stream restituisce i byte già decompressi: si raccolgono i pezzi e si uniscono alla fine.
+  // Il totale serve solo per la barra di avanzamento.
   const reader = res.body.getReader();
-  const out = new Uint8Array(total);
+  const chunks = [];
   let got = 0;
   for (;;) {
     const { done, value } = await reader.read();
     if (done) break;
-    out.set(value, got);
+    chunks.push(value);
     got += value.length;
-    onProgress(got / total);
+    onProgress(Math.min(got / total, 0.99));
+  }
+  const out = new Uint8Array(got);
+  let at = 0;
+  for (const c of chunks) {
+    out.set(c, at);
+    at += c.length;
   }
   return out.buffer;
 }
