@@ -1,3 +1,4 @@
 {
-  "registro": { "tipo": "nessuno" }
+  "registro": { "tipo": "nessuno" },
+  "ai": { "url": "https://qgpnjicbjpdlbptmzufy.supabase.co/functions/v1" }
 }
