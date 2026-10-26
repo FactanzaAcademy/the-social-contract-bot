@@ -1,0 +1,25 @@
+node_modules/
+tools/_ref/
+.DS_Store
+models-src/
+node_modules.nosync/
+models-src.nosync/
+npm-deps.nosync/
+.env
+worker/.dev.vars
+worker/node_modules/
+worker/.wrangler/
+worker/deps.nosync/
+worker/worker-deps.nosync/
+supabase/.temp/
+supabase/.branches/
+supabase/functions/.env
+# duplicati creati da iCloud e cartelle locali fuori sync
+node_modules*
+models-src*
+*.nosync/
+worker/node_modules*
+# generati: dist/ la ricostruisce GitHub Actions, test/out i test
+dist/
+test/out/
+patto-prova.mp4

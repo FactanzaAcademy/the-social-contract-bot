@@ -1,0 +1,38 @@
+<!doctype html>
+<!-- Rigenera public/patto/patto-poster.webp (immagine statica di Patto) dopo aver cambiato patto.glb.
+     Uso: npm run build, copia questo file in dist/, servi dist/ (configurazione bot-dist) e apri /poster.html.
+     Patto fa il saluto e si ferma nella posa di riposo; il link scarica il WebP 240×288 con trasparenza.
+     L'inquadratura deve restare uguale a quella di src/ui/patto3d.js. -->
+<meta charset="utf-8">
+<title>Poster di Patto</title>
+<style>
+  body { margin: 24px; background: #fbf2e2; font: 14px system-ui; color: #241a33; }
+  model-viewer { width: 120px; height: 144px; background: transparent; --poster-color: transparent; }
+  .box { display: inline-block; background: repeating-conic-gradient(#eee 0 25%, #fff 0 50%) 0 0 / 16px 16px; }
+</style>
+<div class="box"><model-viewer id="mv"></model-viewer></div>
+<p id="stato">Carico…</p>
+<script type="module">
+  import './vendor/model-viewer.min.js';
+  customElements.get('model-viewer').meshoptDecoderLocation = 'data:text/javascript,';
+  const mv = document.getElementById('mv');
+  const attrs = {
+    src: 'patto/patto.glb', alt: '', 'camera-target': '0.15m 0.76m 0m', 'camera-orbit': '0deg 84deg 3.05m', 'field-of-view': '30deg',
+    'min-camera-orbit': 'auto auto 3.05m', 'max-camera-orbit': 'auto auto 3.05m', 'interaction-prompt': 'none',
+    'shadow-intensity': '0.55', 'shadow-softness': '1', exposure: '1.05',
+  };
+  for (const [k, v] of Object.entries(attrs)) mv.setAttribute(k, v);
+  // 240×288 pixel veri, qualunque sia la densità dello schermo
+  mv.style.width = `${240 / devicePixelRatio}px`;
+  mv.style.height = `${288 / devicePixelRatio}px`;
+  mv.addEventListener('load', () => {
+    mv.animationName = 'Big_Wave_Hello';
+    mv.play({ repetitions: 1 });
+    mv.addEventListener('finished', async () => {
+      await new Promise((r) => setTimeout(r, 300));
+      const blob = await mv.toBlob({ mimeType: 'image/webp', qualityArgument: 0.9 });
+      const a = Object.assign(document.createElement('a'), { href: URL.createObjectURL(blob), download: 'patto-poster.webp', textContent: `Scarica patto-poster.webp (${(blob.size / 1024).toFixed(1)} KB)` });
+      document.getElementById('stato').replaceChildren(a);
+    }, { once: true });
+  }, { once: true });
+</script>

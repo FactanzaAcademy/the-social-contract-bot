@@ -1,0 +1,25 @@
+{
+ "fondanti": {"spazi": 2, "sovrapprezzo": 3, "nota": "Stampato 'COSTO +3' su entrambi gli spazi. Regolamento p.13: l'offerta deve essere almeno costo+3 (es. costo 7 -> almeno 10). I Fondanti non si esauriscono mai."},
+ "principali": {"spazi": 5, "nota": "Nessuna condizione. Usati per risolvere un Evento ricevono 'Mancanza di Risorse' finché non arriva un'Allocazione di Risorse."},
+ "provvisori": [
+  {"pos": 1, "effetto": "soldi", "icona": "pila di monete", "nota": "Soldi gratis!: tutti ricevono 4 monete"},
+  {"pos": 2, "effetto": "promessa", "icona": "pacco regalo con freccia a destra", "nota": "Promessa Elettorale: il Leader piazza gratis una seconda Carta Progetto rivelata nello spazio Provvisorio vuoto alla destra"},
+  {"pos": 3, "effetto": null, "icona": null},
+  {"pos": 4, "effetto": "risoluzione", "icona": "punto esclamativo arancione", "nota": "Risoluzione Evento"},
+  {"pos": 5, "effetto": "allocazione", "icona": "batteria verde con fulmine", "nota": "Allocazione di Risorse: rimuove i segnalini Mancanza di Risorse da tutti i Principali"}
+ ],
+ "provvisori_nota": "Un Progetto Provvisorio usato per risolvere un Evento va in Archivio (pila 'PROGETTI PROVVISORI USATI' / 'ARCHIVIO' in basso a destra). Se Carta e spazio hanno entrambi un effetto: prima la Carta, poi lo spazio.",
+ "tensione": [
+  {"casella": 0, "effetto": null, "nota": "partenza (bulbo blu del termometro)"},
+  {"casella": 1, "effetto": "soldi"},
+  {"casella": 2, "effetto": "risoluzione"},
+  {"casella": 3, "effetto": "colpo", "nota": "UNA sola sirena"},
+  {"casella": 4, "effetto": "risoluzione"},
+  {"casella": 5, "effetto": "soldi"},
+  {"casella": 6, "effetto": "risoluzione"},
+  {"casella": 7, "effetto": "soldi"},
+  {"casella": 8, "effetto": "sconfitta", "nota": "teschio: ultima casella, partita persa per tutti"}
+ ],
+ "tensione_nota": "8 caselle oltre la partenza, verificate a 400 dpi sul PDF della plancia e sull'esempio del regolamento p.20. Ogni aumento: il segnalino avanza di 1 e si applica l'effetto della casella di arrivo; poi il Leader sceglie Eventi o Progetti, scarta tutte le carte rivelate di quel tipo e ne rivela di nuove.",
+ "note_legenda": "Sotto il tracciato: [segnalino Tensione Sociale (il riquadro con la folla) con linee di movimento e una freccia verso destra] = [icona a ettagono con un pugno alzato e raggi] [frecce circolari] [carta verticale] / [carta orizzontale]. Significato (regolamento pp.9, 17-18): ogni volta che il segnalino avanza, il Leader deve rinnovare UNA delle due file di carte rivelate: gli Eventi (carte verticali) OPPURE i Progetti (carte orizzontali), scartando tutte quelle visibili e rivelandone di nuove. L'icona del pugno non è spiegata dal regolamento: probabilmente indica la protesta o la tensione."
+}

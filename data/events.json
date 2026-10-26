@@ -1,0 +1,372 @@
+{
+  "events": [
+    {
+      "id": "e01",
+      "page": 1,
+      "nome": "Costo della vita in aumento",
+      "requisiti": {
+        "difesa": 0,
+        "economia": 5,
+        "tecnologia": 0,
+        "carte": 0
+      },
+      "effetto": "tensione",
+      "colpo_di_scena": "Scarta tutti i PROGETTI e gli EVENTI rivelati e rivelane altrettanti",
+      "flavor": "Quanto hai detto che costa il latte senza glutine?!",
+      "uncertain": null,
+      "twist": "scarta_rivelati_tutti"
+    },
+    {
+      "id": "e02",
+      "page": 2,
+      "nome": "Inverno demografico",
+      "requisiti": {
+        "difesa": 0,
+        "economia": 7,
+        "tecnologia": 0,
+        "carte": 0
+      },
+      "effetto": null,
+      "colpo_di_scena": "Il Leader sceglie un PROGETTO PRINCIPALE approvato da scartare",
+      "flavor": "Chi ci pagherà la pensione, se non lavora nessuno?",
+      "uncertain": null,
+      "twist": "scarta_principale_scelta"
+    },
+    {
+      "id": "e03",
+      "page": 3,
+      "nome": "Esplode la disoccupazione",
+      "requisiti": {
+        "difesa": 0,
+        "economia": 9,
+        "tecnologia": 0,
+        "carte": 0
+      },
+      "effetto": "nuova_linea",
+      "colpo_di_scena": "Tutti i giocatori ottengono 4 MONETE",
+      "flavor": "“Ci sei per un aperitivo?” “Amico è mercoledì, e sono le 11:00 del mattino...”",
+      "uncertain": null,
+      "twist": "tutti_piu_4"
+    },
+    {
+      "id": "e04",
+      "page": 4,
+      "nome": "Blackout frequenti",
+      "requisiti": {
+        "difesa": 0,
+        "economia": 0,
+        "tecnologia": 5,
+        "carte": 0
+      },
+      "effetto": "colpo",
+      "colpo_di_scena": "Posiziona il segnalino “Mancanza di Risorse” sui 3 PROGETTI PRINCIPALI più a sinistra del tabellone",
+      "flavor": "Ugh, senza luce né Wi-Fi non ci resta che giocare a qualche stupido gioco da tavolo...",
+      "uncertain": "Nel colpo di scena 'Mancanza di Risorse' è un'icona (batteria scarica rossa, segnalino Mancanza di Risorse come in reg-17), non testo stampato.",
+      "twist": "mancanza_3_principali_sinistra"
+    },
+    {
+      "id": "e05",
+      "page": 5,
+      "nome": "Mancanza di produttività",
+      "requisiti": {
+        "difesa": 0,
+        "economia": 0,
+        "tecnologia": 7,
+        "carte": 0
+      },
+      "effetto": null,
+      "colpo_di_scena": "Il Leader pesca la prima Carta del Mazzo Progetti e la sostituisce ad un PROGETTO APPROVATO",
+      "flavor": "Senza Intelligenza Artificiale chi le scrive le nostre mail?",
+      "uncertain": null,
+      "twist": "sostituisci_approvato_con_pescato"
+    },
+    {
+      "id": "e06",
+      "page": 6,
+      "nome": "Organizzazione di un’Esposizione Universale",
+      "requisiti": {
+        "difesa": 0,
+        "economia": 0,
+        "tecnologia": 8,
+        "carte": 0
+      },
+      "effetto": "nuova_linea",
+      "colpo_di_scena": "Tutti i giocatori perdono 2 MONETE",
+      "flavor": "Per quella di Parigi del 1889 costruirono la Torre Eiffel. Vedete cosa dovete fare stavolta.",
+      "uncertain": null,
+      "twist": "tutti_meno_2"
+    },
+    {
+      "id": "e07",
+      "page": 7,
+      "nome": "Incidente diplomatico",
+      "requisiti": {
+        "difesa": 5,
+        "economia": 0,
+        "tecnologia": 0,
+        "carte": 0
+      },
+      "effetto": "colpo",
+      "colpo_di_scena": "Il Leader deve scegliere tra: - perdere personalmente 5 MONETE; - scartare una CARTA EVENTO dalla sezione Eventi Risolti.",
+      "flavor": "Col senno di poi, anche quella battuta sui giapponesi è stata un errore.",
+      "uncertain": null,
+      "twist": "leader_5_o_scarta_risolto"
+    },
+    {
+      "id": "e08",
+      "page": 8,
+      "nome": "Disordini lungo i confini",
+      "requisiti": {
+        "difesa": 6,
+        "economia": 0,
+        "tecnologia": 0,
+        "carte": 0
+      },
+      "effetto": null,
+      "colpo_di_scena": "Scarta tutte le CARTE EVENTO rivelate e rivelane altrettante",
+      "flavor": "Sicuramente non apriremo le porte proprio ora che hanno dei forconi in mano.",
+      "uncertain": null,
+      "twist": "scarta_eventi_rivelati"
+    },
+    {
+      "id": "e09",
+      "page": 9,
+      "nome": "Guerra civile",
+      "requisiti": {
+        "difesa": 9,
+        "economia": 0,
+        "tecnologia": 0,
+        "carte": 0
+      },
+      "effetto": "nuova_linea",
+      "colpo_di_scena": "Aumenta la TENSIONE SOCIALE di 1 (senza attivare Effetti Speciali né scartare Carte)",
+      "flavor": "Nessuno ricordava come fosse iniziata: sapevano solo che c’entrava Sanremo.",
+      "uncertain": null,
+      "twist": "tensione_secca"
+    },
+    {
+      "id": "e10",
+      "page": 10,
+      "nome": "Proteste popolari per la mancanza di risorse",
+      "requisiti": {
+        "difesa": 5,
+        "economia": 0,
+        "tecnologia": 5,
+        "carte": 0
+      },
+      "effetto": "soldi",
+      "colpo_di_scena": "Il Leader sceglie tra: - Guadagnare personalmente 7 MONETE - Ognuno ottiene 4 MONETE",
+      "flavor": "Che mangino brioche!",
+      "uncertain": null,
+      "twist": "leader_7_o_tutti_4"
+    },
+    {
+      "id": "e11",
+      "page": 11,
+      "nome": "Corsa al riarmo",
+      "requisiti": {
+        "difesa": 7,
+        "economia": 0,
+        "tecnologia": 2,
+        "carte": 0
+      },
+      "effetto": null,
+      "colpo_di_scena": "Il Leader sceglie una Carta Progetto PROVVISORIA e, se c’è spazio, la rende PRINCIPALE",
+      "flavor": "Devo riarmarmi prima che tu ti riarmi prima che io mi riarmi prima che tu...",
+      "uncertain": null,
+      "twist": "provvisorio_a_principale"
+    },
+    {
+      "id": "e12",
+      "page": 12,
+      "nome": "Problemi di approvvigionamento",
+      "requisiti": {
+        "difesa": 0,
+        "economia": 3,
+        "tecnologia": 4,
+        "carte": 0
+      },
+      "effetto": "cambio_priorita",
+      "colpo_di_scena": "Il Leader sceglie una Carta Progetto FONDANTE e, se c’è spazio, la rende PRINCIPALE",
+      "flavor": "Senza ricotta come la faccio la pastiera? Qualcuno pensi alla pastiera!",
+      "uncertain": null,
+      "twist": "fondante_a_principale"
+    },
+    {
+      "id": "e13",
+      "page": 13,
+      "nome": "Forza lavoro non qualificata",
+      "requisiti": {
+        "difesa": 0,
+        "economia": 5,
+        "tecnologia": 3,
+        "carte": 0
+      },
+      "effetto": null,
+      "colpo_di_scena": "Il Leader può SCAMBIARE LA POSIZIONE di 2 Carte Progetto approvate",
+      "flavor": "“Mio padre non aveva poi sbagliato, a dir che un laureato, conta più di un cantante” Cit.",
+      "uncertain": null,
+      "twist": "scambia_due"
+    },
+    {
+      "id": "e14",
+      "page": 14,
+      "nome": "Aumento delle disuguaglianze economiche",
+      "requisiti": {
+        "difesa": 3,
+        "economia": 5,
+        "tecnologia": 0,
+        "carte": 0
+      },
+      "effetto": null,
+      "colpo_di_scena": "Il Leader deve scegliere tra: - perdere personalmente 5 MONETE - SCARTARE le prime 5 carte del Mazzo Progetti",
+      "flavor": "Se tu hai un pollo e io ho zero polli, la media è di mezzo pollo a testa. Ma io vado a letto senza cena.",
+      "uncertain": null,
+      "twist": "leader_5_o_scarta_5_progetti"
+    },
+    {
+      "id": "e15",
+      "page": 15,
+      "nome": "Criminalità in aumento",
+      "requisiti": {
+        "difesa": 3,
+        "economia": 2,
+        "tecnologia": 0,
+        "carte": 0
+      },
+      "effetto": "colpo",
+      "colpo_di_scena": "SCARTA il Progetto Principale approvato più a sinistra sul Tabellone",
+      "flavor": "Per l’ultima volta, signora, anche se promette di riportarla non può “prendere in prestito” la carta igienica dal supermercato. È comunque furto.",
+      "uncertain": null,
+      "twist": "scarta_principale_sinistra"
+    },
+    {
+      "id": "e16",
+      "page": 16,
+      "nome": "Organizzazione dei Giochi Orbitali",
+      "requisiti": {
+        "difesa": 3,
+        "economia": 3,
+        "tecnologia": 3,
+        "carte": 0
+      },
+      "effetto": "cambio_priorita",
+      "colpo_di_scena": "Il Leader perde 3 MONETE",
+      "flavor": "Annunciata la nuova disciplina di questa edizione: Maratona di Scrolling",
+      "uncertain": null,
+      "twist": "leader_meno_3"
+    },
+    {
+      "id": "e17",
+      "page": 17,
+      "nome": "Disastro climatico",
+      "requisiti": {
+        "difesa": 3,
+        "economia": 3,
+        "tecnologia": 5,
+        "carte": 0
+      },
+      "effetto": "soldi",
+      "colpo_di_scena": "Il Leader ottiene 3 MONETE",
+      "flavor": "Lo scioglimento dei ghiacciai è la grande vendetta dell’umanità per quello che hanno fatto al Titanic.",
+      "uncertain": null,
+      "twist": "leader_piu_3"
+    },
+    {
+      "id": "e18",
+      "page": 18,
+      "nome": "Pandemia",
+      "requisiti": {
+        "difesa": 4,
+        "economia": 5,
+        "tecnologia": 3,
+        "carte": 0
+      },
+      "effetto": "soldi",
+      "colpo_di_scena": "Tutti i giocatori perdono 3 MONETE",
+      "flavor": "“Tranquilli, tempo una settimana e sarà tutto finito.”",
+      "uncertain": null,
+      "twist": "tutti_meno_3"
+    },
+    {
+      "id": "e19",
+      "page": 19,
+      "nome": "Incursione militare",
+      "requisiti": {
+        "difesa": 5,
+        "economia": 4,
+        "tecnologia": 3,
+        "carte": 0
+      },
+      "effetto": "soldi",
+      "colpo_di_scena": "Il Leader può pagare 5 monete per scegliere 2 Progetti rivelati e piazzarli tra i Provvisori, senza attivare gli Effetti Speciali delle caselle",
+      "flavor": "Oh ma guarda! Ci hanno lasciato davanti alle porte un bellissimo cavallo di legno!",
+      "uncertain": null,
+      "twist": "incursione"
+    },
+    {
+      "id": "e20",
+      "page": 20,
+      "nome": "Primi passi",
+      "requisiti": {
+        "difesa": 0,
+        "economia": 0,
+        "tecnologia": 0,
+        "carte": 3
+      },
+      "effetto": "tensione",
+      "colpo_di_scena": "La persona a sinistra dell’attuale Leader diventa il nuovo Leader",
+      "flavor": "Ci serve un Bar, la prima cosa che ci serve è proprio un Bar.",
+      "uncertain": null,
+      "twist": "leader_sinistra"
+    },
+    {
+      "id": "e21",
+      "page": 21,
+      "nome": "Crescita sostenuta",
+      "requisiti": {
+        "difesa": 0,
+        "economia": 0,
+        "tecnologia": 0,
+        "carte": 4
+      },
+      "effetto": "colpo",
+      "colpo_di_scena": "La persona a destra dell’attuale Leader diventa il nuovo Leader",
+      "flavor": "Qualcuno dovrà prendersi la briga di dare un nome a queste vie.",
+      "uncertain": null,
+      "twist": "leader_destra"
+    },
+    {
+      "id": "e22",
+      "page": 22,
+      "nome": "Cantiere aperto",
+      "requisiti": {
+        "difesa": 0,
+        "economia": 0,
+        "tecnologia": 0,
+        "carte": 5
+      },
+      "effetto": null,
+      "colpo_di_scena": "Aggiungi subito questa Carta Evento agli Eventi Risolti",
+      "flavor": "I vecchietti che guardano stanno diventando un problema.",
+      "uncertain": null,
+      "twist": "auto_risolto"
+    },
+    {
+      "id": "e23",
+      "page": 23,
+      "nome": "Metropolis!",
+      "requisiti": {
+        "difesa": 0,
+        "economia": 0,
+        "tecnologia": 0,
+        "carte": 6
+      },
+      "effetto": "soldi",
+      "colpo_di_scena": "Il Leader può scartare un Progetto Fondante approvato per risolvere un Evento rivelato a sua scelta",
+      "flavor": "Tentacolare, caotica, viva! Se avesse il mare sarebbe una piccola Bari.",
+      "uncertain": null,
+      "twist": "metropolis"
+    }
+  ]
+}

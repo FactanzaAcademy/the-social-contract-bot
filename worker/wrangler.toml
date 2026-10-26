@@ -1,0 +1,23 @@
+name = "tsc-regole-ai"
+main = "src/index.js"
+compatibility_date = "2026-09-01"
+compatibility_flags = ["nodejs_compat"]
+
+[vars]
+# Origini che possono chiamare il Worker (URL di GitHub Pages del bot; localhost per le prove)
+ORIGINI = "http://localhost:4173"
+# Tetto di spesa mensile in dollari: oltre, il Worker risponde 429 e il bot usa solo la ricerca locale
+LIMITE_MENSILE_USD = "5"
+# Domande per visitatore all'ora
+LIMITE_ORARIO = "30"
+
+# Spesa del mese e contatori per visitatore. Crea il namespace con:
+#   npx wrangler kv namespace create SPESA
+# e incolla qui l'id restituito.
+[[kv_namespaces]]
+binding = "SPESA"
+id = "INCOLLA_QUI_ID_NAMESPACE"
+
+# Segreti (mai in questo file):
+#   npx wrangler secret put ANTHROPIC_API_KEY
+#   npx wrangler secret put SALE        (una stringa casuale qualsiasi, per l'hash degli IP)

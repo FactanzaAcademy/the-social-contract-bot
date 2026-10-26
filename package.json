@@ -1,0 +1,21 @@
+{
+  "name": "social-contract-bot",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Assistente offline alle regole di The Social Contract (Factanza)",
+  "scripts": {
+    "test": "vitest run",
+    "build": "node tools/build.js",
+    "review": "node tools/review-sheet.js"
+  },
+  "devDependencies": {
+    "@huggingface/transformers": "^3.7.5",
+    "esbuild": "0.24.2",
+    "vitest": "2.1.9"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.135.0",
+    "@google/model-viewer": "4.4.0"
+  }
+}

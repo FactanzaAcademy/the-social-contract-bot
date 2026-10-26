@@ -1,0 +1,353 @@
+{
+  "_nota": "Registro dei casi che il regolamento non risolve. 'interpretazione' è ciò che fa il motore; 'stato' diventa 'confermata' quando Factanza decide la regola ufficiale (testo in src/kb/house-rules.js). 'decisione' è la data della risposta di Factanza.",
+  "ambiguities": [
+    {
+      "id": "risoluzione-una-o-piu",
+      "titolo": "Un effetto Risoluzione Evento permette di risolvere uno o più Eventi?",
+      "parole": [
+        "risolvere due eventi",
+        "piu eventi insieme",
+        "un solo punto esclamativo",
+        "uno o piu eventi",
+        "quanti eventi per ogni risoluzione",
+        "risolverne due",
+        "due nello stesso momento",
+        "due eventi con un innesco"
+      ],
+      "cosa_dice": "La legenda degli effetti (pag. 9 e 14) dice che il Leader \"sceglie UNA Carta Evento tra le disponibili e la risolve\". Il paragrafo Risoluzione Carta Evento (pag. 15) dice invece che il Leader \"può decidere di risolvere una o più Carte Evento\".",
+      "cosa_non_dice": "Non chiarisce se \"una o più\" significhi un Evento per ogni innesco (carta, spazio, casella Tensione) o più Eventi con un solo innesco.",
+      "interpretazione": "Un Evento per ogni innesco. Se nello stesso turno si attivano due inneschi (es. carta con ! piazzata sullo spazio Provvisorio con !), si possono risolvere due Eventi.",
+      "stato": "confermata",
+      "decisione": "2026-10-26"
+    },
+    {
+      "id": "riuso-stesso-turno",
+      "titolo": "Un Progetto Principale o Provvisorio può servire a due Eventi nello stesso turno?",
+      "parole": [
+        "due eventi stesso turno",
+        "stesso progetto due eventi",
+        "riusare un principale",
+        "usare due volte nello stesso turno"
+      ],
+      "cosa_dice": "Il segnalino Mancanza di Risorse e l'archiviazione vengono applicati a fine turno (pag. 16), ma pag. 14 dice che i Principali \"quando vengono utilizzati\" ricevono il segnalino e i Provvisori \"vengono archiviati\".",
+      "cosa_non_dice": "Non dice esplicitamente se un Progetto già usato in questo turno sia riutilizzabile prima della fine del turno.",
+      "interpretazione": "No: un Principale o Provvisorio usato è consumato subito. Solo i Fondanti si possono riusare (pag. 13: \"possono essere utilizzati più volte\").",
+      "stato": "confermata",
+      "decisione": "2026-10-26"
+    },
+    {
+      "id": "stallo-tabellone-pieno",
+      "titolo": "Tabellone pieno e nessun Evento risolvibile: cosa succede?",
+      "parole": [
+        "tabellone pieno nessun evento",
+        "nessun evento risolvibile",
+        "partita bloccata",
+        "stallo"
+      ],
+      "cosa_dice": "Pag. 12: se non ci sono spazi liberi si attiva automaticamente una Risoluzione Evento, poi inizia un nuovo turno con lo stesso Leader.",
+      "cosa_non_dice": "Non dice cosa succede se nessun Evento scoperto è risolvibile: in teoria la partita si blocca, perché senza Progetti nuovi non si liberano spazi.",
+      "interpretazione": "La Tensione Sociale sale di 1, con il rinnovo delle carte scoperte; poi nuovo turno con lo stesso Leader.",
+      "stato": "confermata",
+      "decisione": "2026-10-26"
+    },
+    {
+      "id": "nessuno-spazio-legale",
+      "titolo": "Progetto approvato ma restano liberi solo gli spazi Fondanti e l'offerta non arriva a costo +3",
+      "parole": [
+        "solo fondante libero",
+        "fondante libero senza +3",
+        "approvato ma non posso piazzarlo"
+      ],
+      "cosa_dice": "Pag. 12: si propone un Progetto se c'è almeno uno spazio libero. Pag. 13: per il Fondante l'offerta deve superare il costo di almeno 3.",
+      "cosa_non_dice": "Non dice cosa succede se l'unico spazio libero è Fondante e l'offerta non basta.",
+      "interpretazione": "Il motore lo tratta come Progetto fallito (monete ai giocatori, Tensione +1). Conviene avvisare il tavolo prima dell'asta.",
+      "stato": "confermata",
+      "decisione": "2026-10-26"
+    },
+    {
+      "id": "promessa-effetto-carta",
+      "titolo": "Promessa Elettorale: la seconda carta piazzata gratis attiva il proprio Effetto Speciale?",
+      "parole": [
+        "seconda carta effetto",
+        "promessa elettorale effetto",
+        "carta gratis attiva effetto"
+      ],
+      "cosa_dice": "Pag. 14: il Leader può posizionare \"immediatamente e gratuitamente\" una seconda Carta Progetto scoperta nello spazio Provvisorio vuoto alla sua destra.",
+      "cosa_non_dice": "Non dice se l'Effetto Speciale della seconda carta si attiva.",
+      "interpretazione": "Si attiva: la seconda carta attiva il proprio Effetto Speciale (lo spazio a destra, il 3° Provvisorio, non ha icone).",
+      "stato": "confermata",
+      "decisione": "2026-10-26"
+    },
+    {
+      "id": "promessa-effetto-spazio",
+      "titolo": "Promessa Elettorale verso uno spazio con effetto",
+      "parole": [],
+      "cosa_dice": "Lo spazio a destra della Promessa Elettorale è il 3° Provvisorio, che non ha icone.",
+      "cosa_non_dice": "Il caso si presenta solo se le carte vengono spostate in modo insolito.",
+      "interpretazione": "Effetto dello spazio non attivato.",
+      "stato": "aperta"
+    },
+    {
+      "id": "colpo-carta-pescata",
+      "titolo": "Dove va la Carta Evento pescata per un Colpo di scena?",
+      "parole": [
+        "carta pescata colpo di scena",
+        "dove va la carta pescata",
+        "evento pescato dove va",
+        "va scartata",
+        "carta pescata",
+        "dove finisce la carta pescata"
+      ],
+      "cosa_dice": "Pag. 9: il Leader pesca 1 Carta Evento dal mazzo coperto e ne applica subito il Colpo di scena.",
+      "cosa_non_dice": "Non dice se poi la carta va scartata, rimessa nel mazzo o tra gli Eventi scoperti.",
+      "interpretazione": "Viene scartata (esce dal gioco). Unica eccezione è Cantiere aperto, il cui Colpo di scena la mette tra gli Eventi Risolti. Attenzione: ogni carta scartata così riduce il mazzo Eventi e avvicina la sconfitta per mazzo esaurito.",
+      "stato": "confermata",
+      "decisione": "2026-10-26"
+    },
+    {
+      "id": "segnalino-spostamento",
+      "titolo": "Un Principale con segnalino Mancanza di Risorse spostato tra i Provvisori (Cambio di priorità) tiene il segnalino?",
+      "parole": [
+        "principale scarico spostato",
+        "tiene il segnalino",
+        "cambio di priorita segnalino"
+      ],
+      "cosa_dice": "Pag. 9: Cambio di priorità sposta un Principale in uno spazio Provvisorio.",
+      "cosa_non_dice": "Non parla del segnalino.",
+      "interpretazione": "Il segnalino resta (la carta resta scarica).",
+      "stato": "confermata",
+      "decisione": "2026-10-26"
+    },
+    {
+      "id": "blackout-sinistra",
+      "titolo": "Blackout frequenti: \"i 3 Progetti Principali più a sinistra\" se alcuni spazi sono vuoti",
+      "parole": [
+        "blackout frequenti spazi vuoti",
+        "tre principali piu a sinistra"
+      ],
+      "cosa_dice": "Colpo di scena di Blackout frequenti: il segnalino va sui 3 Progetti Principali più a sinistra.",
+      "cosa_non_dice": "Non chiarisce se si contano gli spazi o i Progetti presenti.",
+      "interpretazione": "I primi 3 Progetti Principali presenti, partendo da sinistra (gli spazi vuoti si saltano).",
+      "stato": "confermata",
+      "decisione": "2026-10-26"
+    },
+    {
+      "id": "sostituzione-dettagli",
+      "titolo": "Mancanza di produttività: cosa succede alla carta sostituita e a quella nuova?",
+      "parole": [
+        "carta sostituita dove va",
+        "mancanza di produttivita carta sostituita"
+      ],
+      "cosa_dice": "Il Leader pesca la prima carta del mazzo Progetti e la sostituisce a un Progetto approvato.",
+      "cosa_non_dice": "Non dice dove va la carta tolta, né se la nuova attiva effetti o eredita il segnalino.",
+      "interpretazione": "La carta tolta esce dal gioco; la nuova entra carica (senza segnalino) e senza attivare effetti (quest'ultima parte non è stata decisa).",
+      "stato": "confermata",
+      "decisione": "2026-10-26"
+    },
+    {
+      "id": "sposta-quale-spazio",
+      "titolo": "Corsa al riarmo / Problemi di approvvigionamento: in quale spazio Principale va la carta?",
+      "parole": [
+        "in quale spazio principale",
+        "quale spazio principale libero"
+      ],
+      "cosa_dice": "Il Leader sceglie una carta e \"se c'è spazio\" la rende Principale.",
+      "cosa_non_dice": "Non dice quale spazio Principale libero usare.",
+      "interpretazione": "Lo sceglie il Leader (nel simulatore il primo libero). Di solito è irrilevante, salvo per gli effetti che guardano \"più a sinistra\".",
+      "stato": "confermata",
+      "decisione": "2026-10-26"
+    },
+    {
+      "id": "incursione-effetto-carta",
+      "titolo": "Incursione militare: i due Progetti piazzati attivano il proprio Effetto Speciale?",
+      "parole": [
+        "incursione militare effetto delle carte",
+        "incursione attiva effetti"
+      ],
+      "cosa_dice": "Il Leader può pagare 5 monete per piazzare 2 Progetti scoperti tra i Provvisori \"senza attivare gli Effetti Speciali delle caselle\".",
+      "cosa_non_dice": "Esclude solo gli effetti delle caselle, non dice nulla di quelli delle carte.",
+      "interpretazione": "Gli effetti delle carte si attivano (sono esclusi solo quelli delle caselle).",
+      "stato": "confermata",
+      "decisione": "2026-10-26"
+    },
+    {
+      "id": "incursione-spazi",
+      "titolo": "Incursione militare con meno di 2 spazi Provvisori liberi",
+      "parole": [],
+      "cosa_dice": "Si piazzano 2 Progetti tra i Provvisori.",
+      "cosa_non_dice": "Non dice cosa fare se c'è un solo spazio libero.",
+      "interpretazione": "Se ne piazzano quanti ci stanno, sempre pagando 5 monete.",
+      "stato": "confermata",
+      "decisione": "2026-10-26"
+    },
+    {
+      "id": "senso-sinistra",
+      "titolo": "Primi passi / Crescita sostenuta: chi è \"a sinistra\" del Leader?",
+      "parole": [
+        "chi e a sinistra del leader",
+        "a destra del leader"
+      ],
+      "cosa_dice": "Colpi di scena: la persona a sinistra (Primi passi) o a destra (Crescita sostenuta) del Leader diventa Leader.",
+      "cosa_non_dice": "Nulla di ambiguo al tavolo: è la persona seduta fisicamente a sinistra/destra. Nel verificatore i giocatori vanno inseriti in senso orario.",
+      "interpretazione": "Ordine orario: sinistra = giocatore successivo.",
+      "stato": "aperta"
+    },
+    {
+      "id": "cantiere-effetto",
+      "titolo": "Cantiere aperto finito tra gli Eventi Risolti col Colpo di scena: conta per la vittoria?",
+      "parole": [
+        "cantiere aperto conta per vincere",
+        "cantiere aperto colpo di scena"
+      ],
+      "cosa_dice": "Colpo di scena: \"Aggiungi subito questa Carta Evento agli Eventi Risolti\". La partita si vince al quinto Evento risolto (pag. 19).",
+      "cosa_non_dice": "Non dice se si attiva il suo effetto di risoluzione (Cantiere aperto comunque non ne ha).",
+      "interpretazione": "Conta come Evento risolto a tutti gli effetti, anche per la vittoria e per i punteggi.",
+      "stato": "confermata",
+      "decisione": "2026-10-26"
+    },
+    {
+      "id": "metropolis-effetto",
+      "titolo": "Metropolis!: l'Evento risolto scartando un Fondante attiva il suo effetto?",
+      "parole": [
+        "metropolis attiva effetto",
+        "metropolis effetto evento risolto"
+      ],
+      "cosa_dice": "Il Leader può scartare un Fondante approvato per risolvere un Evento scoperto a scelta.",
+      "cosa_non_dice": "Non dice se l'effetto dell'Evento risolto si attiva.",
+      "interpretazione": "Sì, l'Evento è risolto a tutti gli effetti.",
+      "stato": "confermata",
+      "decisione": "2026-10-26"
+    },
+    {
+      "id": "monete-insufficienti",
+      "titolo": "Devo perdere monete ma non ne ho abbastanza",
+      "parole": [
+        "non ho abbastanza monete",
+        "perdere monete che non ho",
+        "ne ho meno",
+        "monete negative",
+        "devo perdere monete ma"
+      ],
+      "cosa_dice": "Alcuni Colpi di scena fanno perdere monete (es. Pandemia -3 a tutti, Incidente diplomatico -5 al Leader).",
+      "cosa_non_dice": "Non c'è debito nel gioco e il regolamento non tratta il caso.",
+      "interpretazione": "Si perdono tutte quelle che si hanno, senza andare sotto zero.",
+      "stato": "confermata",
+      "decisione": "2026-10-26"
+    },
+    {
+      "id": "riserva-esaurita",
+      "titolo": "La riserva comune finisce le monete",
+      "parole": [
+        "riserva finita",
+        "banca ha finito",
+        "monete finite nella riserva"
+      ],
+      "cosa_dice": "La scatola contiene 108 monete (pag. 5).",
+      "cosa_non_dice": "Non dice cosa fare se la riserva non basta per Soldi gratis!.",
+      "interpretazione": "Si distribuisce quello che c'è. In pratica è rarissimo.",
+      "stato": "confermata",
+      "decisione": "2026-10-26"
+    },
+    {
+      "id": "michelangelo-costo-differente",
+      "titolo": "Michelangelo: \"costo DIFFERENTE dagli altri\"",
+      "parole": [
+        "costo differente",
+        "costi differenti",
+        "costo diverso dagli altri"
+      ],
+      "cosa_dice": "3 PV per ogni Progetto approvato con costo differente dagli altri.",
+      "cosa_non_dice": "Non chiarisce se conta solo i Progetti con un costo che nessun altro ha (es. costi 2,2,5 → solo il 5) oppure un Progetto per ogni valore di costo distinto (2 e 5 → due).",
+      "interpretazione": "Un Progetto per ogni costo distinto (es. costi 2, 2, 5, 7 → 3 Progetti, 9 PV).",
+      "stato": "confermata",
+      "decisione": "2026-10-26"
+    },
+    {
+      "id": "fondante-ventaglio",
+      "titolo": "Eventi a ventaglio (spendi N carte): un Fondante conta? Si consuma?",
+      "parole": [
+        "fondante evento ventaglio",
+        "fondante spendere carte",
+        "ventaglio con fondante"
+      ],
+      "cosa_dice": "Pag. 15: per gli Eventi a ventaglio bisogna \"spendere\" il numero di Carte Progetto indicato; pag. 13: i Fondanti non si esauriscono mai.",
+      "cosa_non_dice": "Non dice esplicitamente se un Fondante può essere \"speso\" restando in gioco.",
+      "interpretazione": "Il Fondante conta e resta in tabellone, come per gli Eventi a risorse.",
+      "stato": "confermata",
+      "decisione": "2026-10-26"
+    },
+    {
+      "id": "pareggio-vittoria",
+      "titolo": "Pareggio nel punteggio finale",
+      "parole": [
+        "pareggio punti",
+        "stesso punteggio",
+        "stessi punti",
+        "parita finale",
+        "pareggio finale"
+      ],
+      "cosa_dice": "Pag. 19: vince la persona con il punteggio più alto.",
+      "cosa_non_dice": "Non prevede spareggi.",
+      "interpretazione": "Vittoria condivisa.",
+      "stato": "confermata",
+      "decisione": "2026-10-26"
+    },
+    {
+      "id": "asso-diplomazia",
+      "titolo": "Asso della Diplomazia: carta da personalizzare o obiettivo sulla Tensione?",
+      "parole": [
+        "asso della diplomazia",
+        "carta vuota",
+        "pensatore personalizzato"
+      ],
+      "cosa_dice": "Pag. 8: è la carta senza nome né illustrazione, \"fatta apposta per essere personalizzata\". Il file delle carte riporta però un obiettivo stampato basato sulla casella della Tensione Sociale.",
+      "cosa_non_dice": "Non è chiaro se l'obiettivo stampato sia quello ufficiale o un esempio.",
+      "interpretazione": "Vale l'obiettivo stampato sulla carta.",
+      "stato": "confermata",
+      "decisione": "2026-10-26"
+    },
+    {
+      "id": "esempio-andrea",
+      "titolo": "Errore nell'esempio di punteggio di pag. 21 (Andrea)",
+      "parole": [
+        "esempio di andrea",
+        "pagina 21",
+        "esempio sbagliato",
+        "32 punti"
+      ],
+      "cosa_dice": "Pag. 21: Andrea (Hetty Green + Toussaint Louverture) fa 20 PV con Hetty Green contando 5 Progetti di costo inferiore a 5, e 0 PV con Toussaint (l'unico Progetto con pubblico+innovazione, M.O.R.T.O., è Provvisorio). Il totale stampato è però \"20 PV + 12 PV = 32 PV\".",
+      "cosa_non_dice": "Due errori: (1) il totale non è 32; (2) tra i Progetti di costo inferiore a 5 c'è \"Istituzione dell'alleanza M.O.R.T.O.\", che sulla carta costa 10. Con le carte reali Andrea fa 4 × 4 = 16 PV. Matteo vince comunque (22). Inoltre pag. 19 rimanda all'esempio \"a pagina 18\", ma è a pag. 20-21.",
+      "interpretazione": "Refusi dell'esempio: i Provvisori non danno punti per le coppie di icone e M.O.R.T.O. costa 10, quindi Andrea ha 16 PV.",
+      "stato": "confermata",
+      "decisione": "2026-10-26"
+    },
+    {
+      "id": "allocazione-su-carta",
+      "titolo": "Icona batteria (Allocazione di Risorse) sulle Carte Progetto",
+      "parole": [
+        "batteria sulle carte",
+        "batteria sul progetto",
+        "batteria disegnata",
+        "icona batteria progetto"
+      ],
+      "cosa_dice": "La batteria verde con il fulmine è spiegata a pag. 14 come effetto dello spazio Provvisorio \"Allocazione di Risorse\": toglie i segnalini Mancanza di Risorse da tutti i Principali. La stessa icona compare su 4 Carte Progetto (Rete stradale, Digitalizzazione delle imprese, Pozzi petroliferi statali, Ricerca di armi high-tech).",
+      "cosa_non_dice": "La legenda degli effetti delle Carte Progetto (pag. 9) non elenca questa icona.",
+      "interpretazione": "Sulle carte ha lo stesso significato che ha sullo spazio: Allocazione di Risorse.",
+      "stato": "confermata",
+      "decisione": "2026-10-26"
+    },
+    {
+      "id": "matteotti-mazzo",
+      "titolo": "Matteotti: quali carte si contano?",
+      "parole": [
+        "matteotti carte coperte",
+        "matteotti carte scoperte"
+      ],
+      "cosa_dice": "Si conta il numero di carte nel mazzo Progetti (pag. 8: \"quante carte restano nel mazzo coperto dei Progetti\").",
+      "cosa_non_dice": "Nulla di ambiguo: si contano solo le carte coperte, non le 4 scoperte.",
+      "interpretazione": "Solo il mazzo coperto.",
+      "stato": "confermata",
+      "decisione": "2026-10-26"
+    }
+  ]
+}

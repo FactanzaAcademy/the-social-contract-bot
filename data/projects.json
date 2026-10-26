@@ -1,0 +1,706 @@
+{
+  "projects": [
+    {
+      "id": "p01",
+      "page": 1,
+      "nome": "Corsi cittadini di artigianato",
+      "costo": 2,
+      "risorsa": {
+        "tipo": "economia",
+        "valore": 1
+      },
+      "ideologie": {
+        "asse_pp": "pubblico",
+        "asse_pc": "preservazione",
+        "asse_it": "innovazione"
+      },
+      "effetto": null,
+      "flavor": "La lobby dei falegnami sta protestando da sei mesi.",
+      "uncertain": null
+    },
+    {
+      "id": "p02",
+      "page": 2,
+      "nome": "Contributi per asili nido aziendali",
+      "costo": 3,
+      "risorsa": {
+        "tipo": "economia",
+        "valore": 1
+      },
+      "ideologie": {
+        "asse_pp": "privato",
+        "asse_pc": "preservazione",
+        "asse_it": "tradizione"
+      },
+      "effetto": null,
+      "flavor": "Come la giornata “Porta i tuoi figli a lavoro”, però tutto l'anno!",
+      "uncertain": null
+    },
+    {
+      "id": "p03",
+      "page": 3,
+      "nome": "Rete stradale",
+      "costo": 4,
+      "risorsa": {
+        "tipo": "economia",
+        "valore": 2
+      },
+      "ideologie": {
+        "asse_pp": "pubblico",
+        "asse_pc": "consumo",
+        "asse_it": "tradizione"
+      },
+      "effetto": "allocazione",
+      "flavor": "Abbiamo tutte queste automobili! Dovremo farci qualcosa prima o poi.",
+      "uncertain": "Icona batteria verde (non presente nella legenda degli effetti delle carte del regolamento): corrisponde all'effetto 'Allocazione di Risorse' degli spazi provvisori del tabellone (regolamento p.10 e p.14)."
+    },
+    {
+      "id": "p04",
+      "page": 4,
+      "nome": "Università private",
+      "costo": 9,
+      "risorsa": {
+        "tipo": "economia",
+        "valore": 3
+      },
+      "ideologie": {
+        "asse_pp": "privato",
+        "asse_pc": "preservazione",
+        "asse_it": "tradizione"
+      },
+      "effetto": "tensione",
+      "flavor": "Come quelle che vedete nei film! Ma con molto meno gossip.",
+      "uncertain": null
+    },
+    {
+      "id": "p05",
+      "page": 5,
+      "nome": "Digitalizzazione delle imprese",
+      "costo": 7,
+      "risorsa": {
+        "tipo": "economia",
+        "valore": 2
+      },
+      "ideologie": {
+        "asse_pp": "privato",
+        "asse_pc": "preservazione",
+        "asse_it": "innovazione"
+      },
+      "effetto": "allocazione",
+      "flavor": "Paolo ha di nuovo dimenticato la password dello SPID...",
+      "uncertain": "Icona batteria verde (non presente nella legenda degli effetti delle carte del regolamento): corrisponde all'effetto 'Allocazione di Risorse' degli spazi provvisori del tabellone (regolamento p.10 e p.14)."
+    },
+    {
+      "id": "p06",
+      "page": 6,
+      "nome": "Polo industriale",
+      "costo": 10,
+      "risorsa": {
+        "tipo": "economia",
+        "valore": 3
+      },
+      "ideologie": {
+        "asse_pp": "privato",
+        "asse_pc": "consumo",
+        "asse_it": "tradizione"
+      },
+      "effetto": "nuova_linea",
+      "flavor": "Se mettiamo tutte le industrie in un unico punto, ci servirà una sola fermata metro! Geniale.",
+      "uncertain": null
+    },
+    {
+      "id": "p07",
+      "page": 7,
+      "nome": "Cooperative economiche",
+      "costo": 8,
+      "risorsa": {
+        "tipo": "economia",
+        "valore": 3
+      },
+      "ideologie": {
+        "asse_pp": "privato",
+        "asse_pc": "preservazione",
+        "asse_it": "tradizione"
+      },
+      "effetto": null,
+      "flavor": "Dividetevi i rischi, e condividiamo gli utili.",
+      "uncertain": null
+    },
+    {
+      "id": "p08",
+      "page": 8,
+      "nome": "Reddito di base universale",
+      "costo": 10,
+      "risorsa": {
+        "tipo": "economia",
+        "valore": 4
+      },
+      "ideologie": {
+        "asse_pp": "pubblico",
+        "asse_pc": "preservazione",
+        "asse_it": "innovazione"
+      },
+      "effetto": "cambio_priorita",
+      "flavor": "Soldi gratis? Senza bisogno di lavorare? Dove firmo?",
+      "uncertain": null
+    },
+    {
+      "id": "p09",
+      "page": 9,
+      "nome": "Sistema pensionistico privato",
+      "costo": 12,
+      "risorsa": {
+        "tipo": "economia",
+        "valore": 4
+      },
+      "ideologie": {
+        "asse_pp": "privato",
+        "asse_pc": "preservazione",
+        "asse_it": "tradizione"
+      },
+      "effetto": null,
+      "flavor": "Se lo Stato non riesce a pagare le pensioni, dovremo pensarci da soli.",
+      "uncertain": null
+    },
+    {
+      "id": "p10",
+      "page": 10,
+      "nome": "Istituzione di una borsa finanziaria",
+      "costo": 5,
+      "risorsa": {
+        "tipo": "economia",
+        "valore": 2
+      },
+      "ideologie": {
+        "asse_pp": "privato",
+        "asse_pc": "consumo",
+        "asse_it": "innovazione"
+      },
+      "effetto": "colpo",
+      "flavor": "Bellissimo quando i numeri vanno su! Quando vanno giù però...",
+      "uncertain": null
+    },
+    {
+      "id": "p11",
+      "page": 11,
+      "nome": "Aumento delle pensioni pubbliche",
+      "costo": 6,
+      "risorsa": {
+        "tipo": "economia",
+        "valore": 2
+      },
+      "ideologie": {
+        "asse_pp": "pubblico",
+        "asse_pc": "preservazione",
+        "asse_it": "tradizione"
+      },
+      "effetto": null,
+      "flavor": "Per i 20enni è un importantissimo investimento per il futuro.",
+      "uncertain": null
+    },
+    {
+      "id": "p12",
+      "page": 12,
+      "nome": "Mutui garantiti dallo Stato per giovani e famiglie",
+      "costo": 4,
+      "risorsa": {
+        "tipo": "economia",
+        "valore": 2
+      },
+      "ideologie": {
+        "asse_pp": "pubblico",
+        "asse_pc": "preservazione",
+        "asse_it": "innovazione"
+      },
+      "effetto": "colpo",
+      "flavor": "Per mandarli via di casa prima dei 40 anni.",
+      "uncertain": null
+    },
+    {
+      "id": "p13",
+      "page": 13,
+      "nome": "Banca di microcredito",
+      "costo": 7,
+      "risorsa": {
+        "tipo": "economia",
+        "valore": 3
+      },
+      "ideologie": {
+        "asse_pp": "privato",
+        "asse_pc": "consumo",
+        "asse_it": "innovazione"
+      },
+      "effetto": "colpo",
+      "flavor": "A volte l'economia si basa sull'acquisto di una stalla, non di una casa.",
+      "uncertain": null
+    },
+    {
+      "id": "p14",
+      "page": 14,
+      "nome": "Potenziamento energie rinnovabili",
+      "costo": 7,
+      "risorsa": {
+        "tipo": "tecnologia",
+        "valore": 3
+      },
+      "ideologie": {
+        "asse_pp": "pubblico",
+        "asse_pc": "preservazione",
+        "asse_it": "innovazione"
+      },
+      "effetto": "colpo",
+      "flavor": "Se solo ci fosse un modo per coprirsi dal Sole e fornire energia a basso costo al quartiere...",
+      "uncertain": null
+    },
+    {
+      "id": "p15",
+      "page": 15,
+      "nome": "Sviluppo di una rete elettrica capillare",
+      "costo": 10,
+      "risorsa": {
+        "tipo": "tecnologia",
+        "valore": 4
+      },
+      "ideologie": {
+        "asse_pp": "privato",
+        "asse_pc": "consumo",
+        "asse_it": "tradizione"
+      },
+      "effetto": null,
+      "flavor": "E fu così che inventammo i black-out.",
+      "uncertain": null
+    },
+    {
+      "id": "p16",
+      "page": 16,
+      "nome": "Costruzione data center per lo sviluppo dell'AI",
+      "costo": 8,
+      "risorsa": {
+        "tipo": "tecnologia",
+        "valore": 3
+      },
+      "ideologie": {
+        "asse_pp": "privato",
+        "asse_pc": "consumo",
+        "asse_it": "innovazione"
+      },
+      "effetto": null,
+      "flavor": "Certo! Ti scrivo subito una descrizione arguta per la carta di un gioco da tavolo...",
+      "uncertain": null
+    },
+    {
+      "id": "p17",
+      "page": 17,
+      "nome": "Allevamenti intensivi",
+      "costo": 2,
+      "risorsa": {
+        "tipo": "tecnologia",
+        "valore": 2
+      },
+      "ideologie": {
+        "asse_pp": "privato",
+        "asse_pc": "consumo",
+        "asse_it": "tradizione"
+      },
+      "effetto": "colpo",
+      "flavor": "Non so bene cosa succeda là dentro, ma la carne costa poco.",
+      "uncertain": null
+    },
+    {
+      "id": "p18",
+      "page": 18,
+      "nome": "Wifi-pubblico e diffuso",
+      "costo": 1,
+      "risorsa": {
+        "tipo": "tecnologia",
+        "valore": 2
+      },
+      "ideologie": {
+        "asse_pp": "pubblico",
+        "asse_pc": "consumo",
+        "asse_it": "tradizione"
+      },
+      "effetto": "doppio_colpo",
+      "flavor": "Per qualche motivo però il MIO non va mai.",
+      "uncertain": null
+    },
+    {
+      "id": "p19",
+      "page": 19,
+      "nome": "Selezione ottimizzata delle sementi",
+      "costo": 2,
+      "risorsa": {
+        "tipo": "tecnologia",
+        "valore": 1
+      },
+      "ideologie": {
+        "asse_pp": "privato",
+        "asse_pc": "preservazione",
+        "asse_it": "tradizione"
+      },
+      "effetto": null,
+      "flavor": "Molto interessante. La prossima volta però valutiamo a monte la reale utilità di un pomodoro blu.",
+      "uncertain": null
+    },
+    {
+      "id": "p20",
+      "page": 20,
+      "nome": "Efficientamento delle batterie per auto elettriche",
+      "costo": 2,
+      "risorsa": {
+        "tipo": "tecnologia",
+        "valore": 1
+      },
+      "ideologie": {
+        "asse_pp": "privato",
+        "asse_pc": "consumo",
+        "asse_it": "innovazione"
+      },
+      "effetto": null,
+      "flavor": "No, non possiamo semplicemente “metterci più pile”.",
+      "uncertain": null
+    },
+    {
+      "id": "p21",
+      "page": 21,
+      "nome": "Ricerca sulla fusione nucleare",
+      "costo": 8,
+      "risorsa": {
+        "tipo": "tecnologia",
+        "valore": 3
+      },
+      "ideologie": {
+        "asse_pp": "pubblico",
+        "asse_pc": "preservazione",
+        "asse_it": "innovazione"
+      },
+      "effetto": null,
+      "flavor": "“La potenza del Sole... nel palmo della mia mano” Cit.",
+      "uncertain": null
+    },
+    {
+      "id": "p22",
+      "page": 22,
+      "nome": "Centrale a carbone statale",
+      "costo": 4,
+      "risorsa": {
+        "tipo": "tecnologia",
+        "valore": 3
+      },
+      "ideologie": {
+        "asse_pp": "pubblico",
+        "asse_pc": "consumo",
+        "asse_it": "tradizione"
+      },
+      "effetto": "doppio_colpo",
+      "flavor": "Qui si festeggia la Befana tutto l'anno.",
+      "uncertain": null
+    },
+    {
+      "id": "p23",
+      "page": 23,
+      "nome": "Pozzi petroliferi statali",
+      "costo": 6,
+      "risorsa": {
+        "tipo": "tecnologia",
+        "valore": 2
+      },
+      "ideologie": {
+        "asse_pp": "pubblico",
+        "asse_pc": "consumo",
+        "asse_it": "tradizione"
+      },
+      "effetto": "allocazione",
+      "flavor": "Ci serve benzina per far funzionare i pozzi petroliferi per avere più benzina per far funzionare più pozzi petroliferi...",
+      "uncertain": "Icona batteria verde (non presente nella legenda degli effetti delle carte del regolamento): corrisponde all'effetto 'Allocazione di Risorse' degli spazi provvisori del tabellone (regolamento p.10 e p.14)."
+    },
+    {
+      "id": "p24",
+      "page": 24,
+      "nome": "Agricoltura idroponica domestica",
+      "costo": 2,
+      "risorsa": {
+        "tipo": "tecnologia",
+        "valore": 1
+      },
+      "ideologie": {
+        "asse_pp": "privato",
+        "asse_pc": "preservazione",
+        "asse_it": "innovazione"
+      },
+      "effetto": null,
+      "flavor": "Un ecosistema in ogni casa. Stavolta senza insetti.",
+      "uncertain": null
+    },
+    {
+      "id": "p25",
+      "page": 25,
+      "nome": "Centri di ricerca di nuovi medicinali",
+      "costo": 7,
+      "risorsa": {
+        "tipo": "tecnologia",
+        "valore": 3
+      },
+      "ideologie": {
+        "asse_pp": "pubblico",
+        "asse_pc": "consumo",
+        "asse_it": "innovazione"
+      },
+      "effetto": "colpo",
+      "flavor": "Abbiamo curato tutto, ma i dolori improvvisi tra le costole sono ancora un mistero. Richiediamo maggiori finanziamenti.",
+      "uncertain": null
+    },
+    {
+      "id": "p26",
+      "page": 26,
+      "nome": "Computer quantistici",
+      "costo": 5,
+      "risorsa": {
+        "tipo": "tecnologia",
+        "valore": 3
+      },
+      "ideologie": {
+        "asse_pp": "privato",
+        "asse_pc": "consumo",
+        "asse_it": "innovazione"
+      },
+      "effetto": "cambio_priorita",
+      "flavor": "Possono completare una Settimana Enigmistica in 4 giorni. Rivoluzionario.",
+      "uncertain": null
+    },
+    {
+      "id": "p27",
+      "page": 27,
+      "nome": "Piano di difesa anti-crisi",
+      "costo": 10,
+      "risorsa": {
+        "tipo": "difesa",
+        "valore": 2
+      },
+      "ideologie": {
+        "asse_pp": "pubblico",
+        "asse_pc": "preservazione",
+        "asse_it": "innovazione"
+      },
+      "effetto": "risoluzione",
+      "flavor": "Dobbiamo essere pronti ANCHE nel caso in cui vada tutto bene. Non si sa mai.",
+      "uncertain": null
+    },
+    {
+      "id": "p28",
+      "page": 28,
+      "nome": "Società di spionaggio",
+      "costo": 4,
+      "risorsa": {
+        "tipo": "difesa",
+        "valore": 1
+      },
+      "ideologie": {
+        "asse_pp": "privato",
+        "asse_pc": "preservazione",
+        "asse_it": "tradizione"
+      },
+      "effetto": "tensione",
+      "flavor": "No signora, non possiamo dirle le ricerche su internet di suo figlio.",
+      "uncertain": null
+    },
+    {
+      "id": "p29",
+      "page": 29,
+      "nome": "Satelliti militari",
+      "costo": 10,
+      "risorsa": {
+        "tipo": "difesa",
+        "valore": 4
+      },
+      "ideologie": {
+        "asse_pp": "privato",
+        "asse_pc": "consumo",
+        "asse_it": "innovazione"
+      },
+      "effetto": "cambio_priorita",
+      "flavor": "Possono vedere TUTTO quello che fate, a qualsiasi ora del giorno e della notte! Non siete felici?",
+      "uncertain": null
+    },
+    {
+      "id": "p30",
+      "page": 30,
+      "nome": "Controllo delle frontiere",
+      "costo": 6,
+      "risorsa": {
+        "tipo": "difesa",
+        "valore": 2
+      },
+      "ideologie": {
+        "asse_pp": "pubblico",
+        "asse_pc": "consumo",
+        "asse_it": "tradizione"
+      },
+      "effetto": null,
+      "flavor": "Senza il timbro non si entra, mi dispiace.",
+      "uncertain": null
+    },
+    {
+      "id": "p31",
+      "page": 31,
+      "nome": "Artiglieria di difesa orbitale",
+      "costo": 12,
+      "risorsa": {
+        "tipo": "difesa",
+        "valore": 3
+      },
+      "ideologie": {
+        "asse_pp": "pubblico",
+        "asse_pc": "consumo",
+        "asse_it": "innovazione"
+      },
+      "effetto": "nuova_linea",
+      "flavor": "Il tasto di lancio lo mettiamo lontano dalla scrivania questa volta.",
+      "uncertain": null
+    },
+    {
+      "id": "p32",
+      "page": 32,
+      "nome": "Caserme di polizia",
+      "costo": 3,
+      "risorsa": {
+        "tipo": "difesa",
+        "valore": 1
+      },
+      "ideologie": {
+        "asse_pp": "pubblico",
+        "asse_pc": "consumo",
+        "asse_it": "tradizione"
+      },
+      "effetto": null,
+      "flavor": "Mi raccomando, come poliziotti è nostro dovere fermare SOLO chi va incredibilmente di fretta.",
+      "uncertain": null
+    },
+    {
+      "id": "p33",
+      "page": 33,
+      "nome": "Programmi di addestramento militare cittadino",
+      "costo": 6,
+      "risorsa": {
+        "tipo": "difesa",
+        "valore": 2
+      },
+      "ideologie": {
+        "asse_pp": "pubblico",
+        "asse_pc": "preservazione",
+        "asse_it": "tradizione"
+      },
+      "effetto": null,
+      "flavor": "Un cittadino pronto è un cittadino al sicuro. Tranne Giulia, Giulia è un caso perso.",
+      "uncertain": null
+    },
+    {
+      "id": "p34",
+      "page": 34,
+      "nome": "Centri di detenzione extra-territoriali",
+      "costo": 9,
+      "risorsa": {
+        "tipo": "difesa",
+        "valore": 2
+      },
+      "ideologie": {
+        "asse_pp": "privato",
+        "asse_pc": "consumo",
+        "asse_it": "tradizione"
+      },
+      "effetto": "risoluzione",
+      "flavor": "A volte i problemi si risolvono solo spostandoli da qualche altra parte.",
+      "uncertain": null
+    },
+    {
+      "id": "p35",
+      "page": 35,
+      "nome": "Ricerca di armi high-tech",
+      "costo": 7,
+      "risorsa": {
+        "tipo": "difesa",
+        "valore": 2
+      },
+      "ideologie": {
+        "asse_pp": "privato",
+        "asse_pc": "consumo",
+        "asse_it": "innovazione"
+      },
+      "effetto": "allocazione",
+      "flavor": "La vera arma del futuro è quella che non ha bisogno di essere usata.",
+      "uncertain": "Icona batteria verde (non presente nella legenda degli effetti delle carte del regolamento): corrisponde all'effetto 'Allocazione di Risorse' degli spazi provvisori del tabellone (regolamento p.10 e p.14)."
+    },
+    {
+      "id": "p36",
+      "page": 36,
+      "nome": "Richiesta di salvataggio interplanetario",
+      "costo": 12,
+      "risorsa": {
+        "tipo": "difesa",
+        "valore": 4
+      },
+      "ideologie": {
+        "asse_pp": "pubblico",
+        "asse_pc": "preservazione",
+        "asse_it": "innovazione"
+      },
+      "effetto": null,
+      "flavor": "“Abbiamo finito la carta igienica. Vi imploriamo. Siete l'ultima speranza dell'umanità.”",
+      "uncertain": null
+    },
+    {
+      "id": "p37",
+      "page": 37,
+      "nome": "Corsi di peacekeeping",
+      "costo": 1,
+      "risorsa": {
+        "tipo": "difesa",
+        "valore": 1
+      },
+      "ideologie": {
+        "asse_pp": "pubblico",
+        "asse_pc": "preservazione",
+        "asse_it": "tradizione"
+      },
+      "effetto": null,
+      "flavor": "Stretta di mano e larghe vedute. Il segreto della convivenza.",
+      "uncertain": null
+    },
+    {
+      "id": "p38",
+      "page": 38,
+      "nome": "Istituzione dell'alleanza M.O.R.T.O.",
+      "costo": 10,
+      "risorsa": {
+        "tipo": "difesa",
+        "valore": 3
+      },
+      "ideologie": {
+        "asse_pp": "pubblico",
+        "asse_pc": "preservazione",
+        "asse_it": "innovazione"
+      },
+      "effetto": "tensione",
+      "flavor": "Altro che NATO...",
+      "uncertain": "Il nome include il sottotitolo stampato '(Missione Operativa per il Rispetto del Trattato Orbitale)'. La carta mostra chiaramente costo 10, ma l'esempio di punteggio del regolamento la elenca tra i progetti con costo inferiore a 5 (errore del regolamento)."
+    },
+    {
+      "id": "p39",
+      "page": 39,
+      "nome": "Sistema di sorveglianza biometrica",
+      "costo": 4,
+      "risorsa": {
+        "tipo": "difesa",
+        "valore": 1
+      },
+      "ideologie": {
+        "asse_pp": "privato",
+        "asse_pc": "consumo",
+        "asse_it": "innovazione"
+      },
+      "effetto": "risoluzione",
+      "flavor": "Sorridi!",
+      "uncertain": null
+    }
+  ]
+}

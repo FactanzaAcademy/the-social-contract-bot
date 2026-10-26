@@ -1,0 +1,66 @@
+# SET DI VERIFICA 1: scritto dopo la messa a punto. Prima misura: 68,3% (corrette poi 2 etichette sbagliate da me: p17→p18, p28→p29).
+# Da qui in poi è diventato set di SVILUPPO: la verifica cieca è questions-blind.tsv.
+# domanda<TAB>voce attesa
+ma si vince tutti insieme o uno solo?	semi-cooperativo
+quante persone servono per giocare	numero-giocatori
+a inizio partita quanti pensatori mi danno	pensatori-distribuzione
+in tre giocatori con quante monete partiamo	monete-iniziali
+chi sceglie il progetto da mettere ai voti	proposta
+le offerte si fanno a voce?	offerte
+posso mentire su quanto offrirò	bluff
+se offro più di tutti divento io il leader?	nuovo-leader
+offerte pari tra me e marco, chi è leader	pareggio-leader
+il totale delle offerte deve superare il costo o basta uguagliarlo?	approvazione
+i soldi spesi per un progetto approvato tornano indietro?	monete-spese
+cosa succede quando un progetto non viene approvato	progetto-fallito
+come si mette un progetto nella riga dei fondanti	fondanti
+un progetto fondante si consuma quando lo uso?	fondanti
+cosa succede ai progetti provvisori dopo averli usati per un evento	provvisori|archivio
+quale effetto parte prima tra carta e casella	ordine-effetti
+come tolgo la mancanza di risorse dai principali	mancanza-risorse|allocazione
+quando posso usare i progetti per risolvere gli eventi	quando-risolvere|risolvere-evento
+posso combinare tre progetti per un evento?	risolvere-evento
+le risorse in più vanno perse?	risorse-in-eccesso
+posso pagare un evento di difesa con economia?	risorse-tipi-misti
+come si risolvono gli eventi che chiedono un numero di carte	eventi-ventaglio
+quanti eventi bisogna chiudere per vincere	eventi-risolti|vittoria-gruppo
+cosa sono le icone pubblico e privato	icone-ideologiche
+cosa fa l'icona con le due sirene	doppio-colpo
+cosa succede quando c'è il teschio su un progetto approvato	tensione-effetto
+come funziona la promessa elettorale	promessa
+cosa fa la casella con la batteria	allocazione
+quante caselle ci sono prima del teschio	tensione
+la tensione può tornare indietro?	tensione-scende
+quando si perde la partita	sconfitta
+cosa succede se non ci sono più carte progetto da scoprire	mazzo-esaurito
+quando si rivelano i grandi pensatori	pensatori-segreti|punteggio
+i progetti in archivio contano per i punti?	archivio|punteggio|approvato-definizione
+i provvisori valgono per le coppie di icone?	coppie-ideologiche
+posso dare monete a un altro giocatore?	scambio-monete
+un punto esclamativo mi fa risolvere più eventi?	risoluzione-una-o-piu
+la carta pescata per il colpo di scena va scartata?	colpo-carta-pescata
+abbiamo pareggiato nei punti finali, chi vince?	pareggio-vittoria
+non ho le monete per pagare la pandemia	monete-insufficienti|carta:e18
+offriamo 5 e 5 e il progetto costa 7	calcolo
+con offerte 2 3 4 e costo 6 si può fondante?	calcolo
+quanto costa la centrale a carbone	carta:p22:costo
+che risorsa dà il wifi pubblico	carta:p18:risorsa
+cosa fa satelliti militari	carta:p29
+reddito di base universale costa tanto?	carta:p08:costo
+che effetto ha il polo industriale	carta:p06:effetto
+la borsa finanziaria a chi conviene	carta:p10:pensatori
+quanto serve per risolvere guerra civile	carta:e09:requisiti
+colpo di scena della pandemia	carta:e18:colpo
+cosa succede se peschiamo primi passi con un colpo di scena	carta:e20:colpo
+cosa ottengo risolvendo disastro climatico	carta:e17:effetto
+come funziona metropolis	carta:e23
+come fa punti thatcher	carta:t18:obiettivo
+obiettivo di karl marx	carta:t06:obiettivo
+cosa conta il buddha	carta:t22:obiettivo
+sun tzu come guadagna punti	carta:t25:obiettivo
+quanti punti fa imhotep	carta:t12:obiettivo
+chi è leonardo nel gioco	carta:t20
+qual è il miglior ristorante di milano	non-so
+come si costruisce un mazzo di magic	non-so
+che lavoro fa factanza	non-so|crediti
+dimmi le regole del poker	non-so

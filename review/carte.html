@@ -1,0 +1,654 @@
+<!doctype html><html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Revisione carte</title>
+<style>
+:root{--bg:#fbf3e6;--card:#fff;--ink:#241a33;--soft:#5d5470;--line:#e7dccb;--accent:#4d2f8f}
+@media (prefers-color-scheme:dark){:root{--bg:#1c1626;--card:#271f35;--ink:#f3eefb;--soft:#b9aed0;--line:#3a2f4d;--accent:#b9a2f2}}
+body{background:var(--bg);color:var(--ink);font:15px/1.45 system-ui,sans-serif;margin:0;padding:16px;max-width:1000px;margin:auto}
+h1{margin:0 0 4px}h2{margin:28px 0 8px;color:var(--accent)}
+.bar{position:sticky;top:0;background:var(--bg);padding:8px 0;border-bottom:1px solid var(--line);z-index:2;display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+table.list{width:100%;border-collapse:collapse}table.list>tbody>tr>td{border-bottom:1px solid var(--line);padding:10px 6px;vertical-align:top}
+td.img{width:200px}td.img img{width:180px;border-radius:8px}td.img img.wide{width:200px}
+.kv th{text-align:left;color:var(--soft);font-weight:600;padding:2px 10px 2px 0;white-space:nowrap;vertical-align:top}.kv td{padding:2px 0}
+.id{color:var(--soft);font-size:12px}.unc{background:#fff1d6;color:#9a5b00;padding:6px 8px;border-radius:6px;font-size:13px}
+.ok{display:inline-flex;gap:6px;margin-top:6px;font-weight:600}.note{display:block;width:100%;margin-top:4px;padding:5px 8px;border:1px solid var(--line);border-radius:6px;background:var(--card);color:var(--ink)}
+code{font-size:12px;word-break:break-all}button{padding:6px 12px;border-radius:8px;border:0;background:var(--accent);color:#fff;font-weight:700;cursor:pointer}
+@media (max-width:600px){td.img{width:120px}td.img img,td.img img.wide{width:110px}}
+</style></head><body>
+<h1>Revisione delle 88 carte trascritte</h1>
+<p>Confronta ogni immagine con i dati che usa il bot. Spunta "corretto" o scrivi una nota. Le spunte restano salvate in questo browser; con il pulsante copi il riepilogo da mandare.</p>
+<div class="bar"><span id="count"></span><button id="copy">Copia riepilogo</button></div>
+<h2>Tabellone</h2><table class="kv">
+<tr><th>Fondanti</th><td>2 spazi, offerta ≥ costo + 3</td></tr>
+<tr><th>Principali</th><td>5 spazi</td></tr>
+<tr><th>Provvisori</th><td>1: soldi · 2: promessa · 3: — · 4: risoluzione · 5: allocazione</td></tr>
+<tr><th>Tensione</th><td>0: partenza · 1: soldi · 2: risoluzione · 3: colpo · 4: risoluzione · 5: soldi · 6: risoluzione · 7: soldi · 8: sconfitta</td></tr></table>
+<img src="../cards/board/board-1.png" style="max-width:100%;margin-top:8px;border-radius:8px">
+<h2>Progetti (39)</h2><table class="list"><tbody>
+<tr id="p01">
+  <td class="img"><img src="../public/cards/p-01.jpg" class="wide" loading="lazy" alt=""></td>
+  <td><table class="kv"><tr><th>Nome</th><td><b>Corsi cittadini di artigianato</b> <span class="id">p01</span></td></tr><tr><th>Costo</th><td>2</td></tr><tr><th>Risorsa</th><td>1 Economia e Welfare</td></tr><tr><th>Icone</th><td>Pubblico · Preservazione · Innovazione</td></tr><tr><th>Effetto</th><td>—</td></tr></table>
+  
+  <label class="ok"><input type="checkbox" data-id="p01"> corretto</label>
+  <input class="note" data-note="p01" placeholder="nota (se c'è un errore)"></td>
+</tr>
+<tr id="p02">
+  <td class="img"><img src="../public/cards/p-02.jpg" class="wide" loading="lazy" alt=""></td>
+  <td><table class="kv"><tr><th>Nome</th><td><b>Contributi per asili nido aziendali</b> <span class="id">p02</span></td></tr><tr><th>Costo</th><td>3</td></tr><tr><th>Risorsa</th><td>1 Economia e Welfare</td></tr><tr><th>Icone</th><td>Privato · Preservazione · Tradizione</td></tr><tr><th>Effetto</th><td>—</td></tr></table>
+  
+  <label class="ok"><input type="checkbox" data-id="p02"> corretto</label>
+  <input class="note" data-note="p02" placeholder="nota (se c'è un errore)"></td>
+</tr>
+<tr id="p03">
+  <td class="img"><img src="../public/cards/p-03.jpg" class="wide" loading="lazy" alt=""></td>
+  <td><table class="kv"><tr><th>Nome</th><td><b>Rete stradale</b> <span class="id">p03</span></td></tr><tr><th>Costo</th><td>4</td></tr><tr><th>Risorsa</th><td>2 Economia e Welfare</td></tr><tr><th>Icone</th><td>Pubblico · Consumo · Tradizione</td></tr><tr><th>Effetto</th><td>Allocazione di Risorse (batteria verde)</td></tr></table>
+  <p class="unc">⚠︎ Icona batteria verde (non presente nella legenda degli effetti delle carte del regolamento): corrisponde all'effetto 'Allocazione di Risorse' degli spazi provvisori del tabellone (regolamento p.10 e p.14).</p>
+  <label class="ok"><input type="checkbox" data-id="p03"> corretto</label>
+  <input class="note" data-note="p03" placeholder="nota (se c'è un errore)"></td>
+</tr>
+<tr id="p04">
+  <td class="img"><img src="../public/cards/p-04.jpg" class="wide" loading="lazy" alt=""></td>
+  <td><table class="kv"><tr><th>Nome</th><td><b>Università private</b> <span class="id">p04</span></td></tr><tr><th>Costo</th><td>9</td></tr><tr><th>Risorsa</th><td>3 Economia e Welfare</td></tr><tr><th>Icone</th><td>Privato · Preservazione · Tradizione</td></tr><tr><th>Effetto</th><td>Aumenta la Tensione Sociale (teschio)</td></tr></table>
+  
+  <label class="ok"><input type="checkbox" data-id="p04"> corretto</label>
+  <input class="note" data-note="p04" placeholder="nota (se c'è un errore)"></td>
+</tr>
+<tr id="p05">
+  <td class="img"><img src="../public/cards/p-05.jpg" class="wide" loading="lazy" alt=""></td>
+  <td><table class="kv"><tr><th>Nome</th><td><b>Digitalizzazione delle imprese</b> <span class="id">p05</span></td></tr><tr><th>Costo</th><td>7</td></tr><tr><th>Risorsa</th><td>2 Economia e Welfare</td></tr><tr><th>Icone</th><td>Privato · Preservazione · Innovazione</td></tr><tr><th>Effetto</th><td>Allocazione di Risorse (batteria verde)</td></tr></table>
+  <p class="unc">⚠︎ Icona batteria verde (non presente nella legenda degli effetti delle carte del regolamento): corrisponde all'effetto 'Allocazione di Risorse' degli spazi provvisori del tabellone (regolamento p.10 e p.14).</p>
+  <label class="ok"><input type="checkbox" data-id="p05"> corretto</label>
+  <input class="note" data-note="p05" placeholder="nota (se c'è un errore)"></td>
+</tr>
+<tr id="p06">
+  <td class="img"><img src="../public/cards/p-06.jpg" class="wide" loading="lazy" alt=""></td>
+  <td><table class="kv"><tr><th>Nome</th><td><b>Polo industriale</b> <span class="id">p06</span></td></tr><tr><th>Costo</th><td>10</td></tr><tr><th>Risorsa</th><td>3 Economia e Welfare</td></tr><tr><th>Icone</th><td>Privato · Consumo · Tradizione</td></tr><tr><th>Effetto</th><td>Nuova linea politica (freccia verde)</td></tr></table>
+  
+  <label class="ok"><input type="checkbox" data-id="p06"> corretto</label>
+  <input class="note" data-note="p06" placeholder="nota (se c'è un errore)"></td>
+</tr>
+<tr id="p07">
+  <td class="img"><img src="../public/cards/p-07.jpg" class="wide" loading="lazy" alt=""></td>
+  <td><table class="kv"><tr><th>Nome</th><td><b>Cooperative economiche</b> <span class="id">p07</span></td></tr><tr><th>Costo</th><td>8</td></tr><tr><th>Risorsa</th><td>3 Economia e Welfare</td></tr><tr><th>Icone</th><td>Privato · Preservazione · Tradizione</td></tr><tr><th>Effetto</th><td>—</td></tr></table>
+  
+  <label class="ok"><input type="checkbox" data-id="p07"> corretto</label>
+  <input class="note" data-note="p07" placeholder="nota (se c'è un errore)"></td>
+</tr>
+<tr id="p08">
+  <td class="img"><img src="../public/cards/p-08.jpg" class="wide" loading="lazy" alt=""></td>
+  <td><table class="kv"><tr><th>Nome</th><td><b>Reddito di base universale</b> <span class="id">p08</span></td></tr><tr><th>Costo</th><td>10</td></tr><tr><th>Risorsa</th><td>4 Economia e Welfare</td></tr><tr><th>Icone</th><td>Pubblico · Preservazione · Innovazione</td></tr><tr><th>Effetto</th><td>Cambio di priorità (freccia rossa)</td></tr></table>
+  
+  <label class="ok"><input type="checkbox" data-id="p08"> corretto</label>
+  <input class="note" data-note="p08" placeholder="nota (se c'è un errore)"></td>
+</tr>
+<tr id="p09">
+  <td class="img"><img src="../public/cards/p-09.jpg" class="wide" loading="lazy" alt=""></td>
+  <td><table class="kv"><tr><th>Nome</th><td><b>Sistema pensionistico privato</b> <span class="id">p09</span></td></tr><tr><th>Costo</th><td>12</td></tr><tr><th>Risorsa</th><td>4 Economia e Welfare</td></tr><tr><th>Icone</th><td>Privato · Preservazione · Tradizione</td></tr><tr><th>Effetto</th><td>—</td></tr></table>
+  
+  <label class="ok"><input type="checkbox" data-id="p09"> corretto</label>
+  <input class="note" data-note="p09" placeholder="nota (se c'è un errore)"></td>
+</tr>
+<tr id="p10">
+  <td class="img"><img src="../public/cards/p-10.jpg" class="wide" loading="lazy" alt=""></td>
+  <td><table class="kv"><tr><th>Nome</th><td><b>Istituzione di una borsa finanziaria</b> <span class="id">p10</span></td></tr><tr><th>Costo</th><td>5</td></tr><tr><th>Risorsa</th><td>2 Economia e Welfare</td></tr><tr><th>Icone</th><td>Privato · Consumo · Innovazione</td></tr><tr><th>Effetto</th><td>Colpo di scena (sirena)</td></tr></table>
+  
+  <label class="ok"><input type="checkbox" data-id="p10"> corretto</label>
+  <input class="note" data-note="p10" placeholder="nota (se c'è un errore)"></td>
+</tr>
+<tr id="p11">
+  <td class="img"><img src="../public/cards/p-11.jpg" class="wide" loading="lazy" alt=""></td>
+  <td><table class="kv"><tr><th>Nome</th><td><b>Aumento delle pensioni pubbliche</b> <span class="id">p11</span></td></tr><tr><th>Costo</th><td>6</td></tr><tr><th>Risorsa</th><td>2 Economia e Welfare</td></tr><tr><th>Icone</th><td>Pubblico · Preservazione · Tradizione</td></tr><tr><th>Effetto</th><td>—</td></tr></table>
+  
+  <label class="ok"><input type="checkbox" data-id="p11"> corretto</label>
+  <input class="note" data-note="p11" placeholder="nota (se c'è un errore)"></td>
+</tr>
+<tr id="p12">
+  <td class="img"><img src="../public/cards/p-12.jpg" class="wide" loading="lazy" alt=""></td>
+  <td><table class="kv"><tr><th>Nome</th><td><b>Mutui garantiti dallo Stato per giovani e famiglie</b> <span class="id">p12</span></td></tr><tr><th>Costo</th><td>4</td></tr><tr><th>Risorsa</th><td>2 Economia e Welfare</td></tr><tr><th>Icone</th><td>Pubblico · Preservazione · Innovazione</td></tr><tr><th>Effetto</th><td>Colpo di scena (sirena)</td></tr></table>
+  
+  <label class="ok"><input type="checkbox" data-id="p12"> corretto</label>
+  <input class="note" data-note="p12" placeholder="nota (se c'è un errore)"></td>
+</tr>
+<tr id="p13">
+  <td class="img"><img src="../public/cards/p-13.jpg" class="wide" loading="lazy" alt=""></td>
+  <td><table class="kv"><tr><th>Nome</th><td><b>Banca di microcredito</b> <span class="id">p13</span></td></tr><tr><th>Costo</th><td>7</td></tr><tr><th>Risorsa</th><td>3 Economia e Welfare</td></tr><tr><th>Icone</th><td>Privato · Consumo · Innovazione</td></tr><tr><th>Effetto</th><td>Colpo di scena (sirena)</td></tr></table>
+  
+  <label class="ok"><input type="checkbox" data-id="p13"> corretto</label>
+  <input class="note" data-note="p13" placeholder="nota (se c'è un errore)"></td>
+</tr>
+<tr id="p14">
+  <td class="img"><img src="../public/cards/p-14.jpg" class="wide" loading="lazy" alt=""></td>
+  <td><table class="kv"><tr><th>Nome</th><td><b>Potenziamento energie rinnovabili</b> <span class="id">p14</span></td></tr><tr><th>Costo</th><td>7</td></tr><tr><th>Risorsa</th><td>3 Tecnologia e Sopravvivenza</td></tr><tr><th>Icone</th><td>Pubblico · Preservazione · Innovazione</td></tr><tr><th>Effetto</th><td>Colpo di scena (sirena)</td></tr></table>
+  
+  <label class="ok"><input type="checkbox" data-id="p14"> corretto</label>
+  <input class="note" data-note="p14" placeholder="nota (se c'è un errore)"></td>
+</tr>
+<tr id="p15">
+  <td class="img"><img src="../public/cards/p-15.jpg" class="wide" loading="lazy" alt=""></td>
+  <td><table class="kv"><tr><th>Nome</th><td><b>Sviluppo di una rete elettrica capillare</b> <span class="id">p15</span></td></tr><tr><th>Costo</th><td>10</td></tr><tr><th>Risorsa</th><td>4 Tecnologia e Sopravvivenza</td></tr><tr><th>Icone</th><td>Privato · Consumo · Tradizione</td></tr><tr><th>Effetto</th><td>—</td></tr></table>
+  
+  <label class="ok"><input type="checkbox" data-id="p15"> corretto</label>
+  <input class="note" data-note="p15" placeholder="nota (se c'è un errore)"></td>
+</tr>
+<tr id="p16">
+  <td class="img"><img src="../public/cards/p-16.jpg" class="wide" loading="lazy" alt=""></td>
+  <td><table class="kv"><tr><th>Nome</th><td><b>Costruzione data center per lo sviluppo dell'AI</b> <span class="id">p16</span></td></tr><tr><th>Costo</th><td>8</td></tr><tr><th>Risorsa</th><td>3 Tecnologia e Sopravvivenza</td></tr><tr><th>Icone</th><td>Privato · Consumo · Innovazione</td></tr><tr><th>Effetto</th><td>—</td></tr></table>
+  
+  <label class="ok"><input type="checkbox" data-id="p16"> corretto</label>
+  <input class="note" data-note="p16" placeholder="nota (se c'è un errore)"></td>
+</tr>
+<tr id="p17">
+  <td class="img"><img src="../public/cards/p-17.jpg" class="wide" loading="lazy" alt=""></td>
+  <td><table class="kv"><tr><th>Nome</th><td><b>Allevamenti intensivi</b> <span class="id">p17</span></td></tr><tr><th>Costo</th><td>2</td></tr><tr><th>Risorsa</th><td>2 Tecnologia e Sopravvivenza</td></tr><tr><th>Icone</th><td>Privato · Consumo · Tradizione</td></tr><tr><th>Effetto</th><td>Colpo di scena (sirena)</td></tr></table>
+  
+  <label class="ok"><input type="checkbox" data-id="p17"> corretto</label>
+  <input class="note" data-note="p17" placeholder="nota (se c'è un errore)"></td>
+</tr>
+<tr id="p18">
+  <td class="img"><img src="../public/cards/p-18.jpg" class="wide" loading="lazy" alt=""></td>
+  <td><table class="kv"><tr><th>Nome</th><td><b>Wifi-pubblico e diffuso</b> <span class="id">p18</span></td></tr><tr><th>Costo</th><td>1</td></tr><tr><th>Risorsa</th><td>2 Tecnologia e Sopravvivenza</td></tr><tr><th>Icone</th><td>Pubblico · Consumo · Tradizione</td></tr><tr><th>Effetto</th><td>Doppio Colpo di scena (due sirene)</td></tr></table>
+  
+  <label class="ok"><input type="checkbox" data-id="p18"> corretto</label>
+  <input class="note" data-note="p18" placeholder="nota (se c'è un errore)"></td>
+</tr>
+<tr id="p19">
+  <td class="img"><img src="../public/cards/p-19.jpg" class="wide" loading="lazy" alt=""></td>
+  <td><table class="kv"><tr><th>Nome</th><td><b>Selezione ottimizzata delle sementi</b> <span class="id">p19</span></td></tr><tr><th>Costo</th><td>2</td></tr><tr><th>Risorsa</th><td>1 Tecnologia e Sopravvivenza</td></tr><tr><th>Icone</th><td>Privato · Preservazione · Tradizione</td></tr><tr><th>Effetto</th><td>—</td></tr></table>
+  
+  <label class="ok"><input type="checkbox" data-id="p19"> corretto</label>
+  <input class="note" data-note="p19" placeholder="nota (se c'è un errore)"></td>
+</tr>
+<tr id="p20">
+  <td class="img"><img src="../public/cards/p-20.jpg" class="wide" loading="lazy" alt=""></td>
+  <td><table class="kv"><tr><th>Nome</th><td><b>Efficientamento delle batterie per auto elettriche</b> <span class="id">p20</span></td></tr><tr><th>Costo</th><td>2</td></tr><tr><th>Risorsa</th><td>1 Tecnologia e Sopravvivenza</td></tr><tr><th>Icone</th><td>Privato · Consumo · Innovazione</td></tr><tr><th>Effetto</th><td>—</td></tr></table>
+  
+  <label class="ok"><input type="checkbox" data-id="p20"> corretto</label>
+  <input class="note" data-note="p20" placeholder="nota (se c'è un errore)"></td>
+</tr>
+<tr id="p21">
+  <td class="img"><img src="../public/cards/p-21.jpg" class="wide" loading="lazy" alt=""></td>
+  <td><table class="kv"><tr><th>Nome</th><td><b>Ricerca sulla fusione nucleare</b> <span class="id">p21</span></td></tr><tr><th>Costo</th><td>8</td></tr><tr><th>Risorsa</th><td>3 Tecnologia e Sopravvivenza</td></tr><tr><th>Icone</th><td>Pubblico · Preservazione · Innovazione</td></tr><tr><th>Effetto</th><td>—</td></tr></table>
+  
+  <label class="ok"><input type="checkbox" data-id="p21"> corretto</label>
+  <input class="note" data-note="p21" placeholder="nota (se c'è un errore)"></td>
+</tr>
+<tr id="p22">
+  <td class="img"><img src="../public/cards/p-22.jpg" class="wide" loading="lazy" alt=""></td>
+  <td><table class="kv"><tr><th>Nome</th><td><b>Centrale a carbone statale</b> <span class="id">p22</span></td></tr><tr><th>Costo</th><td>4</td></tr><tr><th>Risorsa</th><td>3 Tecnologia e Sopravvivenza</td></tr><tr><th>Icone</th><td>Pubblico · Consumo · Tradizione</td></tr><tr><th>Effetto</th><td>Doppio Colpo di scena (due sirene)</td></tr></table>
+  
+  <label class="ok"><input type="checkbox" data-id="p22"> corretto</label>
+  <input class="note" data-note="p22" placeholder="nota (se c'è un errore)"></td>
+</tr>
+<tr id="p23">
+  <td class="img"><img src="../public/cards/p-23.jpg" class="wide" loading="lazy" alt=""></td>
+  <td><table class="kv"><tr><th>Nome</th><td><b>Pozzi petroliferi statali</b> <span class="id">p23</span></td></tr><tr><th>Costo</th><td>6</td></tr><tr><th>Risorsa</th><td>2 Tecnologia e Sopravvivenza</td></tr><tr><th>Icone</th><td>Pubblico · Consumo · Tradizione</td></tr><tr><th>Effetto</th><td>Allocazione di Risorse (batteria verde)</td></tr></table>
+  <p class="unc">⚠︎ Icona batteria verde (non presente nella legenda degli effetti delle carte del regolamento): corrisponde all'effetto 'Allocazione di Risorse' degli spazi provvisori del tabellone (regolamento p.10 e p.14).</p>
+  <label class="ok"><input type="checkbox" data-id="p23"> corretto</label>
+  <input class="note" data-note="p23" placeholder="nota (se c'è un errore)"></td>
+</tr>
+<tr id="p24">
+  <td class="img"><img src="../public/cards/p-24.jpg" class="wide" loading="lazy" alt=""></td>
+  <td><table class="kv"><tr><th>Nome</th><td><b>Agricoltura idroponica domestica</b> <span class="id">p24</span></td></tr><tr><th>Costo</th><td>2</td></tr><tr><th>Risorsa</th><td>1 Tecnologia e Sopravvivenza</td></tr><tr><th>Icone</th><td>Privato · Preservazione · Innovazione</td></tr><tr><th>Effetto</th><td>—</td></tr></table>
+  
+  <label class="ok"><input type="checkbox" data-id="p24"> corretto</label>
+  <input class="note" data-note="p24" placeholder="nota (se c'è un errore)"></td>
+</tr>
+<tr id="p25">
+  <td class="img"><img src="../public/cards/p-25.jpg" class="wide" loading="lazy" alt=""></td>
+  <td><table class="kv"><tr><th>Nome</th><td><b>Centri di ricerca di nuovi medicinali</b> <span class="id">p25</span></td></tr><tr><th>Costo</th><td>7</td></tr><tr><th>Risorsa</th><td>3 Tecnologia e Sopravvivenza</td></tr><tr><th>Icone</th><td>Pubblico · Consumo · Innovazione</td></tr><tr><th>Effetto</th><td>Colpo di scena (sirena)</td></tr></table>
+  
+  <label class="ok"><input type="checkbox" data-id="p25"> corretto</label>
+  <input class="note" data-note="p25" placeholder="nota (se c'è un errore)"></td>
+</tr>
+<tr id="p26">
+  <td class="img"><img src="../public/cards/p-26.jpg" class="wide" loading="lazy" alt=""></td>
+  <td><table class="kv"><tr><th>Nome</th><td><b>Computer quantistici</b> <span class="id">p26</span></td></tr><tr><th>Costo</th><td>5</td></tr><tr><th>Risorsa</th><td>3 Tecnologia e Sopravvivenza</td></tr><tr><th>Icone</th><td>Privato · Consumo · Innovazione</td></tr><tr><th>Effetto</th><td>Cambio di priorità (freccia rossa)</td></tr></table>
+  
+  <label class="ok"><input type="checkbox" data-id="p26"> corretto</label>
+  <input class="note" data-note="p26" placeholder="nota (se c'è un errore)"></td>
+</tr>
+<tr id="p27">
+  <td class="img"><img src="../public/cards/p-27.jpg" class="wide" loading="lazy" alt=""></td>
+  <td><table class="kv"><tr><th>Nome</th><td><b>Piano di difesa anti-crisi</b> <span class="id">p27</span></td></tr><tr><th>Costo</th><td>10</td></tr><tr><th>Risorsa</th><td>2 Difesa e Sicurezza</td></tr><tr><th>Icone</th><td>Pubblico · Preservazione · Innovazione</td></tr><tr><th>Effetto</th><td>Risoluzione Evento (!)</td></tr></table>
+  
+  <label class="ok"><input type="checkbox" data-id="p27"> corretto</label>
+  <input class="note" data-note="p27" placeholder="nota (se c'è un errore)"></td>
+</tr>
+<tr id="p28">
+  <td class="img"><img src="../public/cards/p-28.jpg" class="wide" loading="lazy" alt=""></td>
+  <td><table class="kv"><tr><th>Nome</th><td><b>Società di spionaggio</b> <span class="id">p28</span></td></tr><tr><th>Costo</th><td>4</td></tr><tr><th>Risorsa</th><td>1 Difesa e Sicurezza</td></tr><tr><th>Icone</th><td>Privato · Preservazione · Tradizione</td></tr><tr><th>Effetto</th><td>Aumenta la Tensione Sociale (teschio)</td></tr></table>
+  
+  <label class="ok"><input type="checkbox" data-id="p28"> corretto</label>
+  <input class="note" data-note="p28" placeholder="nota (se c'è un errore)"></td>
+</tr>
+<tr id="p29">
+  <td class="img"><img src="../public/cards/p-29.jpg" class="wide" loading="lazy" alt=""></td>
+  <td><table class="kv"><tr><th>Nome</th><td><b>Satelliti militari</b> <span class="id">p29</span></td></tr><tr><th>Costo</th><td>10</td></tr><tr><th>Risorsa</th><td>4 Difesa e Sicurezza</td></tr><tr><th>Icone</th><td>Privato · Consumo · Innovazione</td></tr><tr><th>Effetto</th><td>Cambio di priorità (freccia rossa)</td></tr></table>
+  
+  <label class="ok"><input type="checkbox" data-id="p29"> corretto</label>
+  <input class="note" data-note="p29" placeholder="nota (se c'è un errore)"></td>
+</tr>
+<tr id="p30">
+  <td class="img"><img src="../public/cards/p-30.jpg" class="wide" loading="lazy" alt=""></td>
+  <td><table class="kv"><tr><th>Nome</th><td><b>Controllo delle frontiere</b> <span class="id">p30</span></td></tr><tr><th>Costo</th><td>6</td></tr><tr><th>Risorsa</th><td>2 Difesa e Sicurezza</td></tr><tr><th>Icone</th><td>Pubblico · Consumo · Tradizione</td></tr><tr><th>Effetto</th><td>—</td></tr></table>
+  
+  <label class="ok"><input type="checkbox" data-id="p30"> corretto</label>
+  <input class="note" data-note="p30" placeholder="nota (se c'è un errore)"></td>
+</tr>
+<tr id="p31">
+  <td class="img"><img src="../public/cards/p-31.jpg" class="wide" loading="lazy" alt=""></td>
+  <td><table class="kv"><tr><th>Nome</th><td><b>Artiglieria di difesa orbitale</b> <span class="id">p31</span></td></tr><tr><th>Costo</th><td>12</td></tr><tr><th>Risorsa</th><td>3 Difesa e Sicurezza</td></tr><tr><th>Icone</th><td>Pubblico · Consumo · Innovazione</td></tr><tr><th>Effetto</th><td>Nuova linea politica (freccia verde)</td></tr></table>
+  
+  <label class="ok"><input type="checkbox" data-id="p31"> corretto</label>
+  <input class="note" data-note="p31" placeholder="nota (se c'è un errore)"></td>
+</tr>
+<tr id="p32">
+  <td class="img"><img src="../public/cards/p-32.jpg" class="wide" loading="lazy" alt=""></td>
+  <td><table class="kv"><tr><th>Nome</th><td><b>Caserme di polizia</b> <span class="id">p32</span></td></tr><tr><th>Costo</th><td>3</td></tr><tr><th>Risorsa</th><td>1 Difesa e Sicurezza</td></tr><tr><th>Icone</th><td>Pubblico · Consumo · Tradizione</td></tr><tr><th>Effetto</th><td>—</td></tr></table>
+  
+  <label class="ok"><input type="checkbox" data-id="p32"> corretto</label>
+  <input class="note" data-note="p32" placeholder="nota (se c'è un errore)"></td>
+</tr>
+<tr id="p33">
+  <td class="img"><img src="../public/cards/p-33.jpg" class="wide" loading="lazy" alt=""></td>
+  <td><table class="kv"><tr><th>Nome</th><td><b>Programmi di addestramento militare cittadino</b> <span class="id">p33</span></td></tr><tr><th>Costo</th><td>6</td></tr><tr><th>Risorsa</th><td>2 Difesa e Sicurezza</td></tr><tr><th>Icone</th><td>Pubblico · Preservazione · Tradizione</td></tr><tr><th>Effetto</th><td>—</td></tr></table>
+  
+  <label class="ok"><input type="checkbox" data-id="p33"> corretto</label>
+  <input class="note" data-note="p33" placeholder="nota (se c'è un errore)"></td>
+</tr>
+<tr id="p34">
+  <td class="img"><img src="../public/cards/p-34.jpg" class="wide" loading="lazy" alt=""></td>
+  <td><table class="kv"><tr><th>Nome</th><td><b>Centri di detenzione extra-territoriali</b> <span class="id">p34</span></td></tr><tr><th>Costo</th><td>9</td></tr><tr><th>Risorsa</th><td>2 Difesa e Sicurezza</td></tr><tr><th>Icone</th><td>Privato · Consumo · Tradizione</td></tr><tr><th>Effetto</th><td>Risoluzione Evento (!)</td></tr></table>
+  
+  <label class="ok"><input type="checkbox" data-id="p34"> corretto</label>
+  <input class="note" data-note="p34" placeholder="nota (se c'è un errore)"></td>
+</tr>
+<tr id="p35">
+  <td class="img"><img src="../public/cards/p-35.jpg" class="wide" loading="lazy" alt=""></td>
+  <td><table class="kv"><tr><th>Nome</th><td><b>Ricerca di armi high-tech</b> <span class="id">p35</span></td></tr><tr><th>Costo</th><td>7</td></tr><tr><th>Risorsa</th><td>2 Difesa e Sicurezza</td></tr><tr><th>Icone</th><td>Privato · Consumo · Innovazione</td></tr><tr><th>Effetto</th><td>Allocazione di Risorse (batteria verde)</td></tr></table>
+  <p class="unc">⚠︎ Icona batteria verde (non presente nella legenda degli effetti delle carte del regolamento): corrisponde all'effetto 'Allocazione di Risorse' degli spazi provvisori del tabellone (regolamento p.10 e p.14).</p>
+  <label class="ok"><input type="checkbox" data-id="p35"> corretto</label>
+  <input class="note" data-note="p35" placeholder="nota (se c'è un errore)"></td>
+</tr>
+<tr id="p36">
+  <td class="img"><img src="../public/cards/p-36.jpg" class="wide" loading="lazy" alt=""></td>
+  <td><table class="kv"><tr><th>Nome</th><td><b>Richiesta di salvataggio interplanetario</b> <span class="id">p36</span></td></tr><tr><th>Costo</th><td>12</td></tr><tr><th>Risorsa</th><td>4 Difesa e Sicurezza</td></tr><tr><th>Icone</th><td>Pubblico · Preservazione · Innovazione</td></tr><tr><th>Effetto</th><td>—</td></tr></table>
+  
+  <label class="ok"><input type="checkbox" data-id="p36"> corretto</label>
+  <input class="note" data-note="p36" placeholder="nota (se c'è un errore)"></td>
+</tr>
+<tr id="p37">
+  <td class="img"><img src="../public/cards/p-37.jpg" class="wide" loading="lazy" alt=""></td>
+  <td><table class="kv"><tr><th>Nome</th><td><b>Corsi di peacekeeping</b> <span class="id">p37</span></td></tr><tr><th>Costo</th><td>1</td></tr><tr><th>Risorsa</th><td>1 Difesa e Sicurezza</td></tr><tr><th>Icone</th><td>Pubblico · Preservazione · Tradizione</td></tr><tr><th>Effetto</th><td>—</td></tr></table>
+  
+  <label class="ok"><input type="checkbox" data-id="p37"> corretto</label>
+  <input class="note" data-note="p37" placeholder="nota (se c'è un errore)"></td>
+</tr>
+<tr id="p38">
+  <td class="img"><img src="../public/cards/p-38.jpg" class="wide" loading="lazy" alt=""></td>
+  <td><table class="kv"><tr><th>Nome</th><td><b>Istituzione dell'alleanza M.O.R.T.O.</b> <span class="id">p38</span></td></tr><tr><th>Costo</th><td>10</td></tr><tr><th>Risorsa</th><td>3 Difesa e Sicurezza</td></tr><tr><th>Icone</th><td>Pubblico · Preservazione · Innovazione</td></tr><tr><th>Effetto</th><td>Aumenta la Tensione Sociale (teschio)</td></tr></table>
+  <p class="unc">⚠︎ Il nome include il sottotitolo stampato '(Missione Operativa per il Rispetto del Trattato Orbitale)'. La carta mostra chiaramente costo 10, ma l'esempio di punteggio del regolamento la elenca tra i progetti con costo inferiore a 5 (errore del regolamento).</p>
+  <label class="ok"><input type="checkbox" data-id="p38"> corretto</label>
+  <input class="note" data-note="p38" placeholder="nota (se c'è un errore)"></td>
+</tr>
+<tr id="p39">
+  <td class="img"><img src="../public/cards/p-39.jpg" class="wide" loading="lazy" alt=""></td>
+  <td><table class="kv"><tr><th>Nome</th><td><b>Sistema di sorveglianza biometrica</b> <span class="id">p39</span></td></tr><tr><th>Costo</th><td>4</td></tr><tr><th>Risorsa</th><td>1 Difesa e Sicurezza</td></tr><tr><th>Icone</th><td>Privato · Consumo · Innovazione</td></tr><tr><th>Effetto</th><td>Risoluzione Evento (!)</td></tr></table>
+  
+  <label class="ok"><input type="checkbox" data-id="p39"> corretto</label>
+  <input class="note" data-note="p39" placeholder="nota (se c'è un errore)"></td>
+</tr></tbody></table>
+<h2>Eventi (23)</h2><table class="list"><tbody>
+<tr id="e01">
+  <td class="img"><img src="../public/cards/e-01.jpg" class="" loading="lazy" alt=""></td>
+  <td><table class="kv"><tr><th>Nome</th><td><b>Costo della vita in aumento</b> <span class="id">e01</span></td></tr><tr><th>Richiede</th><td>5 Economia e Welfare</td></tr><tr><th>Effetto se risolto</th><td>Aumenta la Tensione Sociale (teschio)</td></tr><tr><th>Colpo di scena</th><td>Scarta tutti i PROGETTI e gli EVENTI rivelati e rivelane altrettanti</td></tr><tr><th>Codice motore</th><td><code>scarta_rivelati_tutti</code></td></tr></table>
+  
+  <label class="ok"><input type="checkbox" data-id="e01"> corretto</label>
+  <input class="note" data-note="e01" placeholder="nota (se c'è un errore)"></td>
+</tr>
+<tr id="e02">
+  <td class="img"><img src="../public/cards/e-02.jpg" class="" loading="lazy" alt=""></td>
+  <td><table class="kv"><tr><th>Nome</th><td><b>Inverno demografico</b> <span class="id">e02</span></td></tr><tr><th>Richiede</th><td>7 Economia e Welfare</td></tr><tr><th>Effetto se risolto</th><td>—</td></tr><tr><th>Colpo di scena</th><td>Il Leader sceglie un PROGETTO PRINCIPALE approvato da scartare</td></tr><tr><th>Codice motore</th><td><code>scarta_principale_scelta</code></td></tr></table>
+  
+  <label class="ok"><input type="checkbox" data-id="e02"> corretto</label>
+  <input class="note" data-note="e02" placeholder="nota (se c'è un errore)"></td>
+</tr>
+<tr id="e03">
+  <td class="img"><img src="../public/cards/e-03.jpg" class="" loading="lazy" alt=""></td>
+  <td><table class="kv"><tr><th>Nome</th><td><b>Esplode la disoccupazione</b> <span class="id">e03</span></td></tr><tr><th>Richiede</th><td>9 Economia e Welfare</td></tr><tr><th>Effetto se risolto</th><td>Nuova linea politica (freccia verde)</td></tr><tr><th>Colpo di scena</th><td>Tutti i giocatori ottengono 4 MONETE</td></tr><tr><th>Codice motore</th><td><code>tutti_piu_4</code></td></tr></table>
+  
+  <label class="ok"><input type="checkbox" data-id="e03"> corretto</label>
+  <input class="note" data-note="e03" placeholder="nota (se c'è un errore)"></td>
+</tr>
+<tr id="e04">
+  <td class="img"><img src="../public/cards/e-04.jpg" class="" loading="lazy" alt=""></td>
+  <td><table class="kv"><tr><th>Nome</th><td><b>Blackout frequenti</b> <span class="id">e04</span></td></tr><tr><th>Richiede</th><td>5 Tecnologia e Sopravvivenza</td></tr><tr><th>Effetto se risolto</th><td>Colpo di scena (sirena)</td></tr><tr><th>Colpo di scena</th><td>Posiziona il segnalino “Mancanza di Risorse” sui 3 PROGETTI PRINCIPALI più a sinistra del tabellone</td></tr><tr><th>Codice motore</th><td><code>mancanza_3_principali_sinistra</code></td></tr></table>
+  <p class="unc">⚠︎ Nel colpo di scena 'Mancanza di Risorse' è un'icona (batteria scarica rossa, segnalino Mancanza di Risorse come in reg-17), non testo stampato.</p>
+  <label class="ok"><input type="checkbox" data-id="e04"> corretto</label>
+  <input class="note" data-note="e04" placeholder="nota (se c'è un errore)"></td>
+</tr>
+<tr id="e05">
+  <td class="img"><img src="../public/cards/e-05.jpg" class="" loading="lazy" alt=""></td>
+  <td><table class="kv"><tr><th>Nome</th><td><b>Mancanza di produttività</b> <span class="id">e05</span></td></tr><tr><th>Richiede</th><td>7 Tecnologia e Sopravvivenza</td></tr><tr><th>Effetto se risolto</th><td>—</td></tr><tr><th>Colpo di scena</th><td>Il Leader pesca la prima Carta del Mazzo Progetti e la sostituisce ad un PROGETTO APPROVATO</td></tr><tr><th>Codice motore</th><td><code>sostituisci_approvato_con_pescato</code></td></tr></table>
+  
+  <label class="ok"><input type="checkbox" data-id="e05"> corretto</label>
+  <input class="note" data-note="e05" placeholder="nota (se c'è un errore)"></td>
+</tr>
+<tr id="e06">
+  <td class="img"><img src="../public/cards/e-06.jpg" class="" loading="lazy" alt=""></td>
+  <td><table class="kv"><tr><th>Nome</th><td><b>Organizzazione di un’Esposizione Universale</b> <span class="id">e06</span></td></tr><tr><th>Richiede</th><td>8 Tecnologia e Sopravvivenza</td></tr><tr><th>Effetto se risolto</th><td>Nuova linea politica (freccia verde)</td></tr><tr><th>Colpo di scena</th><td>Tutti i giocatori perdono 2 MONETE</td></tr><tr><th>Codice motore</th><td><code>tutti_meno_2</code></td></tr></table>
+  
+  <label class="ok"><input type="checkbox" data-id="e06"> corretto</label>
+  <input class="note" data-note="e06" placeholder="nota (se c'è un errore)"></td>
+</tr>
+<tr id="e07">
+  <td class="img"><img src="../public/cards/e-07.jpg" class="" loading="lazy" alt=""></td>
+  <td><table class="kv"><tr><th>Nome</th><td><b>Incidente diplomatico</b> <span class="id">e07</span></td></tr><tr><th>Richiede</th><td>5 Difesa e Sicurezza</td></tr><tr><th>Effetto se risolto</th><td>Colpo di scena (sirena)</td></tr><tr><th>Colpo di scena</th><td>Il Leader deve scegliere tra: - perdere personalmente 5 MONETE; - scartare una CARTA EVENTO dalla sezione Eventi Risolti.</td></tr><tr><th>Codice motore</th><td><code>leader_5_o_scarta_risolto</code></td></tr></table>
+  
+  <label class="ok"><input type="checkbox" data-id="e07"> corretto</label>
+  <input class="note" data-note="e07" placeholder="nota (se c'è un errore)"></td>
+</tr>
+<tr id="e08">
+  <td class="img"><img src="../public/cards/e-08.jpg" class="" loading="lazy" alt=""></td>
+  <td><table class="kv"><tr><th>Nome</th><td><b>Disordini lungo i confini</b> <span class="id">e08</span></td></tr><tr><th>Richiede</th><td>6 Difesa e Sicurezza</td></tr><tr><th>Effetto se risolto</th><td>—</td></tr><tr><th>Colpo di scena</th><td>Scarta tutte le CARTE EVENTO rivelate e rivelane altrettante</td></tr><tr><th>Codice motore</th><td><code>scarta_eventi_rivelati</code></td></tr></table>
+  
+  <label class="ok"><input type="checkbox" data-id="e08"> corretto</label>
+  <input class="note" data-note="e08" placeholder="nota (se c'è un errore)"></td>
+</tr>
+<tr id="e09">
+  <td class="img"><img src="../public/cards/e-09.jpg" class="" loading="lazy" alt=""></td>
+  <td><table class="kv"><tr><th>Nome</th><td><b>Guerra civile</b> <span class="id">e09</span></td></tr><tr><th>Richiede</th><td>9 Difesa e Sicurezza</td></tr><tr><th>Effetto se risolto</th><td>Nuova linea politica (freccia verde)</td></tr><tr><th>Colpo di scena</th><td>Aumenta la TENSIONE SOCIALE di 1 (senza attivare Effetti Speciali né scartare Carte)</td></tr><tr><th>Codice motore</th><td><code>tensione_secca</code></td></tr></table>
+  
+  <label class="ok"><input type="checkbox" data-id="e09"> corretto</label>
+  <input class="note" data-note="e09" placeholder="nota (se c'è un errore)"></td>
+</tr>
+<tr id="e10">
+  <td class="img"><img src="../public/cards/e-10.jpg" class="" loading="lazy" alt=""></td>
+  <td><table class="kv"><tr><th>Nome</th><td><b>Proteste popolari per la mancanza di risorse</b> <span class="id">e10</span></td></tr><tr><th>Richiede</th><td>5 Difesa e Sicurezza + 5 Tecnologia e Sopravvivenza</td></tr><tr><th>Effetto se risolto</th><td>Soldi gratis!</td></tr><tr><th>Colpo di scena</th><td>Il Leader sceglie tra: - Guadagnare personalmente 7 MONETE - Ognuno ottiene 4 MONETE</td></tr><tr><th>Codice motore</th><td><code>leader_7_o_tutti_4</code></td></tr></table>
+  
+  <label class="ok"><input type="checkbox" data-id="e10"> corretto</label>
+  <input class="note" data-note="e10" placeholder="nota (se c'è un errore)"></td>
+</tr>
+<tr id="e11">
+  <td class="img"><img src="../public/cards/e-11.jpg" class="" loading="lazy" alt=""></td>
+  <td><table class="kv"><tr><th>Nome</th><td><b>Corsa al riarmo</b> <span class="id">e11</span></td></tr><tr><th>Richiede</th><td>7 Difesa e Sicurezza + 2 Tecnologia e Sopravvivenza</td></tr><tr><th>Effetto se risolto</th><td>—</td></tr><tr><th>Colpo di scena</th><td>Il Leader sceglie una Carta Progetto PROVVISORIA e, se c’è spazio, la rende PRINCIPALE</td></tr><tr><th>Codice motore</th><td><code>provvisorio_a_principale</code></td></tr></table>
+  
+  <label class="ok"><input type="checkbox" data-id="e11"> corretto</label>
+  <input class="note" data-note="e11" placeholder="nota (se c'è un errore)"></td>
+</tr>
+<tr id="e12">
+  <td class="img"><img src="../public/cards/e-12.jpg" class="" loading="lazy" alt=""></td>
+  <td><table class="kv"><tr><th>Nome</th><td><b>Problemi di approvvigionamento</b> <span class="id">e12</span></td></tr><tr><th>Richiede</th><td>3 Economia e Welfare + 4 Tecnologia e Sopravvivenza</td></tr><tr><th>Effetto se risolto</th><td>Cambio di priorità (freccia rossa)</td></tr><tr><th>Colpo di scena</th><td>Il Leader sceglie una Carta Progetto FONDANTE e, se c’è spazio, la rende PRINCIPALE</td></tr><tr><th>Codice motore</th><td><code>fondante_a_principale</code></td></tr></table>
+  
+  <label class="ok"><input type="checkbox" data-id="e12"> corretto</label>
+  <input class="note" data-note="e12" placeholder="nota (se c'è un errore)"></td>
+</tr>
+<tr id="e13">
+  <td class="img"><img src="../public/cards/e-13.jpg" class="" loading="lazy" alt=""></td>
+  <td><table class="kv"><tr><th>Nome</th><td><b>Forza lavoro non qualificata</b> <span class="id">e13</span></td></tr><tr><th>Richiede</th><td>5 Economia e Welfare + 3 Tecnologia e Sopravvivenza</td></tr><tr><th>Effetto se risolto</th><td>—</td></tr><tr><th>Colpo di scena</th><td>Il Leader può SCAMBIARE LA POSIZIONE di 2 Carte Progetto approvate</td></tr><tr><th>Codice motore</th><td><code>scambia_due</code></td></tr></table>
+  
+  <label class="ok"><input type="checkbox" data-id="e13"> corretto</label>
+  <input class="note" data-note="e13" placeholder="nota (se c'è un errore)"></td>
+</tr>
+<tr id="e14">
+  <td class="img"><img src="../public/cards/e-14.jpg" class="" loading="lazy" alt=""></td>
+  <td><table class="kv"><tr><th>Nome</th><td><b>Aumento delle disuguaglianze economiche</b> <span class="id">e14</span></td></tr><tr><th>Richiede</th><td>3 Difesa e Sicurezza + 5 Economia e Welfare</td></tr><tr><th>Effetto se risolto</th><td>—</td></tr><tr><th>Colpo di scena</th><td>Il Leader deve scegliere tra: - perdere personalmente 5 MONETE - SCARTARE le prime 5 carte del Mazzo Progetti</td></tr><tr><th>Codice motore</th><td><code>leader_5_o_scarta_5_progetti</code></td></tr></table>
+  
+  <label class="ok"><input type="checkbox" data-id="e14"> corretto</label>
+  <input class="note" data-note="e14" placeholder="nota (se c'è un errore)"></td>
+</tr>
+<tr id="e15">
+  <td class="img"><img src="../public/cards/e-15.jpg" class="" loading="lazy" alt=""></td>
+  <td><table class="kv"><tr><th>Nome</th><td><b>Criminalità in aumento</b> <span class="id">e15</span></td></tr><tr><th>Richiede</th><td>3 Difesa e Sicurezza + 2 Economia e Welfare</td></tr><tr><th>Effetto se risolto</th><td>Colpo di scena (sirena)</td></tr><tr><th>Colpo di scena</th><td>SCARTA il Progetto Principale approvato più a sinistra sul Tabellone</td></tr><tr><th>Codice motore</th><td><code>scarta_principale_sinistra</code></td></tr></table>
+  
+  <label class="ok"><input type="checkbox" data-id="e15"> corretto</label>
+  <input class="note" data-note="e15" placeholder="nota (se c'è un errore)"></td>
+</tr>
+<tr id="e16">
+  <td class="img"><img src="../public/cards/e-16.jpg" class="" loading="lazy" alt=""></td>
+  <td><table class="kv"><tr><th>Nome</th><td><b>Organizzazione dei Giochi Orbitali</b> <span class="id">e16</span></td></tr><tr><th>Richiede</th><td>3 Difesa e Sicurezza + 3 Economia e Welfare + 3 Tecnologia e Sopravvivenza</td></tr><tr><th>Effetto se risolto</th><td>Cambio di priorità (freccia rossa)</td></tr><tr><th>Colpo di scena</th><td>Il Leader perde 3 MONETE</td></tr><tr><th>Codice motore</th><td><code>leader_meno_3</code></td></tr></table>
+  
+  <label class="ok"><input type="checkbox" data-id="e16"> corretto</label>
+  <input class="note" data-note="e16" placeholder="nota (se c'è un errore)"></td>
+</tr>
+<tr id="e17">
+  <td class="img"><img src="../public/cards/e-17.jpg" class="" loading="lazy" alt=""></td>
+  <td><table class="kv"><tr><th>Nome</th><td><b>Disastro climatico</b> <span class="id">e17</span></td></tr><tr><th>Richiede</th><td>3 Difesa e Sicurezza + 3 Economia e Welfare + 5 Tecnologia e Sopravvivenza</td></tr><tr><th>Effetto se risolto</th><td>Soldi gratis!</td></tr><tr><th>Colpo di scena</th><td>Il Leader ottiene 3 MONETE</td></tr><tr><th>Codice motore</th><td><code>leader_piu_3</code></td></tr></table>
+  
+  <label class="ok"><input type="checkbox" data-id="e17"> corretto</label>
+  <input class="note" data-note="e17" placeholder="nota (se c'è un errore)"></td>
+</tr>
+<tr id="e18">
+  <td class="img"><img src="../public/cards/e-18.jpg" class="" loading="lazy" alt=""></td>
+  <td><table class="kv"><tr><th>Nome</th><td><b>Pandemia</b> <span class="id">e18</span></td></tr><tr><th>Richiede</th><td>4 Difesa e Sicurezza + 5 Economia e Welfare + 3 Tecnologia e Sopravvivenza</td></tr><tr><th>Effetto se risolto</th><td>Soldi gratis!</td></tr><tr><th>Colpo di scena</th><td>Tutti i giocatori perdono 3 MONETE</td></tr><tr><th>Codice motore</th><td><code>tutti_meno_3</code></td></tr></table>
+  
+  <label class="ok"><input type="checkbox" data-id="e18"> corretto</label>
+  <input class="note" data-note="e18" placeholder="nota (se c'è un errore)"></td>
+</tr>
+<tr id="e19">
+  <td class="img"><img src="../public/cards/e-19.jpg" class="" loading="lazy" alt=""></td>
+  <td><table class="kv"><tr><th>Nome</th><td><b>Incursione militare</b> <span class="id">e19</span></td></tr><tr><th>Richiede</th><td>5 Difesa e Sicurezza + 4 Economia e Welfare + 3 Tecnologia e Sopravvivenza</td></tr><tr><th>Effetto se risolto</th><td>Soldi gratis!</td></tr><tr><th>Colpo di scena</th><td>Il Leader può pagare 5 monete per scegliere 2 Progetti rivelati e piazzarli tra i Provvisori, senza attivare gli Effetti Speciali delle caselle</td></tr><tr><th>Codice motore</th><td><code>incursione</code></td></tr></table>
+  
+  <label class="ok"><input type="checkbox" data-id="e19"> corretto</label>
+  <input class="note" data-note="e19" placeholder="nota (se c'è un errore)"></td>
+</tr>
+<tr id="e20">
+  <td class="img"><img src="../public/cards/e-20.jpg" class="" loading="lazy" alt=""></td>
+  <td><table class="kv"><tr><th>Nome</th><td><b>Primi passi</b> <span class="id">e20</span></td></tr><tr><th>Richiede</th><td>3 Carte Progetto qualsiasi</td></tr><tr><th>Effetto se risolto</th><td>Aumenta la Tensione Sociale (teschio)</td></tr><tr><th>Colpo di scena</th><td>La persona a sinistra dell’attuale Leader diventa il nuovo Leader</td></tr><tr><th>Codice motore</th><td><code>leader_sinistra</code></td></tr></table>
+  
+  <label class="ok"><input type="checkbox" data-id="e20"> corretto</label>
+  <input class="note" data-note="e20" placeholder="nota (se c'è un errore)"></td>
+</tr>
+<tr id="e21">
+  <td class="img"><img src="../public/cards/e-21.jpg" class="" loading="lazy" alt=""></td>
+  <td><table class="kv"><tr><th>Nome</th><td><b>Crescita sostenuta</b> <span class="id">e21</span></td></tr><tr><th>Richiede</th><td>4 Carte Progetto qualsiasi</td></tr><tr><th>Effetto se risolto</th><td>Colpo di scena (sirena)</td></tr><tr><th>Colpo di scena</th><td>La persona a destra dell’attuale Leader diventa il nuovo Leader</td></tr><tr><th>Codice motore</th><td><code>leader_destra</code></td></tr></table>
+  
+  <label class="ok"><input type="checkbox" data-id="e21"> corretto</label>
+  <input class="note" data-note="e21" placeholder="nota (se c'è un errore)"></td>
+</tr>
+<tr id="e22">
+  <td class="img"><img src="../public/cards/e-22.jpg" class="" loading="lazy" alt=""></td>
+  <td><table class="kv"><tr><th>Nome</th><td><b>Cantiere aperto</b> <span class="id">e22</span></td></tr><tr><th>Richiede</th><td>5 Carte Progetto qualsiasi</td></tr><tr><th>Effetto se risolto</th><td>—</td></tr><tr><th>Colpo di scena</th><td>Aggiungi subito questa Carta Evento agli Eventi Risolti</td></tr><tr><th>Codice motore</th><td><code>auto_risolto</code></td></tr></table>
+  
+  <label class="ok"><input type="checkbox" data-id="e22"> corretto</label>
+  <input class="note" data-note="e22" placeholder="nota (se c'è un errore)"></td>
+</tr>
+<tr id="e23">
+  <td class="img"><img src="../public/cards/e-23.jpg" class="" loading="lazy" alt=""></td>
+  <td><table class="kv"><tr><th>Nome</th><td><b>Metropolis!</b> <span class="id">e23</span></td></tr><tr><th>Richiede</th><td>6 Carte Progetto qualsiasi</td></tr><tr><th>Effetto se risolto</th><td>Soldi gratis!</td></tr><tr><th>Colpo di scena</th><td>Il Leader può scartare un Progetto Fondante approvato per risolvere un Evento rivelato a sua scelta</td></tr><tr><th>Codice motore</th><td><code>metropolis</code></td></tr></table>
+  
+  <label class="ok"><input type="checkbox" data-id="e23"> corretto</label>
+  <input class="note" data-note="e23" placeholder="nota (se c'è un errore)"></td>
+</tr></tbody></table>
+<h2>Grandi Pensatori (26)</h2><table class="list"><tbody>
+<tr id="t01">
+  <td class="img"><img src="../public/cards/t-01.jpg" class="" loading="lazy" alt=""></td>
+  <td><table class="kv"><tr><th>Nome</th><td><b>Maynard Keynes</b> <span class="id">t01</span></td></tr><tr><th>Obiettivo (testo)</th><td>4 PV per ogni PROGETTO APPROVATO con COSTO SUPERIORE a [moneta 8]</td></tr><tr><th>Obiettivo (motore)</th><td><code>{&quot;tipo&quot;:&quot;per_progetto_costo&quot;,&quot;op&quot;:&quot;&gt;&quot;,&quot;valore&quot;:8,&quot;pv&quot;:4}</code></td></tr></table>
+  
+  <label class="ok"><input type="checkbox" data-id="t01"> corretto</label>
+  <input class="note" data-note="t01" placeholder="nota (se c'è un errore)"></td>
+</tr>
+<tr id="t02">
+  <td class="img"><img src="../public/cards/t-02.jpg" class="" loading="lazy" alt=""></td>
+  <td><table class="kv"><tr><th>Nome</th><td><b>Hetty Green</b> <span class="id">t02</span></td></tr><tr><th>Obiettivo (testo)</th><td>4 PV per ogni PROGETTO APPROVATO con COSTO INFERIORE a [moneta 5]</td></tr><tr><th>Obiettivo (motore)</th><td><code>{&quot;tipo&quot;:&quot;per_progetto_costo&quot;,&quot;op&quot;:&quot;&lt;&quot;,&quot;valore&quot;:5,&quot;pv&quot;:4}</code></td></tr></table>
+  
+  <label class="ok"><input type="checkbox" data-id="t02"> corretto</label>
+  <input class="note" data-note="t02" placeholder="nota (se c'è un errore)"></td>
+</tr>
+<tr id="t03">
+  <td class="img"><img src="../public/cards/t-03.jpg" class="" loading="lazy" alt=""></td>
+  <td><table class="kv"><tr><th>Nome</th><td><b>Amrita Devi Bishnoi</b> <span class="id">t03</span></td></tr><tr><th>Obiettivo (testo)</th><td>Per ogni PROGETTO APPROVATO con la coppia [preservazione] [pubblico] ottieni: 3 PV se è PRINCIPALE, 6 PV se è FONDANTE</td></tr><tr><th>Obiettivo (motore)</th><td><code>{&quot;tipo&quot;:&quot;coppia_ideologica&quot;,&quot;ideologie&quot;:[&quot;preservazione&quot;,&quot;pubblico&quot;],&quot;pv_principale&quot;:3,&quot;pv_fondante&quot;:6}</code></td></tr></table>
+  
+  <label class="ok"><input type="checkbox" data-id="t03"> corretto</label>
+  <input class="note" data-note="t03" placeholder="nota (se c'è un errore)"></td>
+</tr>
+<tr id="t04">
+  <td class="img"><img src="../public/cards/t-04.jpg" class="" loading="lazy" alt=""></td>
+  <td><table class="kv"><tr><th>Nome</th><td><b>Henry David Thoreau</b> <span class="id">t04</span></td></tr><tr><th>Obiettivo (testo)</th><td>Per ogni PROGETTO APPROVATO con la coppia [preservazione] [privato] ottieni: 3 PV se è PRINCIPALE, 6 PV se è FONDANTE</td></tr><tr><th>Obiettivo (motore)</th><td><code>{&quot;tipo&quot;:&quot;coppia_ideologica&quot;,&quot;ideologie&quot;:[&quot;preservazione&quot;,&quot;privato&quot;],&quot;pv_principale&quot;:3,&quot;pv_fondante&quot;:6}</code></td></tr></table>
+  
+  <label class="ok"><input type="checkbox" data-id="t04"> corretto</label>
+  <input class="note" data-note="t04" placeholder="nota (se c'è un errore)"></td>
+</tr>
+<tr id="t05">
+  <td class="img"><img src="../public/cards/t-05.jpg" class="" loading="lazy" alt=""></td>
+  <td><table class="kv"><tr><th>Nome</th><td><b>Mansa Musa</b> <span class="id">t05</span></td></tr><tr><th>Obiettivo (testo)</th><td>Per ogni PROGETTO APPROVATO con la coppia [consumo] [privato] ottieni: 3 PV se è PRINCIPALE, 6 PV se è FONDANTE</td></tr><tr><th>Obiettivo (motore)</th><td><code>{&quot;tipo&quot;:&quot;coppia_ideologica&quot;,&quot;ideologie&quot;:[&quot;consumo&quot;,&quot;privato&quot;],&quot;pv_principale&quot;:3,&quot;pv_fondante&quot;:6}</code></td></tr></table>
+  
+  <label class="ok"><input type="checkbox" data-id="t05"> corretto</label>
+  <input class="note" data-note="t05" placeholder="nota (se c'è un errore)"></td>
+</tr>
+<tr id="t06">
+  <td class="img"><img src="../public/cards/t-06.jpg" class="" loading="lazy" alt=""></td>
+  <td><table class="kv"><tr><th>Nome</th><td><b>Karl Marx</b> <span class="id">t06</span></td></tr><tr><th>Obiettivo (testo)</th><td>Per ogni PROGETTO APPROVATO con la coppia [consumo] [pubblico] ottieni: 3 PV se è PRINCIPALE, 6 PV se è FONDANTE</td></tr><tr><th>Obiettivo (motore)</th><td><code>{&quot;tipo&quot;:&quot;coppia_ideologica&quot;,&quot;ideologie&quot;:[&quot;consumo&quot;,&quot;pubblico&quot;],&quot;pv_principale&quot;:3,&quot;pv_fondante&quot;:6}</code></td></tr></table>
+  
+  <label class="ok"><input type="checkbox" data-id="t06"> corretto</label>
+  <input class="note" data-note="t06" placeholder="nota (se c'è un errore)"></td>
+</tr>
+<tr id="t07">
+  <td class="img"><img src="../public/cards/t-07.jpg" class="" loading="lazy" alt=""></td>
+  <td><table class="kv"><tr><th>Nome</th><td><b>Giacomo Matteotti</b> <span class="id">t07</span></td></tr><tr><th>Obiettivo (testo)</th><td>Conta il numero di carte nel mazzo PROGETTI. Ottieni: 20 PV se ha 3 CARTE O MENO, 15 PV se è MINORE DI 10, 10 PV se è MINORE DI 15</td></tr><tr><th>Obiettivo (motore)</th><td><code>{&quot;tipo&quot;:&quot;soglie&quot;,&quot;conta&quot;:&quot;mazzo_progetti&quot;,&quot;soglie&quot;:[{&quot;cond&quot;:&quot;&lt;=&quot;,&quot;n&quot;:3,&quot;pv&quot;:20},{&quot;cond&quot;:&quot;&lt;&quot;,&quot;n&quot;:10,&quot;pv&quot;:15},{&quot;cond&quot;:&quot;&lt;&quot;,&quot;n&quot;:15,&quot;pv&quot;:10}]}</code></td></tr></table>
+  <p class="unc">⚠︎ Il regolamento (p.8) chiarisce: carte che restano nel mazzo coperto dei Progetti (non le carte rivelate). Con 15 o più carte: 0 PV.</p>
+  <label class="ok"><input type="checkbox" data-id="t07"> corretto</label>
+  <input class="note" data-note="t07" placeholder="nota (se c'è un errore)"></td>
+</tr>
+<tr id="t08">
+  <td class="img"><img src="../public/cards/t-08.jpg" class="" loading="lazy" alt=""></td>
+  <td><table class="kv"><tr><th>Nome</th><td><b>Marie Skłodowska Curie</b> <span class="id">t08</span></td></tr><tr><th>Obiettivo (testo)</th><td>3 PV per ogni PROGETTO APPROVATO con un EFFETTO SPECIALE</td></tr><tr><th>Obiettivo (motore)</th><td><code>{&quot;tipo&quot;:&quot;per_progetto_effetto&quot;,&quot;con_effetto&quot;:true,&quot;pv&quot;:3}</code></td></tr></table>
+  <p class="unc">⚠︎ Effetto Speciale = icona effetto stampata sulla Carta Progetto (non quello dello spazio provvisorio). Progetti archiviati esclusi (regolamento p.21: 'approvati (non archiviati)').</p>
+  <label class="ok"><input type="checkbox" data-id="t08"> corretto</label>
+  <input class="note" data-note="t08" placeholder="nota (se c'è un errore)"></td>
+</tr>
+<tr id="t09">
+  <td class="img"><img src="../public/cards/t-09.jpg" class="" loading="lazy" alt=""></td>
+  <td><table class="kv"><tr><th>Nome</th><td><b>Le Corbusier</b> <span class="id">t09</span></td></tr><tr><th>Obiettivo (testo)</th><td>4 PV per ogni PROGETTO APPROVATO senza EFFETTI SPECIALI</td></tr><tr><th>Obiettivo (motore)</th><td><code>{&quot;tipo&quot;:&quot;per_progetto_effetto&quot;,&quot;con_effetto&quot;:false,&quot;pv&quot;:4}</code></td></tr></table>
+  
+  <label class="ok"><input type="checkbox" data-id="t09"> corretto</label>
+  <input class="note" data-note="t09" placeholder="nota (se c'è un errore)"></td>
+</tr>
+<tr id="t10">
+  <td class="img"><img src="../public/cards/t-10.jpg" class="" loading="lazy" alt=""></td>
+  <td><table class="kv"><tr><th>Nome</th><td><b>Quinto Orazio Flacco</b> <span class="id">t10</span></td></tr><tr><th>Obiettivo (testo)</th><td>4 PV per ogni PROGETTO APPROVATO con costo [moneta 5], [moneta 6], [moneta 7] o [moneta 8]</td></tr><tr><th>Obiettivo (motore)</th><td><code>{&quot;tipo&quot;:&quot;per_progetto_costo&quot;,&quot;op&quot;:&quot;in&quot;,&quot;valore&quot;:[5,6,7,8],&quot;pv&quot;:4}</code></td></tr></table>
+  
+  <label class="ok"><input type="checkbox" data-id="t10"> corretto</label>
+  <input class="note" data-note="t10" placeholder="nota (se c'è un errore)"></td>
+</tr>
+<tr id="t11">
+  <td class="img"><img src="../public/cards/t-11.jpg" class="" loading="lazy" alt=""></td>
+  <td><table class="kv"><tr><th>Nome</th><td><b>Friedrich Nietzsche</b> <span class="id">t11</span></td></tr><tr><th>Obiettivo (testo)</th><td>Conta il numero di PROGETTI APPROVATI. Ottieni: 20 PV se è MINORE DI 4, 15 PV se è MINORE DI 6, 7 PV se è MINORE DI 9</td></tr><tr><th>Obiettivo (motore)</th><td><code>{&quot;tipo&quot;:&quot;soglie&quot;,&quot;conta&quot;:&quot;progetti_approvati&quot;,&quot;soglie&quot;:[{&quot;cond&quot;:&quot;&lt;&quot;,&quot;n&quot;:4,&quot;pv&quot;:20},{&quot;cond&quot;:&quot;&lt;&quot;,&quot;n&quot;:6,&quot;pv&quot;:15},{&quot;cond&quot;:&quot;&lt;&quot;,&quot;n&quot;:9,&quot;pv&quot;:7}]}</code></td></tr></table>
+  <p class="unc">⚠︎ Approvati = tutti i Progetti sul tabellone (Fondanti+Principali+Provvisori), archiviati esclusi (regolamento p.21: 8 approvati -&gt; 7 PV). Con 9 o più: 0 PV.</p>
+  <label class="ok"><input type="checkbox" data-id="t11"> corretto</label>
+  <input class="note" data-note="t11" placeholder="nota (se c'è un errore)"></td>
+</tr>
+<tr id="t12">
+  <td class="img"><img src="../public/cards/t-12.jpg" class="" loading="lazy" alt=""></td>
+  <td><table class="kv"><tr><th>Nome</th><td><b>Imhotep</b> <span class="id">t12</span></td></tr><tr><th>Obiettivo (testo)</th><td>4 PV per ogni PROGETTO APPROVATO OLTRE IL QUINTO</td></tr><tr><th>Obiettivo (motore)</th><td><code>{&quot;tipo&quot;:&quot;oltre_n&quot;,&quot;n&quot;:5,&quot;pv&quot;:4}</code></td></tr></table>
+  
+  <label class="ok"><input type="checkbox" data-id="t12"> corretto</label>
+  <input class="note" data-note="t12" placeholder="nota (se c'è un errore)"></td>
+</tr>
+<tr id="t13">
+  <td class="img"><img src="../public/cards/t-13.jpg" class="" loading="lazy" alt=""></td>
+  <td><table class="kv"><tr><th>Nome</th><td><b>Michelangelo</b> <span class="id">t13</span></td></tr><tr><th>Obiettivo (testo)</th><td>3 PV per ogni PROGETTO APPROVATO con COSTO DIFFERENTE dagli altri</td></tr><tr><th>Obiettivo (motore)</th><td><code>{&quot;tipo&quot;:&quot;per_progetto_costo&quot;,&quot;op&quot;:&quot;diverso&quot;,&quot;valore&quot;:null,&quot;pv&quot;:3}</code></td></tr></table>
+  <p class="unc">⚠︎ Formulazione ambigua: lettura più probabile = 3 PV per ogni Progetto approvato il cui costo non è condiviso da nessun altro Progetto approvato (costi duplicati non contano per nessuna delle carte coinvolte). Lettura alternativa = 3 PV per ogni valore di costo distinto. Il regolamento non dà esempi.</p>
+  <label class="ok"><input type="checkbox" data-id="t13"> corretto</label>
+  <input class="note" data-note="t13" placeholder="nota (se c'è un errore)"></td>
+</tr>
+<tr id="t14">
+  <td class="img"><img src="../public/cards/t-14.jpg" class="" loading="lazy" alt=""></td>
+  <td><table class="kv"><tr><th>Nome</th><td><b>Bartolina Sisa Vargas</b> <span class="id">t14</span></td></tr><tr><th>Obiettivo (testo)</th><td>Per ogni PROGETTO APPROVATO con la coppia [preservazione] [tradizione] ottieni: 3 PV se è PRINCIPALE, 6 PV se è FONDANTE</td></tr><tr><th>Obiettivo (motore)</th><td><code>{&quot;tipo&quot;:&quot;coppia_ideologica&quot;,&quot;ideologie&quot;:[&quot;preservazione&quot;,&quot;tradizione&quot;],&quot;pv_principale&quot;:3,&quot;pv_fondante&quot;:6}</code></td></tr></table>
+  
+  <label class="ok"><input type="checkbox" data-id="t14"> corretto</label>
+  <input class="note" data-note="t14" placeholder="nota (se c'è un errore)"></td>
+</tr>
+<tr id="t15">
+  <td class="img"><img src="../public/cards/t-15.jpg" class="" loading="lazy" alt=""></td>
+  <td><table class="kv"><tr><th>Nome</th><td><b>James Watt</b> <span class="id">t15</span></td></tr><tr><th>Obiettivo (testo)</th><td>Per ogni PROGETTO APPROVATO con la coppia [consumo] [innovazione] ottieni: 3 PV se è PRINCIPALE, 6 PV se è FONDANTE</td></tr><tr><th>Obiettivo (motore)</th><td><code>{&quot;tipo&quot;:&quot;coppia_ideologica&quot;,&quot;ideologie&quot;:[&quot;consumo&quot;,&quot;innovazione&quot;],&quot;pv_principale&quot;:3,&quot;pv_fondante&quot;:6}</code></td></tr></table>
+  
+  <label class="ok"><input type="checkbox" data-id="t15"> corretto</label>
+  <input class="note" data-note="t15" placeholder="nota (se c'è un errore)"></td>
+</tr>
+<tr id="t16">
+  <td class="img"><img src="../public/cards/t-16.jpg" class="" loading="lazy" alt=""></td>
+  <td><table class="kv"><tr><th>Nome</th><td><b>Gregor Mendel</b> <span class="id">t16</span></td></tr><tr><th>Obiettivo (testo)</th><td>Per ogni PROGETTO APPROVATO con la coppia [preservazione] [innovazione] ottieni: 3 PV se è PRINCIPALE, 6 PV se è FONDANTE</td></tr><tr><th>Obiettivo (motore)</th><td><code>{&quot;tipo&quot;:&quot;coppia_ideologica&quot;,&quot;ideologie&quot;:[&quot;preservazione&quot;,&quot;innovazione&quot;],&quot;pv_principale&quot;:3,&quot;pv_fondante&quot;:6}</code></td></tr></table>
+  
+  <label class="ok"><input type="checkbox" data-id="t16"> corretto</label>
+  <input class="note" data-note="t16" placeholder="nota (se c'è un errore)"></td>
+</tr>
+<tr id="t17">
+  <td class="img"><img src="../public/cards/t-17.jpg" class="" loading="lazy" alt=""></td>
+  <td><table class="kv"><tr><th>Nome</th><td><b>Aḫāḫā</b> <span class="id">t17</span></td></tr><tr><th>Obiettivo (testo)</th><td>Per ogni PROGETTO APPROVATO con la coppia [consumo] [tradizione] ottieni: 3 PV se è PRINCIPALE, 6 PV se è FONDANTE</td></tr><tr><th>Obiettivo (motore)</th><td><code>{&quot;tipo&quot;:&quot;coppia_ideologica&quot;,&quot;ideologie&quot;:[&quot;consumo&quot;,&quot;tradizione&quot;],&quot;pv_principale&quot;:3,&quot;pv_fondante&quot;:6}</code></td></tr></table>
+  <p class="unc">⚠︎ Nome stampato 'AḪĀḪĀ' (H con breve sotto, A con macron); pdftotext restituisce 'AHAHA'.</p>
+  <label class="ok"><input type="checkbox" data-id="t17"> corretto</label>
+  <input class="note" data-note="t17" placeholder="nota (se c'è un errore)"></td>
+</tr>
+<tr id="t18">
+  <td class="img"><img src="../public/cards/t-18.jpg" class="" loading="lazy" alt=""></td>
+  <td><table class="kv"><tr><th>Nome</th><td><b>Margaret Thatcher</b> <span class="id">t18</span></td></tr><tr><th>Obiettivo (testo)</th><td>Per ogni PROGETTO APPROVATO con la coppia [privato] [tradizione] ottieni: 3 PV se è PRINCIPALE, 6 PV se è FONDANTE</td></tr><tr><th>Obiettivo (motore)</th><td><code>{&quot;tipo&quot;:&quot;coppia_ideologica&quot;,&quot;ideologie&quot;:[&quot;privato&quot;,&quot;tradizione&quot;],&quot;pv_principale&quot;:3,&quot;pv_fondante&quot;:6}</code></td></tr></table>
+  
+  <label class="ok"><input type="checkbox" data-id="t18"> corretto</label>
+  <input class="note" data-note="t18" placeholder="nota (se c'è un errore)"></td>
+</tr>
+<tr id="t19">
+  <td class="img"><img src="../public/cards/t-19.jpg" class="" loading="lazy" alt=""></td>
+  <td><table class="kv"><tr><th>Nome</th><td><b>Pio IX</b> <span class="id">t19</span></td></tr><tr><th>Obiettivo (testo)</th><td>Per ogni PROGETTO APPROVATO con la coppia [pubblico] [tradizione] ottieni: 3 PV se è PRINCIPALE, 6 PV se è FONDANTE</td></tr><tr><th>Obiettivo (motore)</th><td><code>{&quot;tipo&quot;:&quot;coppia_ideologica&quot;,&quot;ideologie&quot;:[&quot;pubblico&quot;,&quot;tradizione&quot;],&quot;pv_principale&quot;:3,&quot;pv_fondante&quot;:6}</code></td></tr></table>
+  
+  <label class="ok"><input type="checkbox" data-id="t19"> corretto</label>
+  <input class="note" data-note="t19" placeholder="nota (se c'è un errore)"></td>
+</tr>
+<tr id="t20">
+  <td class="img"><img src="../public/cards/t-20.jpg" class="" loading="lazy" alt=""></td>
+  <td><table class="kv"><tr><th>Nome</th><td><b>Leonardo da Vinci</b> <span class="id">t20</span></td></tr><tr><th>Obiettivo (testo)</th><td>Per ogni PROGETTO APPROVATO con la coppia [privato] [innovazione] ottieni: 3 PV se è PRINCIPALE, 6 PV se è FONDANTE</td></tr><tr><th>Obiettivo (motore)</th><td><code>{&quot;tipo&quot;:&quot;coppia_ideologica&quot;,&quot;ideologie&quot;:[&quot;privato&quot;,&quot;innovazione&quot;],&quot;pv_principale&quot;:3,&quot;pv_fondante&quot;:6}</code></td></tr></table>
+  
+  <label class="ok"><input type="checkbox" data-id="t20"> corretto</label>
+  <input class="note" data-note="t20" placeholder="nota (se c'è un errore)"></td>
+</tr>
+<tr id="t21">
+  <td class="img"><img src="../public/cards/t-21.jpg" class="" loading="lazy" alt=""></td>
+  <td><table class="kv"><tr><th>Nome</th><td><b>Toussaint Louverture</b> <span class="id">t21</span></td></tr><tr><th>Obiettivo (testo)</th><td>Per ogni PROGETTO APPROVATO con la coppia [pubblico] [innovazione] ottieni: 3 PV se è PRINCIPALE, 6 PV se è FONDANTE</td></tr><tr><th>Obiettivo (motore)</th><td><code>{&quot;tipo&quot;:&quot;coppia_ideologica&quot;,&quot;ideologie&quot;:[&quot;pubblico&quot;,&quot;innovazione&quot;],&quot;pv_principale&quot;:3,&quot;pv_fondante&quot;:6}</code></td></tr></table>
+  
+  <label class="ok"><input type="checkbox" data-id="t21"> corretto</label>
+  <input class="note" data-note="t21" placeholder="nota (se c'è un errore)"></td>
+</tr>
+<tr id="t22">
+  <td class="img"><img src="../public/cards/t-22.jpg" class="" loading="lazy" alt=""></td>
+  <td><table class="kv"><tr><th>Nome</th><td><b>Buddha</b> <span class="id">t22</span></td></tr><tr><th>Obiettivo (testo)</th><td>Conta la [economia] tra gli EVENTI RISOLTI. Ottieni: 20 PV se è MINORE DI 4, 15 PV se è MINORE DI 6, 7 PV se è MINORE DI 9</td></tr><tr><th>Obiettivo (motore)</th><td><code>{&quot;tipo&quot;:&quot;soglie&quot;,&quot;conta&quot;:&quot;risorsa_eventi_risolti&quot;,&quot;risorsa&quot;:&quot;economia&quot;,&quot;soglie&quot;:[{&quot;cond&quot;:&quot;&lt;&quot;,&quot;n&quot;:4,&quot;pv&quot;:20},{&quot;cond&quot;:&quot;&lt;&quot;,&quot;n&quot;:6,&quot;pv&quot;:15},{&quot;cond&quot;:&quot;&lt;&quot;,&quot;n&quot;:9,&quot;pv&quot;:7}]}</code></td></tr></table>
+  <p class="unc">⚠︎ Icona verificata a 800 dpi: economia. Interpretazione: somma dei valori di economia richiesti (stampati in basso a sinistra) sulle Carte Evento risolte; confermata dall'esempio del regolamento p.21 (Gandhi: 3+0+3+0+0 = 6 -&gt; 7 PV, quindi soglie strette 'minore di', 6 non è &lt;6). Con totale &gt;= 9 si ottengono 0 PV.</p>
+  <label class="ok"><input type="checkbox" data-id="t22"> corretto</label>
+  <input class="note" data-note="t22" placeholder="nota (se c'è un errore)"></td>
+</tr>
+<tr id="t23">
+  <td class="img"><img src="../public/cards/t-23.jpg" class="" loading="lazy" alt=""></td>
+  <td><table class="kv"><tr><th>Nome</th><td><b>Mahatma Gandhi</b> <span class="id">t23</span></td></tr><tr><th>Obiettivo (testo)</th><td>Conta la [difesa] tra gli EVENTI RISOLTI. Ottieni: 20 PV se è MINORE DI 4, 15 PV se è MINORE DI 6, 7 PV se è MINORE DI 9</td></tr><tr><th>Obiettivo (motore)</th><td><code>{&quot;tipo&quot;:&quot;soglie&quot;,&quot;conta&quot;:&quot;risorsa_eventi_risolti&quot;,&quot;risorsa&quot;:&quot;difesa&quot;,&quot;soglie&quot;:[{&quot;cond&quot;:&quot;&lt;&quot;,&quot;n&quot;:4,&quot;pv&quot;:20},{&quot;cond&quot;:&quot;&lt;&quot;,&quot;n&quot;:6,&quot;pv&quot;:15},{&quot;cond&quot;:&quot;&lt;&quot;,&quot;n&quot;:9,&quot;pv&quot;:7}]}</code></td></tr></table>
+  <p class="unc">⚠︎ Icona verificata a 800 dpi: difesa. Interpretazione: somma dei valori di difesa richiesti (stampati in basso a sinistra) sulle Carte Evento risolte; confermata dall'esempio del regolamento p.21 (Gandhi: 3+0+3+0+0 = 6 -&gt; 7 PV, quindi soglie strette 'minore di', 6 non è &lt;6). Con totale &gt;= 9 si ottengono 0 PV.</p>
+  <label class="ok"><input type="checkbox" data-id="t23"> corretto</label>
+  <input class="note" data-note="t23" placeholder="nota (se c'è un errore)"></td>
+</tr>
+<tr id="t24">
+  <td class="img"><img src="../public/cards/t-24.jpg" class="" loading="lazy" alt=""></td>
+  <td><table class="kv"><tr><th>Nome</th><td><b>William Morris</b> <span class="id">t24</span></td></tr><tr><th>Obiettivo (testo)</th><td>Conta la [tecnologia] tra gli EVENTI RISOLTI. Ottieni: 20 PV se è MINORE DI 4, 15 PV se è MINORE DI 6, 7 PV se è MINORE DI 9</td></tr><tr><th>Obiettivo (motore)</th><td><code>{&quot;tipo&quot;:&quot;soglie&quot;,&quot;conta&quot;:&quot;risorsa_eventi_risolti&quot;,&quot;risorsa&quot;:&quot;tecnologia&quot;,&quot;soglie&quot;:[{&quot;cond&quot;:&quot;&lt;&quot;,&quot;n&quot;:4,&quot;pv&quot;:20},{&quot;cond&quot;:&quot;&lt;&quot;,&quot;n&quot;:6,&quot;pv&quot;:15},{&quot;cond&quot;:&quot;&lt;&quot;,&quot;n&quot;:9,&quot;pv&quot;:7}]}</code></td></tr></table>
+  <p class="unc">⚠︎ Icona verificata a 800 dpi: tecnologia. Interpretazione: somma dei valori di tecnologia richiesti (stampati in basso a sinistra) sulle Carte Evento risolte; confermata dall'esempio del regolamento p.21 (Gandhi: 3+0+3+0+0 = 6 -&gt; 7 PV, quindi soglie strette 'minore di', 6 non è &lt;6). Con totale &gt;= 9 si ottengono 0 PV.</p>
+  <label class="ok"><input type="checkbox" data-id="t24"> corretto</label>
+  <input class="note" data-note="t24" placeholder="nota (se c'è un errore)"></td>
+</tr>
+<tr id="t25">
+  <td class="img"><img src="../public/cards/t-25.jpg" class="" loading="lazy" alt=""></td>
+  <td><table class="kv"><tr><th>Nome</th><td><b>Sun Tzu</b> <span class="id">t25</span></td></tr><tr><th>Obiettivo (testo)</th><td>2 PV per ogni PROGETTO nell’ARCHIVIO</td></tr><tr><th>Obiettivo (motore)</th><td><code>{&quot;tipo&quot;:&quot;archivio&quot;,&quot;pv&quot;:2}</code></td></tr></table>
+  <p class="unc">⚠︎ Citazione stampata con il refuso 'la mie tattiche'.</p>
+  <label class="ok"><input type="checkbox" data-id="t25"> corretto</label>
+  <input class="note" data-note="t25" placeholder="nota (se c'è un errore)"></td>
+</tr>
+<tr id="t26">
+  <td class="img"><img src="../public/cards/t-26.jpg" class="" loading="lazy" alt=""></td>
+  <td><table class="kv"><tr><th>Nome</th><td><b>Asso della Diplomazia</b> <span class="id">t26</span></td></tr><tr><th>Obiettivo (testo)</th><td>Controlla la casella su cui si trova il SEGNALINO [segnalino Tensione Sociale]. Ottieni: 25 PV se è al PUNTO DI PARTENZA o nelle PRIME 2, 15 PV se è nella 3ª o nella 4ª, 6 PV se è nella 5ª o nella 6ª</td></tr><tr><th>Obiettivo (motore)</th><td><code>{&quot;tipo&quot;:&quot;tensione&quot;,&quot;soglie&quot;:[{&quot;caselle&quot;:[0,1,2],&quot;pv&quot;:25},{&quot;caselle&quot;:[3,4],&quot;pv&quot;:15},{&quot;caselle&quot;:[5,6],&quot;pv&quot;:6}]}</code></td></tr></table>
+  <p class="unc">⚠︎ Carta senza illustrazione, senza sottotitolo e senza citazione (regolamento p.8: carta da personalizzare). Casella 7 (moneta) -&gt; 0 PV; casella 8 (teschio) = sconfitta, nessun punteggio.</p>
+  <label class="ok"><input type="checkbox" data-id="t26"> corretto</label>
+  <input class="note" data-note="t26" placeholder="nota (se c'è un errore)"></td>
+</tr></tbody></table>
+<script>
+const KEY='tsc-review';let st={};try{st=JSON.parse(localStorage.getItem(KEY)||'{}')}catch(e){}
+const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(st))}catch(e){};upd()};
+const boxes=[...document.querySelectorAll('[data-id]')],notes=[...document.querySelectorAll('[data-note]')];
+boxes.forEach(b=>{b.checked=!!st[b.dataset.id]?.ok;b.onchange=()=>{(st[b.dataset.id]??={}).ok=b.checked;save()}});
+notes.forEach(n=>{n.value=st[n.dataset.note]?.note||'';n.oninput=()=>{(st[n.dataset.note]??={}).note=n.value;save()}});
+function upd(){document.getElementById('count').textContent=boxes.filter(b=>b.checked).length+' / '+boxes.length+' verificate'}
+document.getElementById('copy').onclick=()=>{const t=boxes.map(b=>{const s=st[b.dataset.id]||{};return b.dataset.id+': '+(s.ok?'OK':'da verificare')+(s.note?' - '+s.note:'')}).join('\n');navigator.clipboard.writeText(t)};
+upd();
+</script></body></html>

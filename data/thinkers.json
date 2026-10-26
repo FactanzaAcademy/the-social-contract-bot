@@ -1,0 +1,530 @@
+{
+ "note": "Regole comuni: 'progetto APPROVATO' = Carta Progetto sul tabellone in uno spazio Fondante, Principale o Provvisorio; i Progetti in Archivio NON sono approvati (regolamento p.11) ma contano per Sun Tzu. Costo = numero in alto a destra della Carta Progetto (senza il +3 del Fondante). Coppia ideologica: il progetto deve avere entrambe le icone; vale solo in Principale (3) o Fondante (6), in Provvisorio 0 (regolamento p.21, Toussaint). Soglie: la prima condizione soddisfatta vince; se nessuna, 0 PV.",
+ "thinkers": [
+  {
+   "id": "t01",
+   "page": 1,
+   "nome": "Maynard Keynes",
+   "titolo": "Lo scavatore di buche",
+   "citazione": "Lo Stato deve sostenere la domanda economica del Paese, costi quel che costi.",
+   "obiettivo": {
+    "tipo": "per_progetto_costo",
+    "op": ">",
+    "valore": 8,
+    "pv": 4
+   },
+   "testo_obiettivo": "4 PV per ogni PROGETTO APPROVATO con COSTO SUPERIORE a [moneta 8]",
+   "uncertain": null
+  },
+  {
+   "id": "t02",
+   "page": 2,
+   "nome": "Hetty Green",
+   "titolo": "La campionessa dell’austerity",
+   "citazione": "Il denaro risparmiato è denaro guadagnato!",
+   "obiettivo": {
+    "tipo": "per_progetto_costo",
+    "op": "<",
+    "valore": 5,
+    "pv": 4
+   },
+   "testo_obiettivo": "4 PV per ogni PROGETTO APPROVATO con COSTO INFERIORE a [moneta 5]",
+   "uncertain": null
+  },
+  {
+   "id": "t03",
+   "page": 3,
+   "nome": "Amrita Devi Bishnoi",
+   "titolo": "L’ambientalista",
+   "citazione": "La Terra è una responsabilità di tutte le anime che la abitano.",
+   "obiettivo": {
+    "tipo": "coppia_ideologica",
+    "ideologie": [
+     "preservazione",
+     "pubblico"
+    ],
+    "pv_principale": 3,
+    "pv_fondante": 6
+   },
+   "testo_obiettivo": "Per ogni PROGETTO APPROVATO con la coppia [preservazione] [pubblico] ottieni: 3 PV se è PRINCIPALE, 6 PV se è FONDANTE",
+   "uncertain": null
+  },
+  {
+   "id": "t04",
+   "page": 4,
+   "nome": "Henry David Thoreau",
+   "titolo": "Il responsabile",
+   "citazione": "“Ogni creatura è meglio viva che morta, e chi lo capisce preferirà preservarne la vita che distruggerla.”",
+   "obiettivo": {
+    "tipo": "coppia_ideologica",
+    "ideologie": [
+     "preservazione",
+     "privato"
+    ],
+    "pv_principale": 3,
+    "pv_fondante": 6
+   },
+   "testo_obiettivo": "Per ogni PROGETTO APPROVATO con la coppia [preservazione] [privato] ottieni: 3 PV se è PRINCIPALE, 6 PV se è FONDANTE",
+   "uncertain": null
+  },
+  {
+   "id": "t05",
+   "page": 5,
+   "nome": "Mansa Musa",
+   "titolo": "Il capitalista",
+   "citazione": "Una carovana d’oro che attraversa il Sahara. Questo farà la storia dell’Impero del Mali.",
+   "obiettivo": {
+    "tipo": "coppia_ideologica",
+    "ideologie": [
+     "consumo",
+     "privato"
+    ],
+    "pv_principale": 3,
+    "pv_fondante": 6
+   },
+   "testo_obiettivo": "Per ogni PROGETTO APPROVATO con la coppia [consumo] [privato] ottieni: 3 PV se è PRINCIPALE, 6 PV se è FONDANTE",
+   "uncertain": null
+  },
+  {
+   "id": "t06",
+   "page": 6,
+   "nome": "Karl Marx",
+   "titolo": "Il comunista",
+   "citazione": "Che i mezzi di produzione tornino nelle mani del popolo!",
+   "obiettivo": {
+    "tipo": "coppia_ideologica",
+    "ideologie": [
+     "consumo",
+     "pubblico"
+    ],
+    "pv_principale": 3,
+    "pv_fondante": 6
+   },
+   "testo_obiettivo": "Per ogni PROGETTO APPROVATO con la coppia [consumo] [pubblico] ottieni: 3 PV se è PRINCIPALE, 6 PV se è FONDANTE",
+   "uncertain": null
+  },
+  {
+   "id": "t07",
+   "page": 7,
+   "nome": "Giacomo Matteotti",
+   "titolo": "Il leader dell’opposizione",
+   "citazione": "Ora basta, tutti fuori dal Parlamento!",
+   "obiettivo": {
+    "tipo": "soglie",
+    "conta": "mazzo_progetti",
+    "soglie": [
+     {
+      "cond": "<=",
+      "n": 3,
+      "pv": 20
+     },
+     {
+      "cond": "<",
+      "n": 10,
+      "pv": 15
+     },
+     {
+      "cond": "<",
+      "n": 15,
+      "pv": 10
+     }
+    ]
+   },
+   "testo_obiettivo": "Conta il numero di carte nel mazzo PROGETTI. Ottieni: 20 PV se ha 3 CARTE O MENO, 15 PV se è MINORE DI 10, 10 PV se è MINORE DI 15",
+   "uncertain": "Il regolamento (p.8) chiarisce: carte che restano nel mazzo coperto dei Progetti (non le carte rivelate). Con 15 o più carte: 0 PV."
+  },
+  {
+   "id": "t08",
+   "page": 8,
+   "nome": "Marie Skłodowska Curie",
+   "titolo": "La scienziata",
+   "citazione": "A volte anche gli atomi possono avere un Effetto Speciale: meglio saperli distinguere.",
+   "obiettivo": {
+    "tipo": "per_progetto_effetto",
+    "con_effetto": true,
+    "pv": 3
+   },
+   "testo_obiettivo": "3 PV per ogni PROGETTO APPROVATO con un EFFETTO SPECIALE",
+   "uncertain": "Effetto Speciale = icona effetto stampata sulla Carta Progetto (non quello dello spazio provvisorio). Progetti archiviati esclusi (regolamento p.21: 'approvati (non archiviati)')."
+  },
+  {
+   "id": "t09",
+   "page": 9,
+   "nome": "Le Corbusier",
+   "titolo": "Il funzionalista",
+   "citazione": "Non voglio vedere nemmeno un orpello, un arco o una spirale su quell’ospedale.",
+   "obiettivo": {
+    "tipo": "per_progetto_effetto",
+    "con_effetto": false,
+    "pv": 4
+   },
+   "testo_obiettivo": "4 PV per ogni PROGETTO APPROVATO senza EFFETTI SPECIALI",
+   "uncertain": null
+  },
+  {
+   "id": "t10",
+   "page": 10,
+   "nome": "Quinto Orazio Flacco",
+   "titolo": "L’equilibrato",
+   "citazione": "“Chiunque l’aurea via di mezzo predilige, al sicuro sta lontano dallo squallore.” Ode X, Libro II",
+   "obiettivo": {
+    "tipo": "per_progetto_costo",
+    "op": "in",
+    "valore": [
+     5,
+     6,
+     7,
+     8
+    ],
+    "pv": 4
+   },
+   "testo_obiettivo": "4 PV per ogni PROGETTO APPROVATO con costo [moneta 5], [moneta 6], [moneta 7] o [moneta 8]",
+   "uncertain": null
+  },
+  {
+   "id": "t11",
+   "page": 11,
+   "nome": "Friedrich Nietzsche",
+   "titolo": "Il rigeneratore",
+   "citazione": "“Sempre distrugge chi è costretto a creare.” Così parlò Zarathustra",
+   "obiettivo": {
+    "tipo": "soglie",
+    "conta": "progetti_approvati",
+    "soglie": [
+     {
+      "cond": "<",
+      "n": 4,
+      "pv": 20
+     },
+     {
+      "cond": "<",
+      "n": 6,
+      "pv": 15
+     },
+     {
+      "cond": "<",
+      "n": 9,
+      "pv": 7
+     }
+    ]
+   },
+   "testo_obiettivo": "Conta il numero di PROGETTI APPROVATI. Ottieni: 20 PV se è MINORE DI 4, 15 PV se è MINORE DI 6, 7 PV se è MINORE DI 9",
+   "uncertain": "Approvati = tutti i Progetti sul tabellone (Fondanti+Principali+Provvisori), archiviati esclusi (regolamento p.21: 8 approvati -> 7 PV). Con 9 o più: 0 PV."
+  },
+  {
+   "id": "t12",
+   "page": 12,
+   "nome": "Imhotep",
+   "titolo": "Il grande costruttore",
+   "citazione": "Per passare alla storia bisogna costruire, costruire e ancora costruire.",
+   "obiettivo": {
+    "tipo": "oltre_n",
+    "n": 5,
+    "pv": 4
+   },
+   "testo_obiettivo": "4 PV per ogni PROGETTO APPROVATO OLTRE IL QUINTO",
+   "uncertain": null
+  },
+  {
+   "id": "t13",
+   "page": 13,
+   "nome": "Michelangelo",
+   "titolo": "L’artista",
+   "citazione": "“Ogni blocco di pietra ha una statua al suo interno, ed è compito dello scultore scoprirla.”",
+   "obiettivo": {
+    "tipo": "per_progetto_costo",
+    "op": "diverso",
+    "valore": null,
+    "pv": 3
+   },
+   "testo_obiettivo": "3 PV per ogni PROGETTO APPROVATO con COSTO DIFFERENTE dagli altri",
+   "uncertain": "Formulazione ambigua: lettura più probabile = 3 PV per ogni Progetto approvato il cui costo non è condiviso da nessun altro Progetto approvato (costi duplicati non contano per nessuna delle carte coinvolte). Lettura alternativa = 3 PV per ogni valore di costo distinto. Il regolamento non dà esempi."
+  },
+  {
+   "id": "t14",
+   "page": 14,
+   "nome": "Bartolina Sisa Vargas",
+   "titolo": "L’indigena",
+   "citazione": "C’è solo da imparare dalle voci indigene.",
+   "obiettivo": {
+    "tipo": "coppia_ideologica",
+    "ideologie": [
+     "preservazione",
+     "tradizione"
+    ],
+    "pv_principale": 3,
+    "pv_fondante": 6
+   },
+   "testo_obiettivo": "Per ogni PROGETTO APPROVATO con la coppia [preservazione] [tradizione] ottieni: 3 PV se è PRINCIPALE, 6 PV se è FONDANTE",
+   "uncertain": null
+  },
+  {
+   "id": "t15",
+   "page": 15,
+   "nome": "James Watt",
+   "titolo": "L’ingegnere",
+   "citazione": "Se avessi chiesto alle persone cosa volevano, mi avrebbero detto “cavalli più veloci”.",
+   "obiettivo": {
+    "tipo": "coppia_ideologica",
+    "ideologie": [
+     "consumo",
+     "innovazione"
+    ],
+    "pv_principale": 3,
+    "pv_fondante": 6
+   },
+   "testo_obiettivo": "Per ogni PROGETTO APPROVATO con la coppia [consumo] [innovazione] ottieni: 3 PV se è PRINCIPALE, 6 PV se è FONDANTE",
+   "uncertain": null
+  },
+  {
+   "id": "t16",
+   "page": 16,
+   "nome": "Gregor Mendel",
+   "titolo": "Il visionario",
+   "citazione": "“Le forze della Natura agiscono secondo una segreta armonia, che è compito dell’uomo scoprire.”",
+   "obiettivo": {
+    "tipo": "coppia_ideologica",
+    "ideologie": [
+     "preservazione",
+     "innovazione"
+    ],
+    "pv_principale": 3,
+    "pv_fondante": 6
+   },
+   "testo_obiettivo": "Per ogni PROGETTO APPROVATO con la coppia [preservazione] [innovazione] ottieni: 3 PV se è PRINCIPALE, 6 PV se è FONDANTE",
+   "uncertain": null
+  },
+  {
+   "id": "t17",
+   "page": 17,
+   "nome": "Aḫāḫā",
+   "titolo": "La mercante",
+   "citazione": "Il mestiere più antico del mondo? La mercante.",
+   "obiettivo": {
+    "tipo": "coppia_ideologica",
+    "ideologie": [
+     "consumo",
+     "tradizione"
+    ],
+    "pv_principale": 3,
+    "pv_fondante": 6
+   },
+   "testo_obiettivo": "Per ogni PROGETTO APPROVATO con la coppia [consumo] [tradizione] ottieni: 3 PV se è PRINCIPALE, 6 PV se è FONDANTE",
+   "uncertain": "Nome stampato 'AḪĀḪĀ' (H con breve sotto, A con macron); pdftotext restituisce 'AHAHA'."
+  },
+  {
+   "id": "t18",
+   "page": 18,
+   "nome": "Margaret Thatcher",
+   "titolo": "La conservatrice",
+   "citazione": "C’è chi l’ha amata e chi l’ha odiata. Alla Lady di Ferro questo non importava.",
+   "obiettivo": {
+    "tipo": "coppia_ideologica",
+    "ideologie": [
+     "privato",
+     "tradizione"
+    ],
+    "pv_principale": 3,
+    "pv_fondante": 6
+   },
+   "testo_obiettivo": "Per ogni PROGETTO APPROVATO con la coppia [privato] [tradizione] ottieni: 3 PV se è PRINCIPALE, 6 PV se è FONDANTE",
+   "uncertain": null
+  },
+  {
+   "id": "t19",
+   "page": 19,
+   "nome": "Pio IX",
+   "titolo": "Il Papa",
+   "citazione": "L’istituzione più antica del mondo è sopravvissuta nei millenni per un motivo.",
+   "obiettivo": {
+    "tipo": "coppia_ideologica",
+    "ideologie": [
+     "pubblico",
+     "tradizione"
+    ],
+    "pv_principale": 3,
+    "pv_fondante": 6
+   },
+   "testo_obiettivo": "Per ogni PROGETTO APPROVATO con la coppia [pubblico] [tradizione] ottieni: 3 PV se è PRINCIPALE, 6 PV se è FONDANTE",
+   "uncertain": null
+  },
+  {
+   "id": "t20",
+   "page": 20,
+   "nome": "Leonardo da Vinci",
+   "titolo": "L’inventore",
+   "citazione": "Il genio che ha stabilito per i posteri le vette dell’ingegno umano.",
+   "obiettivo": {
+    "tipo": "coppia_ideologica",
+    "ideologie": [
+     "privato",
+     "innovazione"
+    ],
+    "pv_principale": 3,
+    "pv_fondante": 6
+   },
+   "testo_obiettivo": "Per ogni PROGETTO APPROVATO con la coppia [privato] [innovazione] ottieni: 3 PV se è PRINCIPALE, 6 PV se è FONDANTE",
+   "uncertain": null
+  },
+  {
+   "id": "t21",
+   "page": 21,
+   "nome": "Toussaint Louverture",
+   "titolo": "Il rivoluzionario",
+   "citazione": "Non puoi cambiare il mondo se non hai un sogno abbastanza grande.",
+   "obiettivo": {
+    "tipo": "coppia_ideologica",
+    "ideologie": [
+     "pubblico",
+     "innovazione"
+    ],
+    "pv_principale": 3,
+    "pv_fondante": 6
+   },
+   "testo_obiettivo": "Per ogni PROGETTO APPROVATO con la coppia [pubblico] [innovazione] ottieni: 3 PV se è PRINCIPALE, 6 PV se è FONDANTE",
+   "uncertain": null
+  },
+  {
+   "id": "t22",
+   "page": 22,
+   "nome": "Buddha",
+   "titolo": "Il distaccato",
+   "citazione": "“Sii libero da ogni attaccamento e da ogni timore. È la via per superare la miseria del nascere e del morire.”",
+   "obiettivo": {
+    "tipo": "soglie",
+    "conta": "risorsa_eventi_risolti",
+    "risorsa": "economia",
+    "soglie": [
+     {
+      "cond": "<",
+      "n": 4,
+      "pv": 20
+     },
+     {
+      "cond": "<",
+      "n": 6,
+      "pv": 15
+     },
+     {
+      "cond": "<",
+      "n": 9,
+      "pv": 7
+     }
+    ]
+   },
+   "testo_obiettivo": "Conta la [economia] tra gli EVENTI RISOLTI. Ottieni: 20 PV se è MINORE DI 4, 15 PV se è MINORE DI 6, 7 PV se è MINORE DI 9",
+   "uncertain": "Icona verificata a 800 dpi: economia. Interpretazione: somma dei valori di economia richiesti (stampati in basso a sinistra) sulle Carte Evento risolte; confermata dall'esempio del regolamento p.21 (Gandhi: 3+0+3+0+0 = 6 -> 7 PV, quindi soglie strette 'minore di', 6 non è <6). Con totale >= 9 si ottengono 0 PV."
+  },
+  {
+   "id": "t23",
+   "page": 23,
+   "nome": "Mahatma Gandhi",
+   "titolo": "Il pacifista",
+   "citazione": "“Un uomo può uccidere un fiore, due fiori, tre... ma non può contenere la Primavera.”",
+   "obiettivo": {
+    "tipo": "soglie",
+    "conta": "risorsa_eventi_risolti",
+    "risorsa": "difesa",
+    "soglie": [
+     {
+      "cond": "<",
+      "n": 4,
+      "pv": 20
+     },
+     {
+      "cond": "<",
+      "n": 6,
+      "pv": 15
+     },
+     {
+      "cond": "<",
+      "n": 9,
+      "pv": 7
+     }
+    ]
+   },
+   "testo_obiettivo": "Conta la [difesa] tra gli EVENTI RISOLTI. Ottieni: 20 PV se è MINORE DI 4, 15 PV se è MINORE DI 6, 7 PV se è MINORE DI 9",
+   "uncertain": "Icona verificata a 800 dpi: difesa. Interpretazione: somma dei valori di difesa richiesti (stampati in basso a sinistra) sulle Carte Evento risolte; confermata dall'esempio del regolamento p.21 (Gandhi: 3+0+3+0+0 = 6 -> 7 PV, quindi soglie strette 'minore di', 6 non è <6). Con totale >= 9 si ottengono 0 PV."
+  },
+  {
+   "id": "t24",
+   "page": 24,
+   "nome": "William Morris",
+   "titolo": "L’artigiano",
+   "citazione": "Se fosse vivo oggi, non apprezzerebbe molto l’IA generativa.",
+   "obiettivo": {
+    "tipo": "soglie",
+    "conta": "risorsa_eventi_risolti",
+    "risorsa": "tecnologia",
+    "soglie": [
+     {
+      "cond": "<",
+      "n": 4,
+      "pv": 20
+     },
+     {
+      "cond": "<",
+      "n": 6,
+      "pv": 15
+     },
+     {
+      "cond": "<",
+      "n": 9,
+      "pv": 7
+     }
+    ]
+   },
+   "testo_obiettivo": "Conta la [tecnologia] tra gli EVENTI RISOLTI. Ottieni: 20 PV se è MINORE DI 4, 15 PV se è MINORE DI 6, 7 PV se è MINORE DI 9",
+   "uncertain": "Icona verificata a 800 dpi: tecnologia. Interpretazione: somma dei valori di tecnologia richiesti (stampati in basso a sinistra) sulle Carte Evento risolte; confermata dall'esempio del regolamento p.21 (Gandhi: 3+0+3+0+0 = 6 -> 7 PV, quindi soglie strette 'minore di', 6 non è <6). Con totale >= 9 si ottengono 0 PV."
+  },
+  {
+   "id": "t25",
+   "page": 25,
+   "nome": "Sun Tzu",
+   "titolo": "Lo stratega",
+   "citazione": "“Tutti possono vedere la mie tattiche, nessuno può conoscere la mia strategia.” L’arte della guerra",
+   "obiettivo": {
+    "tipo": "archivio",
+    "pv": 2
+   },
+   "testo_obiettivo": "2 PV per ogni PROGETTO nell’ARCHIVIO",
+   "uncertain": "Citazione stampata con il refuso 'la mie tattiche'."
+  },
+  {
+   "id": "t26",
+   "page": 26,
+   "nome": "Asso della Diplomazia",
+   "titolo": null,
+   "citazione": null,
+   "obiettivo": {
+    "tipo": "tensione",
+    "soglie": [
+     {
+      "caselle": [
+       0,
+       1,
+       2
+      ],
+      "pv": 25
+     },
+     {
+      "caselle": [
+       3,
+       4
+      ],
+      "pv": 15
+     },
+     {
+      "caselle": [
+       5,
+       6
+      ],
+      "pv": 6
+     }
+    ]
+   },
+   "testo_obiettivo": "Controlla la casella su cui si trova il SEGNALINO [segnalino Tensione Sociale]. Ottieni: 25 PV se è al PUNTO DI PARTENZA o nelle PRIME 2, 15 PV se è nella 3ª o nella 4ª, 6 PV se è nella 5ª o nella 6ª",
+   "uncertain": "Carta senza illustrazione, senza sottotitolo e senza citazione (regolamento p.8: carta da personalizzare). Casella 7 (moneta) -> 0 PV; casella 8 (teschio) = sconfitta, nessun punteggio."
+  }
+ ]
+}

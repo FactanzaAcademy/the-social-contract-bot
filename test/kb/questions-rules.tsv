@@ -1,0 +1,152 @@
+# domanda<TAB>voce attesa (id regola/ambiguità, "calcolo", "non-so"). Formulazioni diverse dagli esempi del bot.
+ma alla fine chi vince la partita?	vittoria-gruppo|punteggio
+qual è il fine ultimo di questo gioco	scopo
+bisogna collaborare o farsi la guerra?	semi-cooperativo
+se la società crolla vince qualcuno?	semi-cooperativo|sconfitta
+possiamo giocarci in 5?	numero-giocatori
+è adatto per 2 persone?	numero-giocatori
+quanti possono giocare al massimo	numero-giocatori
+quante carte progetto ci sono nel gioco	componenti
+quanti segnalini mancanza di risorse ci sono	componenti|mancanza-risorse
+di che anno parla la storia	ambientazione
+perché il gioco si chiama contratto sociale	ambientazione
+chi ha disegnato le carte	crediti
+come si apparecchia il tavolo per giocare	preparazione
+quante carte evento si scoprono all'inizio	preparazione
+dove metto il segnalino della tensione all'inizio	preparazione
+in 4 giocatori quanti soldi a testa	monete-iniziali
+si parte con 25 monete?	monete-iniziali
+in sei quante monete prende ognuno	monete-iniziali
+posso cambiare una delle mie carte pensatore	pensatori-distribuzione
+quanti obiettivi segreti ho	pensatori-distribuzione
+posso rivelare agli altri il mio pensatore	pensatori-segreti
+devo tenere segreti i miei obiettivi	pensatori-segreti
+chi fa il leader al primo turno	leader-iniziale
+chi parte per primo	leader-iniziale
+quali sono le fasi di ogni turno	turno
+cosa succede in ordine durante il consiglio	turno
+che poteri ha il capo	leader-ruolo
+a cosa serve essere leader	leader-ruolo
+chi decide quale progetto mettere all'asta	proposta
+posso proporre io un progetto se non sono leader	proposta
+quanto possiamo discutere tra di noi	dibattito
+si possono fare accordi tra giocatori	dibattito
+come si fa a votare un progetto	offerte
+le offerte sono pubbliche o segrete	offerte
+come funziona il pugno chiuso	offerte
+posso dire che offro 5 e poi offrirne 1?	bluff
+le promesse fatte durante il dibattito valgono?	bluff
+posso offrire 0 monete	offerta-zero
+posso puntare tutto quello che ho	offerta-zero
+chi offre di più cosa ottiene	nuovo-leader
+quando si cambia il leader	nuovo-leader
+se io e un altro offriamo lo stesso chi diventa leader	pareggio-leader
+in caso di parità sull'offerta più alta	pareggio-leader
+il leader cambia anche se il progetto non passa?	leader-se-fallisce
+quante monete servono per far passare un progetto	approvazione
+il progetto passa se arriviamo esattamente al costo?	approvazione
+le monete che offriamo dove finiscono	monete-spese
+se offriamo più del costo ci danno il resto?	monete-spese
+cosa succede se non arriviamo al costo	progetto-fallito
+il progetto bocciato torna nel mazzo?	progetto-fallito
+chi sceglie in che riga mettere il progetto	piazzamento
+come scelgo dove piazzare il progetto approvato	piazzamento
+quante monete in più servono per il fondante	fondanti
+i fondanti si esauriscono?	fondanti
+cosa cambia tra fondante e principale	fondanti|principali|piazzamento
+quanti spazi principali ci sono	principali
+cosa succede a un principale dopo che lo uso	principali|mancanza-risorse
+i provvisori usati dove vanno	provvisori|archivio
+quanti spazi provvisori ci sono e cosa fanno	provvisori
+si applica prima l'effetto della carta o quello dello spazio	ordine-effetti
+cosa succede se tutti gli spazi sono occupati	tabellone-pieno|stallo-tabellone-pieno
+i progetti archiviati si possono riusare	archivio
+a cosa serve l'archivio	archivio
+come si toglie il segnalino rosso	mancanza-risorse
+un principale scarico si può usare	mancanza-risorse
+dove sono le monete comuni	riserva
+cosa nasconde lo schermo	schermo
+dove stanno gli eventi sul tabellone	anatomia-tabellone
+che zone ci sono sul tabellone	anatomia-tabellone
+posso risolvere un evento in qualsiasi momento?	quando-risolvere
+cosa mi permette di risolvere un evento	quando-risolvere
+come si usano i progetti per risolvere un evento	risolvere-evento
+devo sommare le risorse di più progetti?	risolvere-evento
+se ho più risorse del necessario le perdo?	risorse-in-eccesso
+le risorse avanzate si conservano per il turno dopo	risorse-in-eccesso
+posso usare la tecnologia al posto della difesa	risorse-tipi-misti
+le risorse sono intercambiabili tra loro?	risorse-tipi-misti
+cosa sono gli eventi con l'icona delle carte	eventi-ventaglio
+evento che chiede di spendere carte	eventi-ventaglio
+quanti eventi servono per vincere	eventi-risolti
+cosa c'è scritto capovolto sulla carta evento	anatomia-evento
+cosa indica il numero in alto a destra del progetto	anatomia-progetto
+cosa significano i simboli sulla carta progetto	anatomia-progetto|effetti-speciali
+quali tipi di risorsa esistono	risorse-tipi
+cosa vuol dire l'icona con lo scudo	risorse-tipi
+le icone ideologiche cambiano qualcosa durante la partita?	icone-ideologiche
+che significa l'icona con la foglia	icone-ideologiche
+icona con la colonna greca	icone-ideologiche
+elenco degli effetti speciali	effetti-speciali
+cosa fa il punto esclamativo arancione	risoluzione-effetto
+l'icona con le monete cosa fa	soldi-gratis
+quanti soldi dà soldi gratis	soldi-gratis
+come funziona la sirena rossa	colpo-di-scena
+cosa succede con due sirene	doppio-colpo
+cosa fa il teschio su un progetto	tensione-effetto
+cosa fa la freccia verde	nuova-linea
+cosa fa la freccia rossa verso il basso	cambio-priorita
+come funziona il pacco regalo sullo spazio provvisorio	promessa
+cosa fa la batteria verde	allocazione|allocazione-su-carta
+come ricarico tutti i principali	allocazione|mancanza-risorse
+quante caselle ha il termometro	tensione
+cosa fa salire la tensione sociale	tensione
+quando sale la tensione quali carte cambio	rinnovo-carte
+il leader sceglie se cambiare eventi o progetti?	rinnovo-carte
+si può abbassare la tensione	tensione-scende
+cosa si fa alla fine del turno	fine-turno
+quando si ripescano le carte scoperte	fine-turno
+la partita finisce appena risolviamo il quinto evento?	vittoria-gruppo
+quando perdiamo tutti	sconfitta
+cosa succede se la tensione arriva al teschio	sconfitta|tensione
+se il mazzo degli eventi finisce cosa succede	mazzo-esaurito
+quanto dura una partita	durata
+c'è un numero massimo di turni	durata
+come si calcola chi ha vinto	punteggio
+contano i progetti falliti per i punti?	punteggio
+i progetti provvisori contano come approvati?	approvato-definizione
+l'archivio conta come approvato per keynes	approvato-definizione|carta:t01
+un progetto provvisorio con la coppia giusta dà punti?	coppie-ideologiche
+quanti punti vale una coppia in fondante	coppie-ideologiche
+fammi la lista di tutti i pensatori	pensatori-elenco
+posso prestare monete a un altro giocatore	scambio-monete
+si possono regalare soldi agli avversari	scambio-monete
+c'è un tutorial video	video-qr
+con un solo punto esclamativo posso risolvere due eventi?	risoluzione-una-o-piu
+un progetto principale può servire per due eventi nello stesso turno	riuso-stesso-turno
+tabellone pieno e nessun evento risolvibile, che facciamo?	stallo-tabellone-pieno
+abbiamo approvato il progetto ma è libero solo un fondante e non abbiamo il +3	nessuno-spazio-legale
+la seconda carta della promessa elettorale attiva il suo effetto?	promessa-effetto-carta
+dove va la carta evento pescata con il colpo di scena	colpo-carta-pescata
+se sposto un principale scarico nei provvisori tiene il segnalino?	segnalino-spostamento
+devo perdere 5 monete ma ne ho 2	monete-insufficienti
+la banca ha finito le monete	riserva-esaurita
+michelangelo come conta i costi differenti	michelangelo-costo-differente
+per gli eventi a ventaglio posso usare un fondante?	fondante-ventaglio
+se due giocatori hanno lo stesso punteggio finale	pareggio-vittoria
+l'asso della diplomazia è una carta vuota?	asso-diplomazia
+l'esempio di andrea a pagina 21 è sbagliato?	esempio-andrea
+la batteria disegnata sulle carte progetto cosa vuol dire	allocazione-su-carta
+offriamo 2, 2 e 3 per un progetto che costa 7	calcolo
+abbiamo messo 4 e 5 monete, il progetto costa 6, va in fondante?	calcolo
+puntate 1 1 1 su costo 4 cosa succede	calcolo
+offerte 3 e 3 costo 5 chi diventa leader	calcolo
+io offro 6 lei 2 lui 2, costo 10	calcolo
+qual è la capitale della francia	non-so
+mi consigli una pizzeria	non-so
+come si gioca a scacchi	non-so
+quanto costa il gioco in negozio	non-so
+dove posso comprare the social contract	non-so
+che ore sono	non-so
+raccontami una barzelletta	non-so
+come si mischiano bene le carte	non-so

@@ -1,0 +1,221 @@
+# Set cieco per la versione con comprensione semantica, scritto il 2026-10-20
+alla fine cosa dobbiamo combinare per portare a casa la partita?	scopo|vittoria-gruppo
+in due parole, di che parla sto gioco?	scopo|ambientazione
+giochiamo tutti insieme contro il gioco o ognuno per conto suo?	semi-cooperativo
+non è che alla fine vincono tutti insieme?	semi-cooperativo|punteggio
+siamo in sette amici, ci stiamo tutti?	numero-giocatori
+ho appena aperto la scatola: come faccio a capire se c'è tutto?	componenti|pezzi-persi
+quanti gettoni moneta dovrebbero esserci in tutto?	componenti|riserva-esaurita
+perché finiamo su un altro pianeta? qual è la trama?	ambientazione
+chi ha fatto i disegni delle carte?	crediti
+chi l'ha inventato?	crediti
+prima di cominciare come sistemiamo il tavolo?	preparazione
+all'inizio quante carte disastro vanno girate in alto?	preparazione|anatomia-tabellone
+in quattro quanti soldini prende ognuno all'inizio?	monete-iniziali
+le due carte coi personaggi storici che mi sono toccate non mi piacciono, posso ridarle indietro?	pensatori-distribuzione
+devo far vedere agli altri chi è il mio personaggio famoso?	pensatori-segreti
+chi prende il gettone del capo al primo giro?	leader-iniziale
+chi comincia?	leader-iniziale
+mi spieghi la sequenza di un giro passo passo?	turno
+il tizio col gettone che dice chi comanda, che poteri ha?	leader-ruolo
+chi sceglie quale legge mettiamo all'asta?	proposta|leader-ruolo
+si può mettere al voto una carta pescata alla cieca dal mazzo?	proposta
+possiamo litigare e trattare mentre si decide, o bisogna stare zitti?	dibattito
+perché tutti chiudono le monete nel pugno?	offerte
+avevo promesso 3 monete e ne ho messa una sola: ho barato?	bluff
+posso mentire?	bluff
+posso tirare fuori la mano vuota?	offerta-zero
+posso giocarmi tutto il gruzzolo in un colpo solo?	offerta-zero
+dopo che apriamo le mani chi prende il comando?	nuovo-leader
+se in due mettono la stessa cifra più alta, chi comanda?	pareggio-leader|nuovo-leader
+la legge non è passata ma Marco aveva messo più di tutti: il comando va a lui lo stesso?	leader-se-fallisce
+non è che se la proposta salta il capo resta quello vecchio?	leader-se-fallisce
+quand'è che una proposta passa?	approvazione
+abbiamo messo più del necessario, ci ridanno il resto?	monete-spese|approvazione
+se nessuno caccia abbastanza soldi cosa succede?	progetto-fallito
+la carta bocciata possiamo riproporla più avanti?	progetto-fallito
+dove la metto la carta che abbiamo appena fatto passare?	piazzamento
+il progetto che rimane per sempre come si ottiene?	fondanti
+non serve pagare di più per mettere una carta nella fila in alto, vero?	fondanti
+Sara ha vinto l'asta e vuole mettere la carta nella riga più alta anche se abbiamo pagato giusto il prezzo: può?	fondanti|piazzamento
+la fila di mezzo che differenza ha rispetto alle altre?	principali
+le carte nella riga centrale si possono riusare quante volte voglio?	principali|mancanza-risorse
+la riga di sotto a cosa serve?	provvisori
+perché ci sono dei disegnini stampati sugli spazi della riga bassa?	provvisori|anatomia-tabellone
+la carta ha la sirena e lo spazio dove l'ho messa dà le monete: quale delle due parte prima?	ordine-effetti
+si attiva prima il simbolo sulla carta o quello stampato sul tabellone?	ordine-effetti
+abbiamo riempito tutti i buchi del tabellone, adesso che si fa?	tabellone-pieno|stallo-tabellone-pieno
+tabellone strapieno e nessuna crisi che riusciamo a chiudere: siamo bloccati per sempre?	stallo-tabellone-pieno
+le carte che finiscono a faccia in giù nell'angolo in basso a destra cosa sono?	archivio
+Marta voleva chiudere una crisi con una carta girata in archivio e gliel'ho impedito: ho fatto bene?	archivio|risolvere-evento
+quel dischetto che mettiamo sopra le carte appena usate cos'è?	mancanza-risorse
+una carta con sopra la pedina della scarsità la posso ancora usare?	mancanza-risorse
+la banca dei soldi in mezzo al tavolo chi la gestisce?	riserva
+da dove prendo le 4 monete regalate?	riserva|soldi-gratis
+il paravento di cartone a cosa serve?	schermo
+spiegami le varie zone della plancia	anatomia-tabellone
+dove si mettono i problemi già sistemati?	anatomia-tabellone|eventi-risolti
+possiamo sistemare una crisi quando ci pare?	quando-risolvere
+come si usano le carte sul tabellone per affrontare un'emergenza?	risolvere-evento
+per battere una crisi basta sommare i numeri delle carte?	risolvere-evento|risorse-tipi-misti
+se ho 5 scudi e me ne servono 3, i 2 che avanzano li tengo per dopo?	risorse-in-eccesso
+posso coprire la difesa con i chip della tecnologia?	risorse-tipi-misti
+i grafici a barre valgono come scudi?	risorse-tipi-misti
+l'evento con disegnate tante carte aperte a ventaglio come si chiude?	eventi-ventaglio
+quelle crisi che chiedono solo un numero di carte: conta di che tipo sono?	eventi-ventaglio
+se uso una carta delle fondamenta per una crisi a ventaglio, la perdo?	fondante-ventaglio
+quante emergenze bisogna superare per farcela?	eventi-risolti|scopo|vittoria-gruppo
+perché sulle carte disastro c'è una scritta al contrario?	anatomia-evento|colpo-di-scena
+come si legge una carta crisi?	anatomia-evento
+il numero in alto a destra sulle carte legge cosa indica?	anatomia-progetto|approvazione
+scudo, grafico e chip cosa rappresentano?	risorse-tipi|anatomia-progetto
+le iconcine colorate in basso, lampadina foglia mattoni, cambiano qualcosa mentre si gioca?	icone-ideologiche
+cosa vuol dire l'omino singolo viola?	icone-ideologiche
+che significano i simbolini accanto al nome della carta?	effetti-speciali
+il punto esclamativo cosa fa?	risoluzione-effetto|quando-risolvere|effetti-speciali
+col punto esclamativo posso chiudere due crisi di fila?	risoluzione-una-o-piu
+la casella con le monete disegnate cosa regala?	soldi-gratis
+la sirena?	colpo-di-scena|effetti-speciali
+è uscito l'imprevisto: la crisi che pesco la aggiungo a quelle in tavola?	colpo-di-scena|colpo-carta-pescata
+dopo aver letto la parte capovolta, la carta pescata dove la butto?	colpo-carta-pescata
+con due sirene in che ordine si leggono le sorprese?	doppio-colpo
+il teschio stampato su una carta proposta cosa fa?	tensione-effetto
+freccia verde in su?	nuova-linea|effetti-speciali
+la freccia rossa che va giù a cosa serve?	cambio-priorita
+posso riportare una carta dalla fila di mezzo a quella sotto per riprendere i soldi gratis?	cambio-priorita
+lo spazio col pacchetto regalo che fa?	promessa
+Luca ha messo la carta sullo spazio del regalo e vuole calarne un'altra, ma lo spazio subito a destra è già pieno: può metterla da un'altra parte?	promessa
+la seconda carta messa gratis col regalo attiva il suo potere?	promessa-effetto-carta
+come si ricaricano le carte scariche?	allocazione|mancanza-risorse
+perché la Rete stradale ha disegnata la batteria verde se la legenda delle carte non la spiega?	allocazione-su-carta|allocazione|carta:p03:effetto
+quel termometro colorato in alto a destra cosa misura?	tensione
+come si fa a perdere per colpa del malcontento della gente?	tensione|sconfitta
+abbiamo fatto saltare una carta e il segnalino è finito su una casella con la sirena: chi pesca?	tensione|colpo-di-scena|progetto-fallito
+quando sale il nervosismo si buttano le carte in vista: quali, tutte?	rinnovo-carte|tensione-effetto
+si può calmare la folla e far tornare indietro la lancetta?	tensione-scende
+finito il giro, cosa va sistemato prima di ricominciare?	fine-turno
+abbiamo chiuso la quinta crisi a metà turno: dobbiamo finire il giro o è finita?	vittoria-gruppo
+in che modi si può perdere tutti?	sconfitta
+se il mazzo delle leggi si svuota che succede?	mazzo-esaurito|sconfitta
+quanto dura?	durata
+a fine partita come si decide chi ha vinto tra noi?	punteggio|vittoria-gruppo
+i punti si contano anche se abbiamo perso?	punteggio|sconfitta
+sulle carte dei personaggi c'è scritto APPROVATO in maiuscolo: quelle finite in archivio valgono?	approvato-definizione
+il mio mentore vuole foglia + tre omini: quanto vale una carta con quella combinazione?	coppie-ideologiche|carta:t03:obiettivo
+le carte nella riga bassa contano per le coppie di simboli?	coppie-ideologiche|provvisori
+quali personaggi famosi ci sono nel mazzo?	pensatori-elenco
+Rousseau c'è tra i mentori?	pensatori-elenco
+posso prestare due monete al mio amico?	scambio-monete
+c'è un tutorial da guardare invece di leggere il libretto?	video-qr
+la stessa carta della fila di mezzo la posso usare per due crisi nello stesso giro?	riuso-stesso-turno
+restano liberi solo i due posti in alto ma non abbiamo pagato abbastanza extra: dove va la carta?	nessuno-spazio-legale
+sposto con la freccia rossa una carta scarica nella riga sotto: il dischetto le resta sopra?	segnalino-spostamento|cambio-priorita
+i blackout mettono i gettoni sulle 3 carte più a sinistra, ma se in mezzo ci sono buchi?	blackout-sinistra|carta:e04:colpo
+con la mancanza di produttività la carta tolta dove va? e quella nuova attiva il suo potere?	sostituzione-dettagli|carta:e05:colpo
+la corsa al riarmo dice di renderla principale: ma in quale buco della fila di mezzo?	sposta-quale-spazio|carta:e11:colpo
+con l'incursione pago 5 e metto 2 carte sotto: i poteri stampati sulle carte partono?	incursione-effetto-carta|carta:e19:colpo
+'a sinistra del leader' vuol dire in senso orario?	senso-sinistra
+il cantiere si mette da solo tra le crisi chiuse: vale come una delle cinque?	cantiere-effetto|carta:e22:colpo
+con Metropolis butto una carta delle fondamenta e chiudo un'altra crisi: il bonus di quella crisi parte?	metropolis-effetto
+la pandemia mi toglie 3 monete ma ne ho una sola, vado in negativo?	monete-insufficienti
+la banca è rimasta senza monete: come diamo i soldi gratis?	riserva-esaurita
+Michelangelo: due carte con lo stesso prezzo valgono zero tutte e due?	michelangelo-costo-differente|carta:t13:obiettivo
+finiamo pari a punti, chi vince?	pareggio-vittoria
+c'è una carta personaggio senza faccia né nome, che ci faccio?	asso-diplomazia|carta:t26
+nell'esempio dei punti in fondo al libretto i conti di Andrea non mi tornano	esempio-andrea
+Matteotti conta le carte rimaste da pescare o quelle buttate?	matteotti-mazzo|carta:t07:obiettivo
+quanto costa la fusione nucleare?	carta:p21:costo
+la carta degli allevamenti di maiali che effetto ha?	carta:p17:effetto
+i satelliti spia quanta difesa danno?	carta:p29:risorsa
+il reddito per tutti senza lavorare che simboli ideologici ha?	carta:p08:ideologie
+a quale personaggio fa comodo il polo industriale?	carta:p06:pensatori
+dimmi tutto sul wifi gratis per tutti	carta:p18:tutto|carta:p18
+la centrale a carbone ha la doppia sirena?	carta:p22:effetto
+le pensioni private quanto costano?	carta:p09:costo
+che effetto ha l'alleanza che fa il verso alla NATO?	carta:p38:effetto
+computer quantistici: che risorsa danno?	carta:p26:risorsa
+la banca dei piccoli prestiti a quali mentori conviene?	carta:p13:pensatori
+i data center per l'intelligenza artificiale hanno poteri speciali?	carta:p16:effetto
+quanto bisogna sborsare per chiedere aiuto agli altri pianeti?	carta:p36:costo
+corsi di peacekeeping	carta:p37
+le caserme quanta difesa danno?	carta:p32:risorsa
+i pozzi di petrolio dello Stato cosa fanno quando li approvo?	carta:p23:effetto|allocazione-su-carta
+che icone ha la sorveglianza biometrica?	carta:p39:ideologie
+la carta dei semi selezionati quali personaggi la vogliono?	carta:p19:pensatori
+università private	carta:p04
+le batterie delle auto elettriche quanto costano?	carta:p20:costo
+la carta delle energie verdi che effetto ha?	carta:p14:effetto
+il cannone nello spazio, quello orbitale: com'è fatto?	carta:p31:tutto|carta:p31
+cosa serve per superare la pandemia?	carta:e18:requisiti
+la guerra civile cosa fa se esce dall'imprevisto?	carta:e09:colpo
+l'esposizione universale cosa chiede?	carta:e06:requisiti
+il disastro climatico quando lo chiudiamo cosa ci dà?	carta:e17:effetto
+quella crisi col cavallo di Troia cosa chiede?	carta:e19:requisiti
+inverno demografico	carta:e02
+le olimpiadi nello spazio cosa richiedono?	carta:e16:requisiti
+che succede con il caro vita se esce come sorpresa capovolta?	carta:e01:colpo
+le proteste per la mancanza di risorse: cosa fa la parte capovolta?	carta:e10:colpo
+criminalità in aumento: cosa succede quando la risolviamo?	carta:e15:effetto
+disuguaglianze: il leader deve pagare 5 o buttare carte?	carta:e14:colpo
+i disordini alla frontiera quanti scudi servono?	carta:e08:requisiti
+quella carta della pastiera senza ricotta cosa chiede?	carta:e12:requisiti
+cosa vuole Marx per fare punti?	carta:t06:obiettivo
+la Lady di Ferro come fa punti?	carta:t18:obiettivo
+il papa cosa conta a fine partita?	carta:t19:obiettivo
+l'imperatore del Mali come guadagna punti?	carta:t05:obiettivo
+lo scavatore di buche cosa premia?	carta:t01:obiettivo
+la scienziata del radio cosa vuole?	carta:t08:obiettivo
+Sun Tzu	carta:t25
+il poeta latino della via di mezzo che obiettivo ha?	carta:t10:obiettivo
+Gandhi conta gli scudi delle crisi chiuse?	carta:t23:obiettivo
+l'architetto che odia gli orpelli come fa punti?	carta:t09:obiettivo
+progetto da 7, offriamo 3, 2 e 1: passa?	calcolo
+i Satelliti militari costano 10, abbiamo messo 4, 4 e 5: possono andare tra le fondamenta?	calcolo
+abbiamo appena aperto i pugni: io 2, Sara 2, Leo 3, la carta costa 8. Che succede e chi comanda adesso?	calcolo
+carta da 5: Anna 0, Bruno 5, Carla 5, e il capo era Dario che ha messo 1. Chi è il leader ora?	calcolo|pareggio-leader
+carta da 12 e siamo in tre: mettiamo 4 a testa, basta?	calcolo
+in quattro mettiamo una moneta a testa per il wifi pubblico: passa? chi prende il comando?	calcolo
+per mettere tra le fondamenta una carta da 6 a quanto deve arrivare il totale?	calcolo|fondanti
+abbiamo messo 9 su una carta da 9: va bene per la fila in alto?	calcolo|fondanti
+offerte 6 e 3 su un progetto da 10: le 9 monete chi se le tiene?	calcolo|monete-spese|progetto-fallito
+io punto 7, gli altri 2 e 2, la carta costa 12: divento capo anche se non passa?	calcolo|leader-se-fallisce
+il computer quantistico costa 5, abbiamo offerto 2+2+2+2: dove può andare?	calcolo
+io ho 3 monete e Paolo 4, il progetto costa 8: anche mettendo tutto ce la facciamo?	calcolo
+siamo in 5 e ognuno mette 2 su un progetto da 10: si può piazzare nelle fondamenta?	calcolo
+offerte 4, 4 e 3 per la rete stradale: approvata? e il leader, se prima era quello che ha messo 3?	calcolo
+il leader mette 6, io 6, gli altri niente, la carta costa 15: cosa succede?	calcolo
+cosa dice il contratto sociale di Rousseau?	non-so
+qual è la tensione elettrica delle prese in Italia?	non-so
+chi sono i leader politici italiani più popolari oggi?	non-so
+che eventi ci sono a Milano questo weekend?	non-so
+mi consigli un progetto per ristrutturare il bagno?	non-so
+quanto costa un caffè al bar?	non-so
+che tempo fa domani?	non-so
+chi ha scritto Così parlò Zarathustra?	non-so
+spiegami il moltiplicatore keynesiano in dettaglio	non-so
+come si gioca a Monopoli?	non-so
+quante carte sviluppo ci sono in Catan?	non-so
+scrivimi una poesia sull'autunno	non-so
+chi ha vinto le elezioni politiche del 2022?	non-so
+come faccio a investire in borsa?	non-so
+cos'è una pandemia dal punto di vista medico?	non-so
+ricetta della pastiera napoletana	non-so
+salta la corrente in casa: cosa controllo nel quadro elettrico?	non-so
+quanti abitanti ha la Francia?	non-so
+ciao, tu chi sei?	bot-info
+sei un'intelligenza artificiale? funzioni anche senza internet?	bot-info
+dove lo compro e quanto costa?	acquisto
+lo vendono su Amazon?	acquisto
+c'è un'espansione con carte nuove?	varianti
+si può giocare a squadre?	varianti
+esiste un'app per tenere i punti?	varianti
+ci sono tornei ufficiali?	varianti
+posso giocarci da solo contro il gioco?	varianti|numero-giocatori
+c'è una versione in inglese?	varianti
+un bambino di 8 anni ce la fa a giocare?	eta
+da che età è consigliato?	eta
+qual è il personaggio più forte da avere?	strategia
+trucchi per vincere sempre?	strategia
+conviene diventare capo subito?	strategia
+il cane si è mangiato due monete, come rimedio?	pezzi-persi
+si è strappata una carta crisi, me ne mandate un'altra?	pezzi-persi

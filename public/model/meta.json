@@ -1,0 +1,6 @@
+{
+  "dims": 128,
+  "rows": 58463,
+  "origine": "sentence-transformers/static-similarity-mrl-multilingual-v1 (Apache-2.0)",
+  "riduzione": "prime 128 dimensioni (Matryoshka), int8 per riga, solo token in alfabeto latino"
+}

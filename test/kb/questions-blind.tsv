@@ -1,0 +1,221 @@
+# [CONSUMATO 20-10-2026: dopo la prima misura cieca (65,0% → 79,1% con le parafrasi) gli errori sono stati letti e usati per correggere il bot; da qui in poi è set di SVILUPPO] # Blind evaluation set (220 domande): scritto senza guardare bot/src né bot/test, solo da kb-topics, dai JSON delle carte e dal regolamento. Formato: domanda<TAB>etichette attese separate da |. Non usare per training né per tarare sinonimi.
+ma alla fine qual è l obiettivo del gioco?	scopo
+cm si vince a sto gioco	scopo|vittoria-gruppo|punteggio
+è un gioco dove si collabora o è ognuno per sé?	semi-cooperativo
+quindi se la societa crolla perdiamo tutti insieme? nessuno vince?	semi-cooperativo|sconfitta
+si può giocare in 7? siamo un gruppo grande stasera	numero-giocatori
+posso giocarci da solo?	numero-giocatori
+cosa dovrebbe esserci nella scatola? ho paura che manchi qualcosa	componenti
+di cosa parla la storia? tipo l'ambientazione	ambientazione
+chi ha fatto i disegni delle carte?	crediti
+come si prepara il tavolo prima di iniziare	preparazione
+quanti eventi si scoprono all'inizio della partita?	preparazione
+siamo in 4, quante monete diamo a testa?	monete-iniziali
+qunte monete si parte in 3	monete-iniziali
+posso cambiare uno dei miei pensatori se non mi piace?	pensatori-distribuzione
+posso far vedere agli altri i miei grandi pensatori?	pensatori-segreti
+è lecito dire ad alta voce qual è il mio obiettivo segreto o è contro le regole?	pensatori-segreti
+chi fa il leader al primo turno	leader-iniziale
+mi spieghi le fasi di un turno in ordine	turno
+cosa può fare il leader che gli altri non possono fare	leader-ruolo
+chi decde dove va la carta e quale evento si risolve? sempre il leader?	leader-ruolo|piazzamento
+possiamo votare quale progetto mettere all'asta o decide solo il leader?	proposta|leader-ruolo
+il leader può proporre una carta presa direttamente dal mazzo coperto?	proposta
+si può parlare durante le offerte o bisogna stare zitti?	dibattito
+cm funziona l asta	offerte
+il leader offre anche lui o fa solo da banditore?	offerte
+se ho promesso 5 monete e poi nel pugno ne metto 1 sto barando?	bluff|dibattito
+si puo mentire sulle offerte	bluff
+posso presentarmi col pugno vuoto?	offerta-zero
+posso puntare tutte le mie monete in una volta sola	offerta-zero
+dopo che si aprono i pugni chi diventa leader	nuovo-leader
+se io e un altro offriamo la stessa cifra più alta chi diventa leader?	pareggio-leader|nuovo-leader
+pk il leader non cambia se pareggiamo l'offerta piu alta? anche se lui aveva messo meno?	pareggio-leader
+il progetto non passa ma io avevo puntato più di tutti: divento leader lo stesso?	leader-se-fallisce
+quando passa un progetto? bisogna arrivare esatti al costo?	approvazione
+se in totale offriamo più del costo ci torna il resto?	monete-spese|approvazione
+se il progetto non passa le monete offerte si perdono?	monete-spese|progetto-fallito
+cosa succede quando un progetto non viene approvato	progetto-fallito
+il progetto bocciato torna sotto al mazzo o si butta?	progetto-fallito
+dove metto il progetto appena approvato	piazzamento
+chi sceglie la riga dove va il progetto, il leader vecchio o quello appena uscito dall'asta?	piazzamento|nuovo-leader
+i progetti fondanti si consumano quando li uso per un evento?	fondanti
+un progetto da 7 quanto deve raccogliere in totale per finire tra i fondanti?	fondanti|approvazione
+a cosa servono gli spazi principali	principali
+posso riusare un principale dopo averlo usato per un evento?	principali|mancanza-risorse
+come funziona la riga di sotto, quella dei provvisori	provvisori
+che fine fa un provvisorio quando lo uso per risolvere un evento	provvisori|archivio
+la carta ha un effetto e anche la casella provvisoria ce l'ha: quale applico prima?	ordine-effetti
+ho messo in soldi gratis una carta col teschio: prima prendiamo le monete o prima sale la tensione?	ordine-effetti
+abbiamo tutti gli spazi del tabellone occupati, che si fa a inizio turno?	tabellone-pieno
+se nn ci sono spazi liberi si salta l'asta?	tabellone-pieno
+abbiamo il tabellone pieno e nessun evento si può fare, che si fa?	stallo-tabellone-pieno|tabellone-pieno
+tabellone pieno, nessun evento risolvibile... siamo bloccati in un loop infinito?	stallo-tabellone-pieno
+cos'è l'archivio in basso a destra	archivio
+le carte finite in archivio valgono ancora come progetti approvati?	archivio|approvato-definizione
+a cosa serve il segnalino con la batteria rossa scarica	mancanza-risorse
+come si toglie il segnalino mancanza di risorse da un progetto	mancanza-risorse|allocazione
+abbiamo usato rete stradale per un evento, era tra i principali e ora ha il segnalino. per riusarlo dobbiamo per forza mettere qualcosa sull'ultimo spazio provvisorio?	mancanza-risorse|allocazione
+cos'è la riserva comune	riserva
+sono finite le monete nella banca, che facciamo?	riserva-esaurita
+a che serve il cartoncino che si mette davanti a ognuno	schermo
+come è diviso il tabellone? dove vanno gli eventi e dove i progetti	anatomia-tabellone
+possiamo risolvere un evento quando ci pare?	quando-risolvere
+come si risolve un evento in pratica	risolvere-evento
+per un evento posso sommare più progetti insieme?	risolvere-evento
+le carte in archivio si possono usare per risolvere gli eventi?	risolvere-evento|archivio
+se ho 6 di difesa e l'evento ne chiede 5, l'avanzo me lo tengo per dopo?	risorse-in-eccesso
+posso pagare la tecnologia con l'economia?	risorse-tipi-misti
+l'evento chiede 4 di difesa ma abbiamo solo progetti economia, va bene lo stesso?	risorse-tipi-misti
+che significano gli eventi con disegnato un ventaglio di carte e un numero	eventi-ventaglio
+per primi passi posso contare anche un fondante tra le carte da spendere? e poi lo devo scartare?	fondante-ventaglio
+quanti eventi servono per vincere?	eventi-risolti|vittoria-gruppo
+perché c'è un testo scritto al contrario in cima alle carte evento?	anatomia-evento|colpo-di-scena
+il numero in alto a destra sulla carta progetto cos'è	anatomia-progetto
+che vuol dire lo scudo sulle carte progetto	risorse-tipi|anatomia-progetto
+a cosa servono le iconcine in basso a sinistra, la foglia la lampadina ecc	icone-ideologiche
+le icone ideologiche cambiano qualcosa durante la partita o solo alla fine?	icone-ideologiche
+che significano i simboli accanto al nome del progetto	effetti-speciali|anatomia-progetto
+cosa fa il punto esclamativo	risoluzione-effetto|quando-risolvere
+il leader può rifiutarsi di risolvere un evento quando scatta il punto esclamativo?	risoluzione-effetto
+soldi gratis quanto danno e a chi	soldi-gratis
+la sirena cosa fa? il colpo di scena come funziona	colpo-di-scena
+con due sirene quanti eventi pesco e in che ordine li applico?	doppio-colpo
+dopo aver letto il colpo di scena la carta evento la rimetto nel mazzo o la scarto?	colpo-carta-pescata
+il teschio sulla carta progetto cosa fa	tensione-effetto
+freccia verde verso l'alto sulla carta, che significa?	nuova-linea
+freccia rossa?	cambio-priorita
+lo spazio col pacco regalo come funziona	promessa
+con la promessa elettorale la seconda carta gratis fa scattare anche il suo effetto speciale?	promessa-effetto-carta
+la batteria verde ricarica tutti i principali o solo uno?	allocazione
+come funziona il termometro della tensione sociale	tensione
+quando sale la tensione?	tensione
+la tensione è arrivata sulla casella con la sirena, che si fa?	tensione|colpo-di-scena
+la tensione è sulla penultima casella e un progetto fallisce: abbiamo perso?	tensione|sconfitta
+quando sale la tensione quali carte scartiamo? tutte quelle scoperte?	rinnovo-carte|tensione-effetto
+c'è un modo per abbassare la tensione sociale?	tensione-scende
+a fine turno cosa si fa, si ripescano le carte?	fine-turno
+appena risolviamo il quinto evento finisce subito o si finisce il giro?	vittoria-gruppo|eventi-risolti
+come si perde	sconfitta
+e se finiscono le carte del mazzo progetti?	mazzo-esaurito|sconfitta
+quanti turni dura una partita	durata
+come si contano i punti alla fine	punteggio
+se perdiamo si contano i punti lo stesso per vedere chi ha giocato meglio?	sconfitta|punteggio
+nelle carte pensatore quando dice progetto approvato intende anche quelli in archivio?	approvato-definizione
+quanto vale un progetto con le due icone giuste se sta nei fondanti?	coppie-ideologiche|fondanti
+i provvisori contano per gli obiettivi con le coppie di icone?	coppie-ideologiche|provvisori
+che grandi pensatori ci sono nel gioco	pensatori-elenco
+posso prestare delle monete a un altro giocatore?	scambio-monete
+si possono dare soldi agli altri in cambio di un favore tipo "ti do 3 monete se mi fai leader"?	scambio-monete
+c'è un video che spiega come si gioca?	video-qr
+quando scatta la risoluzione evento possiamo risolverne due nello stesso momento?	risoluzione-una-o-piu
+se nello stesso turno risolvo due eventi posso usare lo stesso principale per tutti e due?	riuso-stesso-turno
+il progetto passa ma restano liberi solo i fondanti e non abbiamo messo costo +3, dove lo mettiamo?	nessuno-spazio-legale
+sposto un principale col segnalino nei provvisori con il cambio di priorità, il segnalino resta?	segnalino-spostamento|cambio-priorita
+primi passi dice la persona a sinistra del leader: sinistra guardando il tavolo o rispetto a lui?	senso-sinistra|carta:e20:colpo
+con la pandemia devo perdere 3 monete ma ne ho 1 sola, che succede?	monete-insufficienti|carta:e18:colpo
+devo pagare monete per un colpo di scena ma sono a zero, vado in negativo?	monete-insufficienti
+a fine partita due giocatori hanno gli stessi punti, chi vince?	pareggio-vittoria
+nell'esempio di pagina 21 i conti di andrea non tornano: 20+12 fa 32 ma toussaint non doveva fare 0?	esempio-andrea
+su rete stradale c'è la batteria verde ma nella legenda delle carte non c'è, che effetto è?	allocazione-su-carta|carta:p03:effetto
+quanto costa la centrale a carbone	carta:p22:costo
+computer quantistici che risorsa dà?	carta:p26:risorsa
+la carta del MORTO che effetto ha	carta:p38:effetto
+alleanza morto che icone ha	carta:p38:ideologie
+reddito di base universale	carta:p08
+il reddito universale quanto costa?	carta:p08:costo
+allevamenti intensivi quali icone ideologiche	carta:p17:ideologie
+le caserme di polizia quanta difesa danno	carta:p32:risorsa
+wifi pubblico	carta:p18
+data center per l'ai quanto costa?	carta:p16:costo
+fusione nucleare cosa fa	carta:p21
+pozzi petroliferi statali che effetto ha	carta:p23:effetto|allocazione-su-carta
+ricerca armi hi-tech	carta:p35
+satelliti militari a quali pensatori conviene?	carta:p29:pensatori
+per karl marx conviene approvare il polo industriale?	carta:p06:pensatori|carta:t06:obiettivo
+sorveglianza biometrica	carta:p39
+banca di microcredito costo e risorsa	carta:p13
+richiesta di salvataggio interplanetario che fa	carta:p36:effetto
+corsi di peacekeeping che risorsa sono	carta:p37:risorsa
+universita private quanto costano	carta:p04:costo
+mutui garantiti per giovani e famiglie	carta:p12
+agricoltura idroponica icone	carta:p24:ideologie
+controllo delle frontiere quanto costa	carta:p30:costo
+la società di spionaggio ha effetti speciali?	carta:p28:effetto
+sementi ottimizzate	carta:p19
+batterie per auto elettriche che risorsa danno	carta:p20:risorsa
+artiglieria orbitale	carta:p31
+centri di detenzione extraterritoriali a chi fanno fare punti	carta:p34:pensatori
+istituzione della borsa quanto costa	carta:p10:costo
+aumento pensioni pubbliche ha un effetto?	carta:p11:effetto
+pandemia cosa serve per risolverla	carta:e18:requisiti
+colpo di scena della guerra civile	carta:e09:colpo
+blackout frequenti: abbiamo solo 2 principali e poi uno spazio vuoto, dove vanno i segnalini?	blackout-sinistra|carta:e04:colpo
+blackout	carta:e04
+mancanza di produttività: la carta che sostituisco dove va? e quella nuova attiva l'effetto?	sostituzione-dettagli|carta:e05:colpo
+corsa al riarmo: il provvisorio in quale spazio principale lo metto?	sposta-quale-spazio|carta:e11:colpo
+problemi di approvvigionamento cosa chiede	carta:e12:requisiti
+incursione militare: i 2 progetti che piazzo pagando 5 monete fanno scattare il loro effetto?	incursione-effetto-carta|carta:e19:colpo
+cantiere aperto col colpo di scena finisce tra i risolti, conta come uno dei 5?	cantiere-effetto|carta:e22:colpo
+metropolis: l'evento che risolvo scartando il fondante attiva il suo effetto?	metropolis-effetto|carta:e23:colpo
+metropolis quante carte servono	carta:e23:requisiti|eventi-ventaglio
+incidente diplomatico colpo di scena	carta:e07:colpo
+costo della vita in aumento cosa succede quando lo risolvi	carta:e01:effetto
+inverno demografico	carta:e02
+esposizione universale quanta tecnologia ci vuole	carta:e06:requisiti
+giochi orbitali	carta:e16
+disastro climatico che effetto ha quando lo risolviamo	carta:e17:effetto
+criminalita in aumento colpo di scena	carta:e15:colpo
+aumento disuguaglianze economiche	carta:e14
+crescita sostenuta quante carte vuole	carta:e21:requisiti
+gandhi come fa punti	carta:t23:obiettivo
+keynes obiettivo	carta:t01:obiettivo
+matteotti conta le carte rimaste nel mazzo o quelle scartate?	matteotti-mazzo|carta:t07:obiettivo
+michelangelo dice costo differente: se due progetti costano uguale contano tutti e due?	michelangelo-costo-differente|carta:t13:obiettivo
+l'asso della diplomazia è una carta bianca da scrivere noi?	asso-diplomazia|carta:t26
+sun tzu	carta:t25
+nietzsche quanti punti fa	carta:t11:obiettivo
+la curie che obiettivo ha	carta:t08:obiettivo
+le corbusier vuole progetti senza effetti?	carta:t09:obiettivo
+william moris	carta:t24
+thatcher che icone vuole	carta:t18:obiettivo
+offriamo 2 3 e 4 su un progetto da 8	calcolo
+progetto da 6: io metto 3, marco 2, giulia 0. passa?	calcolo
+costo 7, abbiamo messo 4 4 e 2: può andare nei fondanti?	calcolo
+siamo in 5 e abbiamo offerto 1, 1, 2, 0, 3 per un progetto che costa 9	calcolo
+carta da 5, offerte 5 e 5: passa e chi diventa leader?	calcolo
+abbiamo offerto 3+3+3 per una carta da 10	calcolo
+progetto da 4, uno ha messo 7 e l'altro 0	calcolo
+il leader offre 2, anna 4, luca 4, il progetto costa 9: che succede?	calcolo
+progetto che costa 3, offerte 2 2 2: posso metterlo nei fondanti?	calcolo
+costa 8 e abbiamo messo 3 4 e 3, si approva?	calcolo
+in tre: 0 0 5 su un progetto da 5	calcolo
+offerte 6 1 1 1 su un progetto da 6, fondante si o no?	calcolo
+costo 2, tutti zero tranne me che metto 1	calcolo
+4 giocatori offrono 2, 2, 3 e 1 su un progetto da 7	calcolo
+se metto 10 io da solo su un progetto da 7 va nei fondanti?	calcolo
+che tempo fa domani a milano	non-so
+dove posso comprare il gioco?	non-so
+quanto costa la scatola in negozio	non-so
+come si gioca a monopoly	non-so
+chi ha vinto la serie a l'anno scorso	non-so
+mi consigli un altro gioco cooperativo tipo pandemic?	non-so
+come ti chiami?	non-so
+raccontami una barzelletta	non-so
+ricetta della carbonara	non-so
+come si gioca a catan	non-so
+il gioco esiste anche in inglese?	non-so
+c'è un'espansione?	non-so
+quanto dura in media una partita in minuti	durata|non-so
+che età minima serve per giocare	non-so
+è adatto a un bambino di 8 anni?	non-so
+esiste una versione online o un'app?	non-so
+quanto ci vuole a imparare le regole	non-so
+ho perso il segnalino leader, posso usare un tappo di bottiglia?	non-so
+qual è la strategia migliore per vincere	non-so
+qual è il pensatore più forte?	non-so
+dove trovo il regolamento in pdf	non-so
+si può giocare a squadre, due contro due?	non-so
+ci sono tornei ufficiali?	non-so
+le carte sono plastificate o di cartone?	non-so
+chi ha vinto la partita di ieri sera da marco?	non-so
