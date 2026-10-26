@@ -274,6 +274,7 @@ img { max-width: 100%; }
 .send:not(:disabled) .ico { animation: nudge 0.35s var(--spring); }
 @keyframes nudge { from { transform: translateX(-3px); } }
 .note { margin: 7px 2px 0; font-size: 0.72rem; color: var(--ink-3); text-align: center; text-wrap: balance; }
+.note .linkish { font-size: inherit; padding: 0; }
 
 /* ---------- strumenti ---------- */
 .verifier { flex: 1; overflow-y: auto; padding: 16px 18px 28px; }

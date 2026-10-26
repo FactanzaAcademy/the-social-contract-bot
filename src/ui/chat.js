@@ -10,6 +10,7 @@ import { h, cardImage } from './dom.js';
 import { icon } from './icons.js';
 import { createPatto } from './patto3d.js';
 import { log, enabled } from '../log/logger.js';
+import { PRIVACY } from '../kb/privacy.js';
 
 const STARTERS = [
   { id: 'turno', title: 'Come funziona un turno?' },
@@ -29,6 +30,7 @@ const KIND = {
   ambiguita: { icon: 'open', label: 'Caso aperto' },
   decisione: { icon: 'rule', label: 'Decisione ufficiale' },
   fuori: { icon: 'info', label: 'Fuori regolamento' },
+  privacy: { icon: 'info', label: 'Privacy' },
 };
 
 // ?attesa nell'indirizzo simula l'attesa dell'AI (3 s) per vedere Patto che pensa anche senza ponte
@@ -51,8 +53,13 @@ export function mountChat(root, { openVerifier, onImage, onStarted = () => {} })
   // nota sotto la casella: dice onestamente dove va la domanda
   const updateNote = () => {
     const ai = aiUrl ? 'Patto risponde con l\'AI a partire dal regolamento ufficiale: la domanda viene inviata ad Anthropic per la risposta.' : 'Risposte dal regolamento ufficiale. Niente di quello che scrivi lascia questa pagina.';
-    note.textContent = enabled() ? `${ai} Le domande vengono anche registrate in forma anonima per migliorare l'assistente.` : ai;
+    note.replaceChildren(
+      enabled() ? `${ai} Le domande vengono anche registrate in forma anonima per migliorare l'assistente. ` : `${ai} `,
+      h('button', { class: 'linkish', type: 'button', onclick: () => showPrivacy() }, 'Privacy'),
+    );
   };
+  // informativa privacy come messaggio di Patto, leggibile anche sul telefono
+  const showPrivacy = () => (start(), botRow(eyebrow('privacy'), h('h3', { class: 'answer-title' }, 'Come trattiamo le tue domande'), h('div', { class: 'prose', html: md(PRIVACY) })));
   updateNote();
 
   const scroll = (el) =>

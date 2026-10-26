@@ -4,8 +4,10 @@ import crypto from 'node:crypto';
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { privacyDaCompletare } from '../src/kb/privacy.js';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
+if (privacyDaCompletare()) console.warn('ATTENZIONE: l\'informativa privacy (src/kb/privacy.js) ha ancora parti [da completare]: non pubblicare così.');
 const dist = path.join(root, 'dist');
 fs.rmSync(dist, { recursive: true, force: true });
 fs.mkdirSync(path.join(dist, 'cards'), { recursive: true });
