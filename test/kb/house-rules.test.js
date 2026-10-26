@@ -14,11 +14,12 @@ describe('decisioni di Factanza', () => {
     for (const a of casi.filter((x) => x.stato !== 'confermata')) expect(resolveAmbiguity(a)).toBeNull();
   });
 
-  it('un caso confermato si mostra come decisione ufficiale, uno aperto come interpretazione', () => {
+  it('un caso confermato si mostra come decisione ufficiale; uno aperto non ha decisione', () => {
     const confermato = answerById('promessa-effetto-carta').text;
     expect(confermato).toContain('Decisione ufficiale di Factanza');
     expect(confermato).not.toContain('interpretazione, non regola ufficiale');
-    const aperto = answerById('senso-sinistra').text;
-    expect(aperto).toContain('interpretazione, non regola ufficiale');
+    // il caso 24 resta aperto (col tabellone attuale non può capitare e non compare in chat)
+    expect(resolveAmbiguity(casi.find((a) => a.id === 'promessa-effetto-spazio'))).toBeNull();
+    expect(resolveAmbiguity({ ...casi[0], stato: 'aperta' })).toBeNull();
   });
 });

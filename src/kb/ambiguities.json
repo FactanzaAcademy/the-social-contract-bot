@@ -189,8 +189,9 @@
       ],
       "cosa_dice": "Colpi di scena: la persona a sinistra (Primi passi) o a destra (Crescita sostenuta) del Leader diventa Leader.",
       "cosa_non_dice": "Nulla di ambiguo al tavolo: è la persona seduta fisicamente a sinistra/destra. Nel verificatore i giocatori vanno inseriti in senso orario.",
-      "interpretazione": "Ordine orario: sinistra = giocatore successivo.",
-      "stato": "aperta"
+      "interpretazione": "Posto fisico al tavolo, rispetto al Leader; nel motore ordine orario: sinistra = giocatore successivo.",
+      "stato": "confermata",
+      "decisione": "2026-10-26"
     },
     {
       "id": "cantiere-effetto",

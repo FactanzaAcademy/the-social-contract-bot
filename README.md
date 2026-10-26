@@ -13,7 +13,7 @@ Chatbot per il sito Wix di Factanza: risponde alle domande sulle regole e sulle 
 | Dati delle carte | `data/*.json` | 39 Progetti, 23 Eventi, 26 Pensatori e il tabellone, trascritti dalle immagini (icone comprese) |
 | Motore di regole | `src/engine/` | asta e Leader, piazzamento, effetti, Colpi di scena, Tensione, risolutore degli Eventi, punteggi, fine partita |
 | Base di conoscenza | `src/kb/rules.js`, `paraphrases.js`, `rules-extra.js` | 75 voci (69 di regola con citazione di pagina, 6 "fuori dal regolamento"), quasi 1.500 formulazioni di esempio |
-| Casi aperti | `src/kb/ambiguities.json` | 25 casi che il regolamento stampato non risolve. 23 sono decisi da Factanza (`"stato": "confermata"`, 26-10-2026); per gli altri 2 il bot dice cosa dice il testo, cosa non dice e quale interpretazione applica |
+| Casi aperti | `src/kb/ambiguities.json` | 25 casi che il regolamento stampato non risolve. 24 sono decisi da Factanza (`"stato": "confermata"`, 26-10-2026). Resta aperto solo il caso 24 (Promessa Elettorale verso uno spazio con effetto), che col tabellone attuale non può capitare: lì il bot dice cosa dice il testo, cosa non dice e quale interpretazione applica |
 | Decisioni ufficiali | `src/kb/house-rules.js` | `DECISIONI` e `resolveAmbiguity()`: il testo ufficiale di ogni caso deciso. Il test `test/kb/house-rules.test.js` controlla che coincida con gli stati di `ambiguities.json` |
 | AI | `src/ai/haiku.js`, `src/ai/ponte.js`, `src/ai/client.js` | istruzioni e catalogo per Haiku, ponte con limiti e contatori, chiamate dal browser con ripiego locale |
 | Ponte su Supabase | `supabase/` | Edge Function `proponi`, migrazioni SQL di contatori e segnalazioni. Guida: [`supabase/README.md`](supabase/README.md) |
@@ -82,7 +82,7 @@ Senza WebGL, con prefers-reduced-motion o con `?statico` nell'indirizzo resta so
 - **Una domanda che il bot non capisce**: aggiungi la formulazione agli `esempi` della voce giusta (o in `paraphrases.js`).
 - **Factanza decide un caso aperto**: aggiungi il testo in `DECISIONI` (`src/kb/house-rules.js`), metti `"stato": "confermata"` in `ambiguities.json`, rigenera il catalogo. Se la decisione cambia una regola, aggiorna `src/engine/` e `test/engine/decisioni.test.js`.
 
-Le decisioni del 26-10-2026 che hanno cambiato il motore: la seconda carta della Promessa Elettorale attiva il suo effetto; a tabellone pieno senza Eventi risolvibili la Tensione sale di 1 (variante `stallo: 'blocco'` per il regolamento stampato); Michelangelo conta un Progetto per ogni costo distinto. Manca la conferma sul caso 20 ("a sinistra" del Leader); il caso 24 non può capitare col tabellone attuale.
+Le decisioni del 26-10-2026 che hanno cambiato il motore: la seconda carta della Promessa Elettorale attiva il suo effetto; a tabellone pieno senza Eventi risolvibili la Tensione sale di 1 (variante `stallo: 'blocco'` per il regolamento stampato); Michelangelo conta un Progetto per ogni costo distinto. Caso 20: "a sinistra" e "a destra" del Leader si riferiscono al posto fisico al tavolo (nel verificatore i giocatori vanno in senso orario). Il caso 24 non può capitare col tabellone attuale.
 
 ## Set di domande
 

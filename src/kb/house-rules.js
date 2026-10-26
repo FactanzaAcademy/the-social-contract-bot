@@ -64,6 +64,9 @@ export const DECISIONI = {
   // caso 19: Factanza ha confermato che i Provvisori non danno punti; il resto è il conto con le carte stampate
   'esempio-andrea':
     "L'esempio di pag. 21 ha due refusi, che il regolamento stampato non segnala. Primo: per Hetty Green elenca 5 Progetti di costo inferiore a 5 (20 PV), ma Istituzione dell'alleanza M.O.R.T.O. costa 10, quindi sono 4 (16 PV). Secondo: il totale stampato è \"20 PV + 12 PV = 32 PV\", ma Toussaint Louverture fa 0 PV, perché **i Progetti Provvisori non danno punti** per gli obiettivi a coppie di icone (regola confermata da Factanza). Andrea fa quindi **16 PV**; Matteo vince comunque con 22. In più, pag. 19 rimanda all'esempio \"a pagina 18\", ma è a pag. 20-21.",
+  // caso 20
+  'senso-sinistra':
+    "Conta il **posto fisico al tavolo**, rispetto al Leader: con Primi passi diventa Leader chi siede **alla sinistra del Leader**, con Crescita sostenuta chi siede **alla sua destra**. Nel verificatore del bot i giocatori vanno inseriti in senso orario, così chi viene dopo il Leader nell'elenco è quello alla sua sinistra.",
   // caso 21
   'sposta-quale-spazio': 'Lo spazio Principale libero lo **sceglie il Leader**.',
   // caso 22

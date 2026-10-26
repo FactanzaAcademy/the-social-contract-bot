@@ -534,9 +534,13 @@ Il gruppo pu\xF2 discutere, ma la decisione finale spetta al Leader.`
     },
     {
       "id": "senso-sinistra",
-      "titolo": '[caso aperto] Primi passi / Crescita sostenuta: chi \xE8 "a sinistra" del Leader?',
+      "titolo": '[decisione ufficiale] Primi passi / Crescita sostenuta: chi \xE8 "a sinistra" del Leader?',
       "indizi": "chi e a sinistra del leader, a destra del leader",
-      "testo": '**Primi passi / Crescita sostenuta: chi \xE8 "a sinistra" del Leader?**\n\n**Cosa dice il regolamento:** Colpi di scena: la persona a sinistra (Primi passi) o a destra (Crescita sostenuta) del Leader diventa Leader.\n\n**Cosa non dice:** Nulla di ambiguo al tavolo: \xE8 la persona seduta fisicamente a sinistra/destra. Nel verificatore i giocatori vanno inseriti in senso orario.\n\n**Come lo applica questo assistente** (interpretazione, non regola ufficiale): Ordine orario: sinistra = giocatore successivo.'
+      "testo": `**Primi passi / Crescita sostenuta: chi \xE8 "a sinistra" del Leader?**
+
+Conta il **posto fisico al tavolo**, rispetto al Leader: con Primi passi diventa Leader chi siede **alla sinistra del Leader**, con Crescita sostenuta chi siede **alla sua destra**. Nel verificatore del bot i giocatori vanno inseriti in senso orario, cos\xEC chi viene dopo il Leader nell'elenco \xE8 quello alla sua sinistra.
+
+_Decisione ufficiale di Factanza: il regolamento stampato non lo specifica._`
     },
     {
       "id": "cantiere-effetto",
@@ -1031,18 +1035,28 @@ _Ci serve un Bar, la prima cosa che ci serve \xE8 proprio un Bar._
 ---
 **Primi passi / Crescita sostenuta: chi \xE8 "a sinistra" del Leader?**
 
-**Cosa dice il regolamento:** Colpi di scena: la persona a sinistra (Primi passi) o a destra (Crescita sostenuta) del Leader diventa Leader.
+Conta il **posto fisico al tavolo**, rispetto al Leader: con Primi passi diventa Leader chi siede **alla sinistra del Leader**, con Crescita sostenuta chi siede **alla sua destra**. Nel verificatore del bot i giocatori vanno inseriti in senso orario, cos\xEC chi viene dopo il Leader nell'elenco \xE8 quello alla sua sinistra.
 
-**Cosa non dice:** Nulla di ambiguo al tavolo: \xE8 la persona seduta fisicamente a sinistra/destra. Nel verificatore i giocatori vanno inseriti in senso orario.
-
-**Come lo applica questo assistente** (interpretazione, non regola ufficiale): Ordine orario: sinistra = giocatore successivo.`
+_Decisione ufficiale di Factanza: il regolamento stampato non lo specifica._`
     },
     {
       "id": "e21",
       "kind": "event",
       "tipo": "Evento",
       "nome": "Crescita sostenuta (Qualcuno dovr\xE0 prendersi la briga di dare un nome a queste vie.)",
-      "testo": '**Crescita sostenuta** (Evento)\n- Per risolverlo: **4 Carte Progetto qualsiasi**\n- Effetto quando risolto: **Colpo di scena (sirena)**: il Leader pesca 1 Evento dal mazzo e ne applica subito il Colpo di scena\n- Colpo di scena: La persona a destra dell\u2019attuale Leader diventa il nuovo Leader\n\n_Qualcuno dovr\xE0 prendersi la briga di dare un nome a queste vie._\n\n---\n**Primi passi / Crescita sostenuta: chi \xE8 "a sinistra" del Leader?**\n\n**Cosa dice il regolamento:** Colpi di scena: la persona a sinistra (Primi passi) o a destra (Crescita sostenuta) del Leader diventa Leader.\n\n**Cosa non dice:** Nulla di ambiguo al tavolo: \xE8 la persona seduta fisicamente a sinistra/destra. Nel verificatore i giocatori vanno inseriti in senso orario.\n\n**Come lo applica questo assistente** (interpretazione, non regola ufficiale): Ordine orario: sinistra = giocatore successivo.'
+      "testo": `**Crescita sostenuta** (Evento)
+- Per risolverlo: **4 Carte Progetto qualsiasi**
+- Effetto quando risolto: **Colpo di scena (sirena)**: il Leader pesca 1 Evento dal mazzo e ne applica subito il Colpo di scena
+- Colpo di scena: La persona a destra dell\u2019attuale Leader diventa il nuovo Leader
+
+_Qualcuno dovr\xE0 prendersi la briga di dare un nome a queste vie._
+
+---
+**Primi passi / Crescita sostenuta: chi \xE8 "a sinistra" del Leader?**
+
+Conta il **posto fisico al tavolo**, rispetto al Leader: con Primi passi diventa Leader chi siede **alla sinistra del Leader**, con Crescita sostenuta chi siede **alla sua destra**. Nel verificatore del bot i giocatori vanno inseriti in senso orario, cos\xEC chi viene dopo il Leader nell'elenco \xE8 quello alla sua sinistra.
+
+_Decisione ufficiale di Factanza: il regolamento stampato non lo specifica._`
     },
     {
       "id": "e22",

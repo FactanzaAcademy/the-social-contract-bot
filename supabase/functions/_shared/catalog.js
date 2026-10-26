@@ -520,9 +520,9 @@ export default {
   },
   {
    "id": "senso-sinistra",
-   "titolo": "[caso aperto] Primi passi / Crescita sostenuta: chi è \"a sinistra\" del Leader?",
+   "titolo": "[decisione ufficiale] Primi passi / Crescita sostenuta: chi è \"a sinistra\" del Leader?",
    "indizi": "chi e a sinistra del leader, a destra del leader",
-   "testo": "**Primi passi / Crescita sostenuta: chi è \"a sinistra\" del Leader?**\n\n**Cosa dice il regolamento:** Colpi di scena: la persona a sinistra (Primi passi) o a destra (Crescita sostenuta) del Leader diventa Leader.\n\n**Cosa non dice:** Nulla di ambiguo al tavolo: è la persona seduta fisicamente a sinistra/destra. Nel verificatore i giocatori vanno inseriti in senso orario.\n\n**Come lo applica questo assistente** (interpretazione, non regola ufficiale): Ordine orario: sinistra = giocatore successivo."
+   "testo": "**Primi passi / Crescita sostenuta: chi è \"a sinistra\" del Leader?**\n\nConta il **posto fisico al tavolo**, rispetto al Leader: con Primi passi diventa Leader chi siede **alla sinistra del Leader**, con Crescita sostenuta chi siede **alla sua destra**. Nel verificatore del bot i giocatori vanno inseriti in senso orario, così chi viene dopo il Leader nell'elenco è quello alla sua sinistra.\n\n_Decisione ufficiale di Factanza: il regolamento stampato non lo specifica._"
   },
   {
    "id": "cantiere-effetto",
@@ -1003,14 +1003,14 @@ export default {
    "kind": "event",
    "tipo": "Evento",
    "nome": "Primi passi (Ci serve un Bar, la prima cosa che ci serve è proprio un Bar.)",
-   "testo": "**Primi passi** (Evento)\n- Per risolverlo: **3 Carte Progetto qualsiasi**\n- Effetto quando risolto: **Aumenta la Tensione Sociale (teschio)**: la Tensione sale di 1: si applica l'effetto della casella, poi il Leader rinnova gli Eventi o i Progetti scoperti\n- Colpo di scena: La persona a sinistra dell’attuale Leader diventa il nuovo Leader\n\n_Ci serve un Bar, la prima cosa che ci serve è proprio un Bar._\n\n---\n**Primi passi / Crescita sostenuta: chi è \"a sinistra\" del Leader?**\n\n**Cosa dice il regolamento:** Colpi di scena: la persona a sinistra (Primi passi) o a destra (Crescita sostenuta) del Leader diventa Leader.\n\n**Cosa non dice:** Nulla di ambiguo al tavolo: è la persona seduta fisicamente a sinistra/destra. Nel verificatore i giocatori vanno inseriti in senso orario.\n\n**Come lo applica questo assistente** (interpretazione, non regola ufficiale): Ordine orario: sinistra = giocatore successivo."
+   "testo": "**Primi passi** (Evento)\n- Per risolverlo: **3 Carte Progetto qualsiasi**\n- Effetto quando risolto: **Aumenta la Tensione Sociale (teschio)**: la Tensione sale di 1: si applica l'effetto della casella, poi il Leader rinnova gli Eventi o i Progetti scoperti\n- Colpo di scena: La persona a sinistra dell’attuale Leader diventa il nuovo Leader\n\n_Ci serve un Bar, la prima cosa che ci serve è proprio un Bar._\n\n---\n**Primi passi / Crescita sostenuta: chi è \"a sinistra\" del Leader?**\n\nConta il **posto fisico al tavolo**, rispetto al Leader: con Primi passi diventa Leader chi siede **alla sinistra del Leader**, con Crescita sostenuta chi siede **alla sua destra**. Nel verificatore del bot i giocatori vanno inseriti in senso orario, così chi viene dopo il Leader nell'elenco è quello alla sua sinistra.\n\n_Decisione ufficiale di Factanza: il regolamento stampato non lo specifica._"
   },
   {
    "id": "e21",
    "kind": "event",
    "tipo": "Evento",
    "nome": "Crescita sostenuta (Qualcuno dovrà prendersi la briga di dare un nome a queste vie.)",
-   "testo": "**Crescita sostenuta** (Evento)\n- Per risolverlo: **4 Carte Progetto qualsiasi**\n- Effetto quando risolto: **Colpo di scena (sirena)**: il Leader pesca 1 Evento dal mazzo e ne applica subito il Colpo di scena\n- Colpo di scena: La persona a destra dell’attuale Leader diventa il nuovo Leader\n\n_Qualcuno dovrà prendersi la briga di dare un nome a queste vie._\n\n---\n**Primi passi / Crescita sostenuta: chi è \"a sinistra\" del Leader?**\n\n**Cosa dice il regolamento:** Colpi di scena: la persona a sinistra (Primi passi) o a destra (Crescita sostenuta) del Leader diventa Leader.\n\n**Cosa non dice:** Nulla di ambiguo al tavolo: è la persona seduta fisicamente a sinistra/destra. Nel verificatore i giocatori vanno inseriti in senso orario.\n\n**Come lo applica questo assistente** (interpretazione, non regola ufficiale): Ordine orario: sinistra = giocatore successivo."
+   "testo": "**Crescita sostenuta** (Evento)\n- Per risolverlo: **4 Carte Progetto qualsiasi**\n- Effetto quando risolto: **Colpo di scena (sirena)**: il Leader pesca 1 Evento dal mazzo e ne applica subito il Colpo di scena\n- Colpo di scena: La persona a destra dell’attuale Leader diventa il nuovo Leader\n\n_Qualcuno dovrà prendersi la briga di dare un nome a queste vie._\n\n---\n**Primi passi / Crescita sostenuta: chi è \"a sinistra\" del Leader?**\n\nConta il **posto fisico al tavolo**, rispetto al Leader: con Primi passi diventa Leader chi siede **alla sinistra del Leader**, con Crescita sostenuta chi siede **alla sua destra**. Nel verificatore del bot i giocatori vanno inseriti in senso orario, così chi viene dopo il Leader nell'elenco è quello alla sua sinistra.\n\n_Decisione ufficiale di Factanza: il regolamento stampato non lo specifica._"
   },
   {
    "id": "e22",
