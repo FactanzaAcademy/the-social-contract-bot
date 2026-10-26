@@ -32,7 +32,9 @@ const html = `<!doctype html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>The Social Contract · Assistente alle regole</title>
-<meta name="description" content="Assistente alle regole del gioco da tavolo The Social Contract di Factanza: risposte dal regolamento ufficiale.">
+<meta name="description" content="Chiedi a Patto le regole di The Social Contract, il gioco da tavolo di Factanza: risposte brevi dell'AI basate solo sul regolamento ufficiale e sulle carte, con le fonti da aprire e i calcoli di offerte e punteggi.">
+<meta property="og:title" content="The Social Contract · Assistente alle regole">
+<meta property="og:description" content="Dubbi sulle regole di The Social Contract? Chiedi a Patto: risponde dal regolamento ufficiale.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
