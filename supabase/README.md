@@ -18,6 +18,7 @@ Qualità misurata il 21-10-2026 con `node tools/ai/eval-risposte.mjs` (effort me
 | `functions/_shared/*.js` | Copie generate di `src/ai/ponte.js`, `src/ai/haiku.js` e del catalogo: **non modificarle a mano** |
 | `migrations/…_contatori_bot.sql` | Tabella `bot_contatori` e funzioni `bot_prenota` / `bot_addebita` |
 | `migrations/…_segnalazioni_bot.sql` | Tabella `bot_segnalazioni` e funzione `bot_segnala` (massimo 5 all'ora per visitatore) |
+| `migrations/…_segnalazioni_12_mesi.sql` | Cancella le segnalazioni dopo 12 mesi (alla segnalazione successiva e ogni notte con pg_cron), come dice l'informativa |
 | `dashboard/proponi.js` | La funzione in un solo file, da incollare nell'editor della dashboard (rigenerato da `build-catalog.mjs`) |
 | `config.toml` | `verify_jwt = false` per `proponi`: il bot non ha utenti Supabase |
 
@@ -73,7 +74,7 @@ Il client chiama `<url>/proponi/rispondi` (e `<url>/proponi/segnala`). Esegui `n
 
 ### Dalla dashboard, senza CLI
 
-1. **SQL Editor:** incolla ed esegui `migrations/…_contatori_bot.sql`, poi `migrations/…_segnalazioni_bot.sql`.
+1. **SQL Editor:** incolla ed esegui, in ordine, `migrations/…_contatori_bot.sql`, `migrations/…_segnalazioni_bot.sql` e `migrations/…_segnalazioni_12_mesi.sql`.
 2. **Edge Functions → Deploy a new function → Via editor:** nome `proponi`, incolla tutto `dashboard/proponi.js`, poi Deploy. Nelle impostazioni della funzione disattiva **Verify JWT**.
 3. **Edge Functions → Secrets:** gli stessi segreti del comando qui sopra.
 4. `public/config.json` come sopra, `npm run build`, ripubblica.

@@ -1,27 +1,30 @@
 // Informativa privacy del bot, mostrata dal link "Privacy" sotto la casella della chat.
-// BOZZA del 26-10-2026, da far approvare a chi segue la privacy di Factanza prima del lancio.
-// Le parti tra [quadre] vanno completate: finché ci sono, `npm run build` stampa un avviso.
-// Descrive il bot così com'è: ponte su Supabase, risposte di Claude (Anthropic), registro anonimo spento.
+// Versione del 27-10-2026, scritta con i dati di Factanza Media. Descrive il bot così com'è:
+// ponte su Supabase (Europa), risposte di Claude (Anthropic), caratteri ospitati nel bot, registro anonimo spento.
+// Se cambia qualcosa (un fornitore, il registro, i tempi di conservazione), aggiorna anche questo testo.
+// Le parti tra [quadre] sono da completare: finché ci sono, `npm run build` stampa un avviso.
 
-export const PRIVACY_VERSIONE = '2026-10-26';
+export const PRIVACY_VERSIONE = '2026-10-27';
 
-export const PRIVACY = `**Chi tratta i dati.** Il titolare è [ragione sociale di Factanza, sede], contattabile a [email privacy].
+export const PRIVACY = `**Chi tratta i dati.** Il titolare è **Factanza Media Srl**, Via del Caravaggio 3, 20144 Milano (P. IVA e C.F. 11395070961). Per qualsiasi domanda sulla privacy scrivi a **info@factanzaacademy.com** (PEC: factanzamedia@pec.it).
 
-**Cosa succede alla tua domanda.** Quando scrivi una domanda, il testo (al massimo 300 caratteri) passa dal nostro server su Supabase e arriva ad **Anthropic**, l'azienda che fornisce l'intelligenza artificiale Claude, che scrive la risposta. Le risposte sono generate dall'AI a partire dal regolamento ufficiale. Noi non salviamo il testo delle domande. Anthropic lo tratta per nostro conto come fornitore e [lo conserva per un massimo di N giorni, senza usarlo per addestrare i suoi modelli: da verificare nei termini del contratto].
+**Cosa succede alla tua domanda.** Il testo che scrivi (al massimo 300 caratteri) passa dal nostro server su **Supabase**, in Europa, e arriva ad **Anthropic**, l'azienda che fornisce l'intelligenza artificiale Claude: Claude legge la domanda e scrive la risposta usando solo il regolamento ufficiale. Noi non salviamo il testo delle domande. Anthropic lo tratta per nostro conto come fornitore, non lo usa per addestrare i suoi modelli e lo cancella entro 30 giorni (più a lungo solo se serve a contrastare un abuso o lo impone la legge).
 
-**Le segnalazioni.** Se il bot non trova la risposta e tocchi "Sì, segnala", salviamo la domanda e la data per migliorare l'assistente. Le conserviamo per [12 mesi].
+**Le segnalazioni.** Se il bot non trova la risposta e tocchi "Sì, segnala", salviamo la domanda e la data per migliorare l'assistente e le FAQ del gioco. Le cancelliamo dopo **12 mesi**.
 
-**Contro gli abusi.** Per limitare le domande per persona usiamo un'impronta del tuo indirizzo IP, calcolata in modo che non si possa risalire all'indirizzo senza una chiave segreta. Le impronte si cancellano da sole dopo 2 ore; quelle legate a una segnalazione restano con la segnalazione.
+**Contro gli abusi.** Per limitare il numero di domande per persona usiamo un'impronta del tuo indirizzo IP, calcolata con una chiave segreta: da sola non permette di risalire all'indirizzo. Le impronte si cancellano da sole dopo 2 ore; quella legata a una segnalazione resta con la segnalazione, per lo stesso tempo.
 
-**Cosa non facciamo.** Niente account, niente cookie di profilazione, niente dati salvati nel tuo browser. Non scrivere nelle domande dati personali tuoi o di altri.
+**Cosa non facciamo.** Niente account, niente cookie, niente profilazione né pubblicità, niente dati salvati nel tuo browser. Non scrivere nelle domande dati personali tuoi o di altre persone.
 
-**Altri fornitori tecnici.** La pagina è ospitata da GitHub (Pages) e inserita nel sito [thesocialcontract.it] (Wix); i caratteri tipografici arrivano da Google Fonts. Ognuno di questi servizi riceve l'indirizzo IP del tuo dispositivo per mostrarti la pagina.
+**Chi ospita la pagina.** La pagina del bot è ospitata da **GitHub Pages** ed è inserita nel sito di The Social Contract, realizzato con **Wix**: come per qualsiasi pagina web, questi servizi ricevono l'indirizzo IP del tuo dispositivo per mostrartela. Per il sito vale anche la sua informativa.
 
-**Fuori dall'Unione Europea.** Anthropic, GitHub e Google hanno sede negli Stati Uniti. [Il trasferimento è protetto da: Data Privacy Framework / clausole contrattuali standard, da verificare per ciascuno].
+**Fuori dall'Unione Europea.** Anthropic e GitHub hanno sede negli Stati Uniti. Il trasferimento dei dati è protetto dalle clausole contrattuali standard approvate dalla Commissione europea, previste nei loro contratti per le aziende, e, dove applicabile, dal Data Privacy Framework UE-USA.
 
-**Base giuridica.** [Da confermare con il consulente: esecuzione del servizio che richiedi (art. 6.1.b GDPR) per le risposte; legittimo interesse (art. 6.1.f) per la protezione dagli abusi e per le segnalazioni.]
+**Perché possiamo farlo.** Rispondiamo alle tue domande perché sei tu a chiederci il servizio (art. 6.1.b del GDPR). Proteggiamo il servizio dagli abusi e usiamo le segnalazioni per migliorarlo sulla base del nostro legittimo interesse (art. 6.1.f).
 
-**I tuoi diritti.** Puoi chiedere accesso, cancellazione o opposizione scrivendo a [email privacy], e puoi fare reclamo al Garante per la protezione dei dati personali.`;
+**I tuoi diritti.** Puoi chiedere di accedere ai tuoi dati, di cancellarli, di limitarne l'uso o di opporti al trattamento scrivendo a info@factanzaacademy.com. Puoi anche presentare reclamo al **Garante per la protezione dei dati personali** (garanteprivacy.it).
+
+_Ultimo aggiornamento: 27 ottobre 2026._`;
 
 // true finché restano parti da completare tra [quadre]
 export const privacyDaCompletare = (testo = PRIVACY) => /\[[^\]]+\]/.test(testo);

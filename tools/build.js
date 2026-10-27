@@ -26,6 +26,24 @@ const js = await esbuild.build({
 });
 const css = await esbuild.build({ entryPoints: [path.join(root, 'src/ui/style.css')], bundle: true, minify: true, write: false });
 
+// Caratteri ospitati nel bot (pacchetti @fontsource, licenza OFL) invece di Google Fonts: nessun
+// fornitore esterno riceve l'IP dei visitatori per i caratteri. Solo i sottoinsiemi latin e latin-ext.
+const FONTS = [['poppins', [400, 500, 600, 700]], ['barlow-condensed', [600, 700]]];
+const fontFiles = [];
+let fontFaces = '';
+for (const [pkg, weights] of FONTS) {
+  for (const w of weights) {
+    const cssText = fs.readFileSync(path.join(root, 'node_modules/@fontsource', pkg, `${w}.css`), 'utf8');
+    for (const block of cssText.split('/*').slice(1)) {
+      const sub = block.match(/^ [\w-]+?-(latin|latin-ext)-\d+-normal \*\//);
+      if (!sub) continue;
+      const file = block.match(/url\(\.\/files\/([\w-]+\.woff2)\)/)[1];
+      fontFiles.push([pkg, file]);
+      fontFaces += block.slice(block.indexOf('@font-face')).replace(/src:[^;]+;/, `src:url(fonts/${file}) format('woff2');`).replace(/\s+/g, ' ');
+    }
+  }
+}
+
 const html = `<!doctype html>
 <html lang="it">
 <head>
@@ -35,13 +53,10 @@ const html = `<!doctype html>
 <meta name="description" content="Chiedi a Patto le regole di The Social Contract, il gioco da tavolo di Factanza: risposte brevi dell'AI basate solo sul regolamento ufficiale e sulle carte, con le fonti da aprire e i calcoli di offerte e punteggi.">
 <meta property="og:title" content="The Social Contract · Assistente alle regole">
 <meta property="og:description" content="Dubbi sulle regole di The Social Contract? Chiedi a Patto: risponde dal regolamento ufficiale.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 <meta name="color-scheme" content="light">
 <meta name="theme-color" content="#fbf2e2">
 <link rel="icon" href="data:image/svg+xml,${encodeURIComponent('<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 64 64\'><rect width=\'64\' height=\'64\' rx=\'16\' fill=\'#7e3a3b\'/><text x=\'32\' y=\'41\' font-family=\'Arial Narrow,Arial,sans-serif\' font-weight=\'700\' font-size=\'24\' text-anchor=\'middle\' fill=\'#fbe9d8\'>TSC</text></svg>')}">
-<style>${css.outputFiles[0].text}</style>
+<style>${fontFaces}${css.outputFiles[0].text}</style>
 </head>
 <body>
 <main id="app" class="app"></main>
@@ -61,6 +76,8 @@ fs.mkdirSync(path.join(dist, 'patto'), { recursive: true });
 for (const f of ['patto.glb', 'patto-poster.webp']) fs.copyFileSync(path.join(root, 'public/patto', f), path.join(dist, 'patto', f));
 fs.mkdirSync(path.join(dist, 'vendor'), { recursive: true });
 fs.copyFileSync(path.join(root, 'node_modules/@google/model-viewer/dist/model-viewer.min.js'), path.join(dist, 'vendor/model-viewer.min.js'));
+fs.mkdirSync(path.join(dist, 'fonts'), { recursive: true });
+for (const [pkg, file] of fontFiles) fs.copyFileSync(path.join(root, 'node_modules/@fontsource', pkg, 'files', file), path.join(dist, 'fonts', file));
 fs.writeFileSync(path.join(dist, '.nojekyll'), '');
 const kb = (fs.statSync(path.join(dist, 'index.html')).size / 1024).toFixed(0);
 console.log(`dist/index.html ${kb} KB + ${fs.readdirSync(path.join(dist, 'cards')).length} carte`);
